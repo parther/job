@@ -12,3 +12,13 @@ SQL 重点使用 查询，函数，正则表达式
 数据分析工作的流程。数据报告，某些指标重点分析
 如何实现自动化，提高效率。减少excel依赖，用r 或python
 数据分析的方法论 5w1h 金字塔原理 四比六分
+ 
+日常工作
+跑 数据
+数据清洗
+根据指标建模，模即维度。如何合理计算指标，算法
+参考：
+https://www.zhihu.com/question/26084632/answer/32227965
+https://www.zhihu.com/question/32096873/answer/54891033
+电商行业数据分析师
+https://www.zhihu.com/question/20129061/answer/21530749
