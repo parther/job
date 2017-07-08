@@ -3,7 +3,10 @@
 https://www.zhihu.com/question/26084632/answer/32227965
 https://www.zhihu.com/question/32096873/answer/54891033
 https://www.zhihu.com/question/20129061/answer/21530749
- 
+
+# 准备工作
+     建模：
+          分类与回归分析；聚类分析；时间序列；因子分析、主成因分析；关联规则分析
 # 问题：
      数据分析的流程 - 采集阶段：
           数据如何采集（从何采集，数据格式） - 如何整合进数据仓库 - 如何从数据库中调出来
