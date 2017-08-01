@@ -1,0 +1,23 @@
+# 58同城大数据平台
+     http://www.sohu.com/a/128731346_470008
+# 斗鱼大数据平台
+     http://mp.weixin.qq.com/s?__biz=MzA4MTA5MjE5Mw==&mid=2651788542&idx=2&sn=d4a19fd37a559bd18f04c99f58e5125b&chksm=8461fff0b31676e62e66460e17854d7b147e70443802ecd3cc3199efd1d3c6cc819853bceef0&mpshare=1&scene=1&srcid=0405EOmyXEtDKC15Kq9yzP4a#rd
+# hadoop vs spark
+     https://www.zhihu.com/question/26568496
+# 分布式系统
+     https://www.zhihu.com/question/23645117/answer/124708083
+# 大数据基础架构方案
+     http://blog.csdn.net/dreaper126/article/details/51599213
+# 日志采集系统flume和kafka
+     https://www.zhihu.com/question/36688175/answer/68692597
+# Linux
+     https://www.zhihu.com/question/20117703/answer/31850471
+# 分布式消息系统：Kafka 各平台信息接入的总线 分布式存储系统
+     http://blog.jobbole.com/75328/
+     
+= ==
+
+# 重点：
+     Sqoop是一款开源的工具，主要用于在HADOOP(Hive)与传统的数据库(mysql、postgresql...)间进行数据的传递
+     Nginx 是服务器端软件，适合静态，类似于apach
+     Redis 基于内存的分布式存储系统
