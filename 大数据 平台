@@ -1,23 +1,69 @@
-# 58同城大数据平台
-     http://www.sohu.com/a/128731346_470008
-# 斗鱼大数据平台
-     http://mp.weixin.qq.com/s?__biz=MzA4MTA5MjE5Mw==&mid=2651788542&idx=2&sn=d4a19fd37a559bd18f04c99f58e5125b&chksm=8461fff0b31676e62e66460e17854d7b147e70443802ecd3cc3199efd1d3c6cc819853bceef0&mpshare=1&scene=1&srcid=0405EOmyXEtDKC15Kq9yzP4a#rd
-# hadoop vs spark
-     https://www.zhihu.com/question/26568496
-# 分布式系统
-     https://www.zhihu.com/question/23645117/answer/124708083
-# 大数据基础架构方案
-     http://blog.csdn.net/dreaper126/article/details/51599213
-# 日志采集系统flume和kafka
-     https://www.zhihu.com/question/36688175/answer/68692597
-# Linux
-     https://www.zhihu.com/question/20117703/answer/31850471
-# 分布式消息系统：Kafka 各平台信息接入的总线 分布式存储系统
-     http://blog.jobbole.com/75328/
-     
-= ==
+# 数据平台
+58同城大数据平台
+http://www.sohu.com/a/128731346_470008
 
-# 重点：
-     Sqoop是一款开源的工具，主要用于在HADOOP(Hive)与传统的数据库(mysql、postgresql...)间进行数据的传递
-     Nginx 是服务器端软件，适合静态，类似于apach
-     Redis 基于内存的分布式存储系统
+斗鱼大数据平台
+http://mp.weixin.qq.com/s?__biz=MzA4MTA5MjE5Mw==&mid=2651788542&idx=2&sn=d4a19fd37a559bd18f04c99f58e5125b&chksm=8461fff0b31676e62e66460e17854d7b147e70443802ecd3cc3199efd1d3c6cc819853bceef0&mpshare=1&scene=1&srcid=0405EOmyXEtDKC15Kq9yzP4a#rd
+
+hadoop vs spark
+https://www.zhihu.com/question/26568496
+
+分布式系统
+https://www.zhihu.com/question/23645117/answer/124708083
+
+大数据基础架构方案
+http://blog.csdn.net/dreaper126/article/details/51599213
+
+日志采集系统flume和kafka
+https://www.zhihu.com/question/36688175/answer/68692597
+
+Linux
+https://www.zhihu.com/question/20117703/answer/31850471
+
+分布式消息系统：Kafka 各平台信息接入的总线 分布式存储系统
+http://blog.jobbole.com/75328/
+     
+Sqoop是一款开源的工具，主要用于在HADOOP(Hive)与传统的数据库(mysql、postgresql...)间进行数据的传递
+Nginx 是服务器端软件，适合静态，类似于apach
+Redis 基于内存的分布式存储系统
+
+===
+
+# 数据业务
+投资人是怎样分析数据的
+http://36kr.com/p/5057339.html
+     
+揭秘LinkedIn总部数据科学战队
+http://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651649440&idx=1&sn=ac310930d892e491b6dd2af18736155e&chksm=bd4dd2338a3a5b25cf0b71d53425e8f7baa366e9b5e84f10d1760fead6281bec6b26bcf23593&mpshare=1&scene=1&srcid=0412keP4WorPqRVZ7qfv12JX#rd
+
+微软数据团队
+http://mp.weixin.qq.com/s?__biz=MjM5MTQzNzU2NA==&mid=2651649590&idx=1&sn=4929cebb7d551840995d8f82b1e700de&chksm=bd4dd1a58a3a58b33e6a930fcd3680f5b91f26f0cc10d6e372e64686aee01acb0153ee9d0a73&mpshare=1&scene=1&srcid=04199oiWbslR19emu0jdZkrY#rd
+
+聊了聊算法和数据挖掘工程师的机会和选择
+http://dwz.cn/6lgW93
+
+===
+
+7周成为数据分析师
+https://www.zhihu.com/question/29265587/answer/125091104
+
+8步让你变成数据科学家
+http://dwz.cn/6lgZ2p
+
+转行数据挖掘需要学习的课程
+https://www.zhihu.com/question/30925724/answer/98131824
+
+教你数据爬虫
+http://dwz.cn/6lgZjg
+
+七个经典可视化案例，展示数据思维
+http://dwz.cn/6lh0bb
+
+用python分析房价
+http://dwz.cn/6lh0vq
+
+利用大数据建智慧城市
+http://dwz.cn/6lh0n4
+     
+     
+     
