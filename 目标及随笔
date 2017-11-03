@@ -7,6 +7,15 @@
 4 统计学
 
 ===
+http://www.jianshu.com/p/8845a83c22f9 
+https://www.zhihu.com/question/25655340
+https://www.zhihu.com/question/35983918
+Hadoop和Spark的底层实现使用Java
+Java写分布式的实现，如mr，graph，spark（scala），python写udf，数据处理，单机版，gpu版，脚本
+
+为什么很多数据挖掘过程中用C++来写算法？https://www.zhihu.com/question/20362988
+改写算法，提高算法的效率
+底层Numpy Scipy 里面有很多代码是 c/cpp 写的啊。python作为胶水，把很多c/cpp代码构成的算法粘在一起
 
 是什么 可以找想像中的例子
 
