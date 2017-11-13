@@ -14,35 +14,20 @@
 简历。135
 
 ===
-https://www.cnblogs.com/xd502djj/p/6862607.html
 
-如何获得对他人的影响力？http://daily.zhihu.com/story/9653385
 
-NLP入门+实战必读：一文教会你最常见的10种自然语言处理技术（附代码）http://dwz.cn/6PnbV9
-数据缺失的坑，无监督学习这样帮你补了 http://dwz.cn/6PncEW
-深度学习新手神器  http://dwz.cn/6Pndbl
-
-db dw 向量化结果不一样的原因
-回顾 神经网络如何得到最佳预测结果-使代价函数最小 - 最合适的w、b
-坚持说实话？
-不敢直接指出问题，说出自己内心的想法
-
-目标的设定，五大原则！ http://mini.eastday.com/mobile/161113083720017.html
-http://www.jianshu.com/p/8845a83c22f9 
-https://www.zhihu.com/question/25655340
-https://www.zhihu.com/question/35983918
-Hadoop和Spark的底层实现使用Java
+数据挖掘中Java的作用 http://www.jianshu.com/p/8845a83c22f9 ：
+性能优化
+apache家族项目java，Hadoop和Spark的底层实现使用Java
 Java写分布式的实现，如mr，graph，spark（scala），python写udf，数据处理，单机版，gpu版，脚本
 
-为什么很多数据挖掘过程中用C++来写算法？https://www.zhihu.com/question/20362988
+为什么很多数据挖掘过程中用C++来写算法 https://www.zhihu.com/question/20362988 ：
 改写算法，提高算法的效率
 底层Numpy Scipy 里面有很多代码是 c/cpp 写的啊。python作为胶水，把很多c/cpp代码构成的算法粘在一起
 
-是什么 可以找想像中的例子
-
-unix https://www.zhihu.com/question/20117703 
+unix https://www.zhihu.com/question/20117703 ：
 用户知道自己想要什么，也明白自己在做什么，并且会为自己的行为负责
-Unix和Linux操作系统有什么区别 https://www.zhihu.com/question/24217234/answer/45669979
+Unix和Linux操作系统有什么区别 https://www.zhihu.com/question/24217234/answer/45669979 ：
 Linux是Unix的开源实现
 
 是否会全力以赴 是一个关于选择的问题
