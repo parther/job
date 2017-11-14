@@ -17,41 +17,9 @@
 关于财富的书 http://36kr.com/p/5100939.html
 
 =
-数据挖掘中Java的作用 http://www.jianshu.com/p/8845a83c22f9 ：
-性能优化
-apache家族项目java，Hadoop和Spark的底层实现使用Java
-Java写分布式的实现，如mr，graph，spark（scala），python写udf，数据处理，单机版，gpu版，脚本
 
-为什么很多数据挖掘过程中用C++来写算法 https://www.zhihu.com/question/20362988 ：
-改写算法，提高算法的效率
-底层Numpy Scipy 里面有很多代码是 c/cpp 写的啊。python作为胶水，把很多c/cpp代码构成的算法粘在一起
-
-unix https://www.zhihu.com/question/20117703 ：
-用户知道自己想要什么，也明白自己在做什么，并且会为自己的行为负责
-Unix和Linux操作系统有什么区别 https://www.zhihu.com/question/24217234/answer/45669979 ：
-Linux是Unix的开源实现
-
-是否会全力以赴 是一个关于选择的问题
-结构化的思维方式尚未养成，容易犯经验主义错误
-补脑的食物：银杏，牛奶，香蕉，核桃，鸡蛋，花生
-=
-word 中只显示超链接，没有文本 https://jingyan.baidu.com/article/148a19218cceb74d71c3b10a.html
-Ctrl + A - Ctrl+shift+F9
-https://zhidao.baidu.com/question/135694113480689805.html
-
-30岁之前，应该如何培养自己 http://36kr.com/p/5099679.html
-hadoop和大数据的关系？和spark的关系？互补？并行？ https://www.zhihu.com/question/23036370/answer/24675452
-分布式计算系统
-
-hadoop 和spark如何系统的学习？https://www.zhihu.com/question/39078198
-Scala
 
 总有人会不爽 https://www.zhihu.com/question/64351318/answer/235106305
-面试前都需要做些什么准备 https://www.zhihu.com/question/25039418/answer/153871356
-哪些做过，做得好吗？是否有事实依据；
-哪些没有做过，如果问起，怎么展现能够迅速上手的能力？
-
-=
 
 遇到问题，先想一下自己会怎么做，便于理清问题是什么
 容易受人影响 独立思考的能力 是真的吗
