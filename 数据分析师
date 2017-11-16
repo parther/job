@@ -51,3 +51,8 @@ Linux C++
 熟悉常用数据算法和建模，如：决策树、聚类、逻辑回归，关联分析、SVDD，boosting等
 xgboost GBDT 随机森林 SVM
 
+SVD singular value decomposition 奇异值分解
+正交矩阵: A^- = A^T
+
+各种矩阵 http://blog.csdn.net/jbb0523/article/details/50596604
+
