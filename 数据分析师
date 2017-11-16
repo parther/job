@@ -49,3 +49,5 @@ spark（Scala）、Hadoop、hive、Linux、Java
 Linux C++
 
 熟悉常用数据算法和建模，如：决策树、聚类、逻辑回归，关联分析、SVDD，boosting等
+xgboost GBDT 随机森林 SVM
+
