@@ -50,9 +50,41 @@ Linux C++
 
 熟悉常用数据算法和建模，如：决策树、聚类、逻辑回归，关联分析、SVDD，boosting等
 xgboost GBDT 随机森林 SVM
+http://dwz.cn/6S2H3x
+http://dwz.cn/6S2HVw
 
-SVD singular value decomposition 奇异值分解
+SVD singular value decomposition 奇异值分解：
+用于降维
 正交矩阵: A^- = A^T
-
 各种矩阵 http://blog.csdn.net/jbb0523/article/details/50596604
+
+Boosting 提升算法：
+提升模型的准确度
+Boosting 分类器属于集成学习模型，它基本思想是把成百上千个分类准确率较低的树模型组合起来，成为一个准确率很高的模型
+这个模型会不断地迭代，每次迭代就生成一颗新的树
+http://blog.csdn.net/foolsnowman/article/details/51770172
+
+SVDD(Support Vector Domain Description) 支持向量数据域描述：
+分类算法
+http://blog.csdn.net/ap1005834/article/details/71512299
+
+xgboost eXtreme Gradient Boosting 急速梯度提升
+xgboost 用于提升boosting的运行效率
+xgboost: 速度快效果好的 boosting 模型 https://cosx.org/2015/03/xgboost
+http://xgboost.readthedocs.io/en/latest/
+机器学习算法中GBDT和XGBOOST的区别有哪些 https://www.zhihu.com/question/41354392
+
+GBDT gradient boosting decide tree 梯度提升决策树
+GBDT中的树是回归树（不是分类树）
+GBDT：梯度提升决策树 http://www.jianshu.com/p/005a4e6ac775
+
+随机森林 random forest
+分类预测的算法，弥补决策树过拟合的缺陷
+http://blog.csdn.net/mao_xiao_feng/article/details/52728164
+
+SVM 支持向量机  Support Vector Regression
+分类器
+http://eric-gcm.iteye.com/blog/1981771
+https://www.leiphone.com/news/201705/v10u2BOvGHEbzBpV.html
+
 
