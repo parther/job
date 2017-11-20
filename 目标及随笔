@@ -14,7 +14,14 @@
 简历。135
 
 ===
-
+最小二乘法：
+最小二乘法跟梯度下降法都是通过求导来求损失函数的最小值
+http://blog.csdn.net/lotus___/article/details/20546259
+最小二乘法的本质是什么 https://www.zhihu.com/question/37031188
+线性代数的直觉理解 https://zhuanlan.zhihu.com/p/26032019
+中心极限定理 http://wiki.mbalib.com/wiki/%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86
+大数定律 http://wiki.mbalib.com/wiki/%E5%A4%A7%E6%95%B0%E5%AE%9A%E7%90%86
+如何通俗地解释泰勒公式？ https://www.zhihu.com/question/21149770
 
 尽信书不如无书
 没有核实问题就妄来分析
