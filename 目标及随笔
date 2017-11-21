@@ -15,6 +15,7 @@
 
 ===
 最小二乘法：
+http://open.163.com/special/Khan/linearalgebra.html
 最小二乘法跟梯度下降法都是通过求导来求损失函数的最小值
 http://blog.csdn.net/lotus___/article/details/20546259
 最小二乘法的本质是什么 https://www.zhihu.com/question/37031188
