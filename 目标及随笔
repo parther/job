@@ -1,34 +1,18 @@
 # 年度目标及日常安排 http://dwz.cn/6JoBvQ
+# 关于我的 http://dwz.cn/6W3P7N
 
 # 11 月份
-1 数据分析师的工作
-2 深度学习微专业 02学习完毕
-3 统计学 ok
-4 线性代数 微积分
-5 数据挖掘
+1 数据分析师的工作 ok
+2 深度学习微专业 02学习完毕 ing
+5 数据挖掘 ing
+3 统计学 cancel
+4 线性代数 微积分 cancel
 
 目标实施计划：
-统计学习方法。上午9-12点
-线性代数，微积分。下午4点
-深度学习。下午2-4，晚上0930-1130
-简历。135
+2 深度学习微专业 02：
+5 数据挖掘 ing：
 
 ===
-优秀数据分析师该有的习惯：
-https://www.zhihu.com/question/62667109/answer/239043717
-https://www.zhihu.com/question/34564836#answer-19234069
-秦路系列
-
-
-缺点：
-没有核实问题就去解决问题
-
-如何快速了解一个知识点：
-准备：目的，动机，应用场景
-如何做：自己的话描述，咀嚼（区别和联系，优点和缺点），应用
-
-优秀资源：网易云课堂，百度文库，知乎，CSDN
-
 最小二乘法：
 http://open.163.com/special/Khan/linearalgebra.html
 最小二乘法跟梯度下降法都是通过求导来求损失函数的最小值
@@ -38,9 +22,5 @@ http://blog.csdn.net/lotus___/article/details/20546259
 中心极限定理 http://wiki.mbalib.com/wiki/%E4%B8%AD%E5%BF%83%E6%9E%81%E9%99%90%E5%AE%9A%E7%90%86
 大数定律 http://wiki.mbalib.com/wiki/%E5%A4%A7%E6%95%B0%E5%AE%9A%E7%90%86
 如何通俗地解释泰勒公式？ https://www.zhihu.com/question/21149770
-
-隐狄利克雷模型 http://dwz.cn/6T8cQH
-文本主题识别模型，主题建模中最流行的概率学方法之一
-利用隐狄利克雷模型识别ted演讲的主题 http://dwz.cn/6T8m3a
 
 
