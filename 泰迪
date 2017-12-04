@@ -32,9 +32,21 @@
 初识文本挖掘 http://www.jianshu.com/p/3d767cb5db59
 如何进行文本挖掘,文本挖掘的目的 http://bbs.pinggu.org/thread-475227-1-1.html
 我爱自然语言处理 http://www.52nlp.cn/resources
-对象是非结构化数据
-对文本信息加工处理，对提取的信息统计处理
-步骤：转换为结构化数据 - 分类 - 归类
+文本挖掘-wordcloud、主题模型与文本分类 http://dwz.cn/70IgT4
+一个文本挖掘过程及案例 http://www.360doc7.net/wxarticlenew/118685382.html
+Python做文本挖掘的情感极性分析 http://dwz.cn/70IiZK
+文本挖掘的基本流程 http://blog.csdn.net/u011274209/article/details/51896757
+文本数据挖掘及其应用 https://wenku.baidu.com/view/a8659c3187c24028915fc3e9.html
+
+文本挖掘也是数据挖掘，处理的对象是半结构化的文本数据
+与处理对象为结构化数据的数据挖掘相比：
+
+文本挖掘的流程：
+抽取和分析数据 - 数据预处理 - 数据建模 - 模型评价
+文本挖掘的应用领域：
+聚类、分类、主题模型
+非结构化到结构化
+
 =
 依法分类处理信访诉求 http://www.gjxfj.gov.cn/2017-08/04/c_136499377.htm
 国务院信访条例 http://www.gjxfj.gov.cn/2009-11/24/c_133327670.htm
