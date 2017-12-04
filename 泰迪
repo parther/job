@@ -13,28 +13,36 @@
 4 格式：
 =
 备选主题：
-1 文本挖掘对信访分析工作的提升
-2 恶化指数综合分析法能够判定信访事件的严重程度
-
+1 利用文本挖掘技术评估信访信件的极端状态
+2 利用恶化指数综合分析法评估信访事件的发展态势
+=
+选1的原因：
+1 更符合核心期刊关于技术性的要求
+2 逻辑性和严谨性会更好。第二篇的效果无法验证
+3 个人角度。学习NLP
 =
 文本挖掘：
-初识文本挖掘 http://www.jianshu.com/p/3d767cb5db59
-如何进行文本挖掘,文本挖掘的目的 http://bbs.pinggu.org/thread-475227-1-1.html
-我爱自然语言处理 http://www.52nlp.cn/resources
-文本挖掘-wordcloud、主题模型与文本分类 http://dwz.cn/70IgT4
-一个文本挖掘过程及案例 http://www.360doc7.net/wxarticlenew/118685382.html
-Python做文本挖掘的情感极性分析 http://dwz.cn/70IiZK
-文本挖掘的基本流程 http://blog.csdn.net/u011274209/article/details/51896757
-文本数据挖掘及其应用 https://wenku.baidu.com/view/a8659c3187c24028915fc3e9.html
-
 文本挖掘也是数据挖掘，处理的对象是半结构化的文本数据
-与处理对象为结构化数据的数据挖掘相比：
-
 文本挖掘的流程：
 抽取和探索文本数据 - 数据预处理 - 数据建模 - 模型评价
-文本挖掘的应用领域：
-聚类、分类、主题模型
-非结构化到结构化
+文本数据预处理：
+文本预处理 - 语言学处理 - 数学处理 - 特征提取和特征选择
+数据建模：
+分类模型：knn算法、svm算法、naivebeyes算法、cart算法
+主题模型：LDA 主题模型
+=
+特征提取：
+文本挖掘的基本流程 http://blog.csdn.net/u011274209/article/details/51896757
+文本数据挖掘及其应用 https://wenku.baidu.com/view/a8659c3187c24028915fc3e9.html
+机器学习那些事——文本挖掘中的特征提取 http://blog.csdn.net/u013709332/article/details/48436663
+特征提取，这是一个文档降维的过程
+计算线性近似复杂度来衡量巨大的文档集 时间复杂度
+利用python的sklearn开源包进行文本挖掘 http://blog.csdn.net/pat_datamine/article/details/43969631
+初识文本挖掘 http://www.jianshu.com/p/3d767cb5db59
+我爱自然语言处理 http://www.52nlp.cn/resources
+Python做文本挖掘的情感极性分析 http://dwz.cn/70IiZK
+
+
 
 单封信件的极端指数则由信件的情感得分、否定评价用语得分、涉法涉诉用语得分、政治用语得分、极端用语得分、
 扬言用语得分、弱者话语得分、涉政话语得分共同组成
