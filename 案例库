@@ -46,5 +46,5 @@ R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
 使用包 require(plyr)
 删除重复值，类似Python d.drop_duplicates ddply(askitem, .(realIP,FULLURL), tail, n = 1)
 选取指定列 data[,c(1,11)]
-
+sql中随机抽取数据的方法 https://www.cnblogs.com/liukunjava/p/7049246.html
 
