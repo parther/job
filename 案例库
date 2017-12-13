@@ -12,6 +12,7 @@
 平台 http://192.168.0.10:8080/tipdm-webapp/
 账号：tipdm_8
 密码：TipDM123456
+数据库地址：192.168.0.10",port="5432",dbname="database1",user="postgres",password="root"
 =
 流程：
 1 案例的目的 - 流程 - 代码实现
@@ -74,5 +75,15 @@ combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details
 R连接PostgreSQL http://blog.sina.com.cn/s/blog_8137c2ea0102w0gb.html
 将R数据写入数据库 dbWriteTable(con, "RESULTS", results2000)
 R语言连接Postgresql数据库乱码 https://www.zhihu.com/question/47236920/answer/105706025
+? 平台上出现了一个names的列，咋回事呢
+select * from all_gzdata where fullurlid = 107001  and length(fullReferrerURL) <255
+? 传入的数据字符长度不能大于255，但如果删除这部分数据，会不会影响其他结果
+mysql获取字符串长度函数(CHAR_LENGTH)
 
-
+select * from all_gzdata where length(userAgent)<255 
+and length(pagePath)<255 and length(fullURL)<255
+and length(hostname)<255 and length(pageTitle)<255
+and length(pageTitleCategoryName)<255
+and length(pageTitleKw)<255 and length(fullReferrer)<255
+and length(fullReferrerURL)<255 and length(organicKeyword)<255
+and length(source)<255
