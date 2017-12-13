@@ -39,6 +39,12 @@
 ?平均点击率
 翻页统计
 -
+? 为什么只选取fullurlid为107001的数据
+? 为何读入ask类型的数据
+? <- 和 =的区别
+? stri_p 返回的数据类型是什么 stri_p <- regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
+? - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] 
+? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
 数据预处理 - 数据清洗
 R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
 读取文件 read.csv(file = "ask02.csv", header = T, stringsAsFactors = F) 
@@ -47,4 +53,17 @@ R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
 删除重复值，类似Python d.drop_duplicates ddply(askitem, .(realIP,FULLURL), tail, n = 1)
 选取指定列 data[,c(1,11)]
 sql中随机抽取数据的方法 https://www.cnblogs.com/liukunjava/p/7049246.html
+更改R皮肤 http://blog.sina.com.cn/s/blog_c685f68e0102wc50.html
+gsub 字符替换 R正则表达式语法细节 http://www.dataguru.cn/article-4707-1.html
+移去某个包 detach("package:RMySQL") https://zhuanlan.zhihu.com/p/29876535
+转义所有的特殊字符 escape http://blog.csdn.net/zzxian/article/details/7283858
+匹配正则表达式 regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
+which返回test为真值的位置（指针）http://blog.csdn.net/baidu_34604003/article/details/52264362
+sapply将列表作用于函数，返回列表 http://blog.sina.com.cn/s/blog_631d4d990102vcji.html
+do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
+rbind()按照横向的方向，或者说按行的方式将矩阵连接到一起
+regmatches 提取regexpr,gregexpr或regexec函数中匹配或者不匹配(invert = TRUE)的字符 https://www.2cto.com/kf/201607/530597.html
+paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blog_6caea8bf0100xiy2.html
+all.equal 判断前后数据是否一致 all.equal(infol[, 2], do.data[, 1]) 
+
 
