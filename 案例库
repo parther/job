@@ -39,12 +39,13 @@
 ?平均点击率
 翻页统计
 -
+? - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] 
+? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
 ? 为什么只选取fullurlid为107001的数据
 ? 为何读入ask类型的数据
 ? <- 和 =的区别
 ? stri_p 返回的数据类型是什么 stri_p <- regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
-? - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] 
-? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
+
 数据预处理 - 数据清洗
 R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
 读取文件 read.csv(file = "ask02.csv", header = T, stringsAsFactors = F) 
