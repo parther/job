@@ -39,7 +39,7 @@
 ?平均点击率
 翻页统计
 -
-? info_p <- predict(info_re, info, n = 5) 文件未读出来
+? 走到最后一步，模型跑的速度太慢了 info_p <- predict(info_re, info, n = 5) 文件未读出来
 ? w.combine是什么意思 w.combine <- ldply(web, rbind)
 ? - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] 
 ? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
@@ -70,6 +70,5 @@ paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blo
 all.equal 判断前后数据是否一致 all.equal(infol[, 2], do.data[, 1]) 
 strsplit用于分离字符 strsplit(user_info[,2], "/", fixed = TRUE) 
 combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details/50688431
-
 
 
