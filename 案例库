@@ -70,5 +70,9 @@ paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blo
 all.equal 判断前后数据是否一致 all.equal(infol[, 2], do.data[, 1]) 
 strsplit用于分离字符 strsplit(user_info[,2], "/", fixed = TRUE) 
 combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details/50688431
+? R跑的慢 减少数据量 傻等
+R连接PostgreSQL http://blog.sina.com.cn/s/blog_8137c2ea0102w0gb.html
+将R数据写入数据库 dbWriteTable(con, "RESULTS", results2000)
+R语言连接Postgresql数据库乱码 https://www.zhihu.com/question/47236920/answer/105706025
 
 
