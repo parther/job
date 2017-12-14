@@ -65,8 +65,8 @@ gsub 字符替换 R正则表达式语法细节 http://www.dataguru.cn/article-47
 转义所有的特殊字符 escape http://blog.csdn.net/zzxian/article/details/7283858
 匹配正则表达式 regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
 which返回test为真值的位置（指针）http://blog.csdn.net/baidu_34604003/article/details/52264362
-sapply将列表作用于函数，返回列表 http://blog.sina.com.cn/s/blog_631d4d990102vcji.html
-do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
+sapply将列表作用于函数，返回value sapply(stri_p, length) http://blog.sina.com.cn/s/blog_631d4d990102vcji.html
+
 rbind()按照横向的方向，或者说按行的方式将矩阵连接到一起
 regmatches 提取regexpr,gregexpr或regexec函数中匹配或者不匹配(invert = TRUE)的字符 https://www.2cto.com/kf/201607/530597.html
 paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blog_6caea8bf0100xiy2.html
@@ -81,5 +81,5 @@ select * from all_gzdata where fullurlid = 107001 and length(fullReferrerURL) <2
 mysql获取字符串长度函数(CHAR_LENGTH)
 删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
 .* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
-
-
+? do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
+? regexec（）返回所匹配的字符的开始位置 https://www.cnblogs.com/wheng/p/6262737.html
