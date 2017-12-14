@@ -76,7 +76,10 @@ combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details
 R连接PostgreSQL http://blog.sina.com.cn/s/blog_8137c2ea0102w0gb.html
 将R数据写入数据库 dbWriteTable(con, "RESULTS", results2000)
 R语言连接Postgresql数据库乱码 https://www.zhihu.com/question/47236920/answer/105706025
-select * from all_gzdata where fullurlid = 107001  and length(fullReferrerURL) <255
+select * from all_gzdata where fullurlid = 107001 and length(fullReferrerURL) <255
 传入的数据字符长度不能大于255 使用text类型
 mysql获取字符串长度函数(CHAR_LENGTH)
+删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
+.* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
+
 
