@@ -1,5 +1,5 @@
 #
-目标：将R语言代码实例转为用户界面操作的按钮
+目标：将R语言代码实例转为用户界面操作的按钮，能够跑通
 完成时间：1215
 考核标准：梦圆考核合格
 =
@@ -16,7 +16,7 @@
 =
 流程：
 1 案例的目的 - 流程 - 代码实现
-2 输入数据 - 配置流程对应的组件 - 新建工程，拖曳形成流程图 - 另存为模板
+2 输入数据 - 新建工程，拖曳系统组件（如有需要修改组件），形成流程图 - 另存为模板
 -
 任何结果都是通过组件实现的
 模型和任务先不用管它
@@ -48,6 +48,8 @@
 ? 为何读入ask类型的数据
 ? <- 和 =的区别
 ? stri_p 返回的数据类型是什么 stri_p <- regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
+? R跑的慢 减少数据量 傻等
+? 平台上出现了一个names的列，咋回事呢
 
 数据预处理 - 数据清洗
 R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
@@ -71,19 +73,10 @@ paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blo
 all.equal 判断前后数据是否一致 all.equal(infol[, 2], do.data[, 1]) 
 strsplit用于分离字符 strsplit(user_info[,2], "/", fixed = TRUE) 
 combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details/50688431
-? R跑的慢 减少数据量 傻等
 R连接PostgreSQL http://blog.sina.com.cn/s/blog_8137c2ea0102w0gb.html
 将R数据写入数据库 dbWriteTable(con, "RESULTS", results2000)
 R语言连接Postgresql数据库乱码 https://www.zhihu.com/question/47236920/answer/105706025
-? 平台上出现了一个names的列，咋回事呢
 select * from all_gzdata where fullurlid = 107001  and length(fullReferrerURL) <255
-? 传入的数据字符长度不能大于255，但如果删除这部分数据，会不会影响其他结果
+传入的数据字符长度不能大于255 使用text类型
 mysql获取字符串长度函数(CHAR_LENGTH)
 
-select * from all_gzdata where length(userAgent)<255 
-and length(pagePath)<255 and length(fullURL)<255
-and length(hostname)<255 and length(pageTitle)<255
-and length(pageTitleCategoryName)<255
-and length(pageTitleKw)<255 and length(fullReferrer)<255
-and length(fullReferrerURL)<255 and length(organicKeyword)<255
-and length(source)<255
