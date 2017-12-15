@@ -84,5 +84,7 @@ mysql获取字符串长度函数(CHAR_LENGTH)
 ? data.frame
 ? 怎样完成2个输入 自己配组件 
 不能保存多次，不能切换到其他工程
+协同过滤推荐系统的R实现 https://www.cnblogs.com/payton/articles/6092777.html
+no method or default for coercing “data.frame” to “binaryRatingMatrix” 没有装包
 
 
