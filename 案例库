@@ -86,5 +86,10 @@ mysql获取字符串长度函数(CHAR_LENGTH)
 不能保存多次，不能切换到其他工程
 协同过滤推荐系统的R实现 https://www.cnblogs.com/payton/articles/6092777.html
 no method or default for coercing “data.frame” to “binaryRatingMatrix” 没有装包
+2017-12-15 20:51:33 ERROR c.t.f.d.c.a.u.rscript.CustomRScript - algorithm execute error: 
+java.lang.RuntimeException: [exception] Error in tryCatchList(expr, classes, parentenv, handlers) : 
+Error:必须在脚本的最后返回DataFrame
+? 将数据转为dataframe
+
 
 
