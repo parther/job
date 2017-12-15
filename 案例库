@@ -42,17 +42,15 @@
 -
 ? 走到最后一步，模型跑的速度太慢了 info_p <- predict(info_re, info, n = 5) 文件未读出来
 ? w.combine是什么意思 w.combine <- ldply(web, rbind)
-? - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] 
 ? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
-? 为什么只选取fullurlid为107001的数据
-? 为何读入ask类型的数据
 ? <- 和 =的区别
 ? stri_p 返回的数据类型是什么 stri_p <- regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
-? R跑的慢 减少数据量 傻等
-? 平台上出现了一个names的列，咋回事呢? do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
 ? regexec（）返回所匹配的字符的开始位置 https://www.cnblogs.com/wheng/p/6262737.html
 ? do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
-? regexec（）返回所匹配的字符的开始位置 https://www.cnblogs.com/wheng/p/6262737.html
+R跑的慢 减少数据量 傻等
+- 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ]  -是去除的意思，筛选
+do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
+平台将列名大写变小写 user_info <- ddply(item_info, .(realip,fullurl), tail, n = 1)
 
 数据预处理 - 数据清洗
 R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
@@ -83,5 +81,7 @@ select * from all_gzdata where fullurlid = 107001 and length(fullReferrerURL) <2
 mysql获取字符串长度函数(CHAR_LENGTH)
 删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
 .* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
-? 
+? data.frame
+? 怎样完成2个输入 自己配组件 
+
 
