@@ -83,5 +83,6 @@ mysql获取字符串长度函数(CHAR_LENGTH)
 .* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
 ? data.frame
 ? 怎样完成2个输入 自己配组件 
+不能保存多次，不能切换到其他工程
 
 
