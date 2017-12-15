@@ -83,5 +83,5 @@ select * from all_gzdata where fullurlid = 107001 and length(fullReferrerURL) <2
 mysql获取字符串长度函数(CHAR_LENGTH)
 删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
 .* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
-
+? 
 
