@@ -25,78 +25,61 @@
 目的：根据用户浏览网页的信息，向用户推荐感兴趣的内容
 抽取数据 - 探索分析数据 - 数据预处理 - 构建模型 - 评价模型
 -
-探索分析数据
-为什么：服务于挖掘目标，知道用户喜欢什么信息
-1 网页类型
-101-107-199
-199 ? - 1999001 - 网页标题
-2 点击次数分析
-点击次数的用户数统计
-点击一次的用户浏览的网页类型统计
-点击一次的用户浏览的网址统计
-3 网页排名
-网址点击次数排名
-网页类型点击次数排名
-?平均点击率
-翻页统计
+业务方面：
+协同过滤推荐系统的R实现 https://www.cnblogs.com/payton/articles/6092777.html
 -
-? 走到最后一步，模型跑的速度太慢了 info_p <- predict(info_re, info, n = 5) 文件未读出来
+平台问题:
+? 传入数据，但没办法预览，无法在模型中跑
+平台将列名大写变小写 user_info <- ddply(item_info, .(realip,fullurl), tail, n = 1)
+怎样完成2个输入：自己配组件
+传入的数据字符长度不能大于255 使用text类型
+不能保存多次，不能切换到其他工程
+-
+R的问题：
+? 选取dataframe指定行
 ? w.combine是什么意思 w.combine <- ldply(web, rbind)
 ? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
-? <- 和 =的区别
-? stri_p 返回的数据类型是什么 stri_p <- regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
-? regexec（）返回所匹配的字符的开始位置 https://www.cnblogs.com/wheng/p/6262737.html
 ? do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
-R跑的慢 减少数据量 傻等
-- 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ]  -是去除的意思，筛选
-do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
-平台将列名大写变小写 user_info <- ddply(item_info, .(realip,fullurl), tail, n = 1)
+? 列表转数据框 http://blog.csdn.net/sinat_18722475/article/details/54562525
+? info_p3 <- as.data.frame(info_p2) 为啥不行呢
+怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)：ip去重
+少了html :本来就有这样的网页
+R跑的慢 减少数据量：傻等
+更改R皮肤 http://blog.sina.com.cn/s/blog_c685f68e0102wc50.html
+- 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] ：-是去除的意思，筛选
 
-数据预处理 - 数据清洗
-R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
+
+
 读取文件 read.csv(file = "ask02.csv", header = T, stringsAsFactors = F) 
 安装包 install.packages("plyr")
-使用包 require(plyr)
-删除重复值，类似Python d.drop_duplicates ddply(askitem, .(realIP,FULLURL), tail, n = 1)
-选取指定列 data[,c(1,11)]
-sql中随机抽取数据的方法 https://www.cnblogs.com/liukunjava/p/7049246.html
-更改R皮肤 http://blog.sina.com.cn/s/blog_c685f68e0102wc50.html
-gsub 字符替换 R正则表达式语法细节 http://www.dataguru.cn/article-4707-1.html
 移去某个包 detach("package:RMySQL") https://zhuanlan.zhihu.com/p/29876535
+使用包 require(plyr)
+
+gsub 字符替换 R正则表达式语法细节 http://www.dataguru.cn/article-4707-1.html
 转义所有的特殊字符 escape http://blog.csdn.net/zzxian/article/details/7283858
 匹配正则表达式 regexec("(^.+/\\d+)_\\d{0,2}(.html)", info_d[, 2])
+regmatches 提取regexpr,gregexpr或regexec函数中匹配或者不匹配(invert = TRUE)的字符 https://www.2cto.com/kf/201607/530597.html
+.* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
+
+R语言的plyr包简介 http://www.jianshu.com/p/bfddfe29aa39
+删除重复值，类似Python d.drop_duplicates ddply(askitem, .(realIP,FULLURL), tail, n = 1)
+选取指定列 data[,c(1,11)]
+do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
 which返回test为真值的位置（指针）http://blog.csdn.net/baidu_34604003/article/details/52264362
 sapply将列表作用于函数，返回value sapply(stri_p, length) http://blog.sina.com.cn/s/blog_631d4d990102vcji.html
 rbind()按照横向的方向，或者说按行的方式将矩阵连接到一起
-regmatches 提取regexpr,gregexpr或regexec函数中匹配或者不匹配(invert = TRUE)的字符 https://www.2cto.com/kf/201607/530597.html
 paste函数把它的自变量连成一个字符串 http://blog.sina.com.cn/s/blog_6caea8bf0100xiy2.html
 all.equal 判断前后数据是否一致 all.equal(infol[, 2], do.data[, 1]) 
 strsplit用于分离字符 strsplit(user_info[,2], "/", fixed = TRUE) 
 combine把片断重新组合 http://blog.csdn.net/sinat_26917383/article/details/50688431
+删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
+R语言数据框-dataframe的使用 http://blog.csdn.net/panguoyuan/article/details/25542697
+列拼接 cbind http://blog.sina.com.cn/s/blog_72512a1d0102xq6b.html
+
 R连接PostgreSQL http://blog.sina.com.cn/s/blog_8137c2ea0102w0gb.html
 将R数据写入数据库 dbWriteTable(con, "RESULTS", results2000)
 R语言连接Postgresql数据库乱码 https://www.zhihu.com/question/47236920/answer/105706025
-select * from all_gzdata where fullurlid = 107001 and length(fullReferrerURL) <255
-传入的数据字符长度不能大于255 使用text类型
 mysql获取字符串长度函数(CHAR_LENGTH)
-删除制定列 data[,-c(1)] http://blog.sciencenet.cn/blog-247792-812799.h tml
-.* 表示替换后面所有 gsub.* ("ab.*", "","abcd., perl = T)
-? data.frame
-? 怎样完成2个输入 自己配组件 
-不能保存多次，不能切换到其他工程
-协同过滤推荐系统的R实现 https://www.cnblogs.com/payton/articles/6092777.html
-? 列表转数据框 http://blog.csdn.net/sinat_18722475/article/details/54562525
-? info_p3 <- as.data.frame(info_p2) 为啥不行呢
-R语言数据框-dataframe的使用 http://blog.csdn.net/panguoyuan/article/details/25542697
-列拼接 cbind http://blog.sina.com.cn/s/blog_72512a1d0102xq6b.html
-? 匹配所有
-? 怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)：ip去重
-? 少了html :本来就有这样的网页
-info_p3 <- data.frame(matrix(info_p2,byrow=T),stringsAsFactors=FALSE)
-info_p4 <- cbind(names(info_p2),info_p3)
-colnames(info_p4) <- c("realip", "url")
-info_p4[, 2] <- sub("c", "", info_p4[, 2], perl = T)
-info_p4[, 2] <- gsub("\\(|\\)", "", info_p4[, 2], perl = T)
-? 传入数据，但没办法预览
+sql中随机抽取数据的方法 https://www.cnblogs.com/liukunjava/p/7049246.html
 
 
