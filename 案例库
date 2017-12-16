@@ -85,19 +85,16 @@ mysql获取字符串长度函数(CHAR_LENGTH)
 ? 怎样完成2个输入 自己配组件 
 不能保存多次，不能切换到其他工程
 协同过滤推荐系统的R实现 https://www.cnblogs.com/payton/articles/6092777.html
-no method or default for coercing “data.frame” to “binaryRatingMatrix” 没有装包
-2017-12-15 20:51:33 ERROR c.t.f.d.c.a.u.rscript.CustomRScript - algorithm execute error: 
-java.lang.RuntimeException: [exception] Error in tryCatchList(expr, classes, parentenv, handlers) : 
-Error:必须在脚本的最后返回DataFrame
 ? 列表转数据框 http://blog.csdn.net/sinat_18722475/article/details/54562525
 ? info_p3 <- as.data.frame(info_p2) 为啥不行呢
 R语言数据框-dataframe的使用 http://blog.csdn.net/panguoyuan/article/details/25542697
 列拼接 cbind http://blog.sina.com.cn/s/blog_72512a1d0102xq6b.html
 ? 匹配所有
-? 怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)
-? 少了html
-
-
-
-
+? 怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)：ip去重
+? 少了html :本来就有这样的网页
+info_p3 <- data.frame(matrix(info_p2,byrow=T),stringsAsFactors=FALSE)
+info_p4 <- cbind(names(info_p2),info_p3)
+colnames(info_p4) <- c("realip", "url")
+info_p4[, 2] <- sub("c", "", info_p4[, 2], perl = T)
+info_p4[, 2] <- gsub("\\(|\\)", "", info_p4[, 2], perl = T)
 
