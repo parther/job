@@ -89,7 +89,15 @@ no method or default for coercing “data.frame” to “binaryRatingMatrix” �
 2017-12-15 20:51:33 ERROR c.t.f.d.c.a.u.rscript.CustomRScript - algorithm execute error: 
 java.lang.RuntimeException: [exception] Error in tryCatchList(expr, classes, parentenv, handlers) : 
 Error:必须在脚本的最后返回DataFrame
-? 将数据转为dataframe
+? 列表转数据框 http://blog.csdn.net/sinat_18722475/article/details/54562525
+? info_p3 <- as.data.frame(info_p2) 为啥不行呢
+R语言数据框-dataframe的使用 http://blog.csdn.net/panguoyuan/article/details/25542697
+列拼接 cbind http://blog.sina.com.cn/s/blog_72512a1d0102xq6b.html
+? 匹配所有
+? 怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)
+? 少了html
+
+
 
 
 
