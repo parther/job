@@ -97,4 +97,6 @@ info_p4 <- cbind(names(info_p2),info_p3)
 colnames(info_p4) <- c("realip", "url")
 info_p4[, 2] <- sub("c", "", info_p4[, 2], perl = T)
 info_p4[, 2] <- gsub("\\(|\\)", "", info_p4[, 2], perl = T)
+? 传入数据，但没办法预览
+
 
