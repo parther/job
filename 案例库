@@ -49,8 +49,6 @@ R跑的慢 减少数据量：傻等
 更改R皮肤 http://blog.sina.com.cn/s/blog_c685f68e0102wc50.html
 - 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] ：-是去除的意思，筛选
 
-
-
 读取文件 read.csv(file = "ask02.csv", header = T, stringsAsFactors = F) 
 安装包 install.packages("plyr")
 移去某个包 detach("package:RMySQL") https://zhuanlan.zhihu.com/p/29876535
