@@ -10,19 +10,23 @@
 主题词提取
 2 分析民众对该事件发展过程的情感变化，挖掘出民众关注的焦点问题
 评论情感分析
-
+=
+? 将txt转成csv
+? list转成dataframe
+? news.rep <- unique(news1) 相当于临时表
+? floor_date(news.cle$time, 'day')
+? read.table
+? factor是什么意思
+-
 文本清洗 - 特征提取 - 模型
 删除Rstudio环境里面的数据 rm(list = ls()) 
 library(stringr)
 library(lubridate)
 str(df) 打印出各列的数据类型
-
 complete.cases(df) 判断是否有缺失值，返回布尔值
-? news.rep <- unique(news1) 相当于临时表
 table(x) 统计频数，一般与as.data.frame(table(x))搭配 https://www.zhihu.com/question/46661384/answer/103506127
-? floor_date(news.cle$time, 'day')
-? read.table
-? factor是什么意思
 unlist(stopword) 即将list数据变成字符串向量或者数字向量的形式
 arguments imply differing number of rows: 809 write.table(new.ty, "./new.ty.txt",row.names = F)
+正则表达式转义符 https://www.cnblogs.com/wheng/p/6262737.html
+
 
