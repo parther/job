@@ -12,8 +12,17 @@
 评论情感分析
 
 文本清洗 - 特征提取 - 模型
-V2 <- c('A',2,3)
-V1 <- c('A',2,4)
 删除Rstudio环境里面的数据 rm(list = ls()) 
+library(stringr)
+library(lubridate)
+str(df) 打印出各列的数据类型
 
+complete.cases(df) 判断是否有缺失值，返回布尔值
+? news.rep <- unique(news1) 相当于临时表
+table(x) 统计频数，一般与as.data.frame(table(x))搭配 https://www.zhihu.com/question/46661384/answer/103506127
+? floor_date(news.cle$time, 'day')
+? read.table
+? factor是什么意思
+unlist(stopword) 即将list数据变成字符串向量或者数字向量的形式
+arguments imply differing number of rows: 809 write.table(new.ty, "./new.ty.txt",row.names = F)
 
