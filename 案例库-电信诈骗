@@ -35,10 +35,10 @@ R 读取和存储 http://blog.sina.com.cn/s/blog_71f3890901013t8g.html http://bl
 手工拼接txt文件会出现意想不到的空格行
 结巴分词的词库必须是utf-8的格式 worker(user = '词库/对象及信息2.csv')
 ? 模型跑不下去
-上传到平台的数据转成utf-8无bom格式
+上传到平台的数据转成utf-8无bom格式，或者直接用gbk的格式
 nrow(df) 查询表格的行数
-
-
-
+sample(nrow(df),500) 抽样
+news2 <- news2[sample(nrows(news),500),]
+卡在了tf
 
 
