@@ -12,6 +12,8 @@
 评论情感分析
 =
 ? 将txt转成csv
+1 txt 转 csv
+2 r读取再转
 ? list转成dataframe
 ? news.rep <- unique(news1) 相当于临时表
 ? floor_date(news.cle$time, 'day')
@@ -28,5 +30,11 @@ table(x) 统计频数，一般与as.data.frame(table(x))搭配 https://www.zhihu
 unlist(stopword) 即将list数据变成字符串向量或者数字向量的形式
 arguments imply differing number of rows: 809 write.table(new.ty, "./new.ty.txt",row.names = F)
 正则表达式转义符 https://www.cnblogs.com/wheng/p/6262737.html
+R 读取和存储 http://blog.sina.com.cn/s/blog_71f3890901013t8g.html http://blog.csdn.net/tb3039450/article/details/52557200
+? 转成csv文件不要header
+手工拼接txt文件会出现意想不到的空格行
+结巴分词的词库必须是utf-8的格式 worker(user = '词库/对象及信息2.csv')
+? 模型跑不下去
+上传到平台的数据转成utf-8无bom格式
 
 
