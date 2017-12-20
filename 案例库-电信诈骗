@@ -51,4 +51,5 @@ Sys.setlocale(locale="Chinese (Simplified)_People's Republic of China.936")
 Corpus(VectorSource(new.gj))
 remove.packages("tm")
 detach("package:tm")
-还是要重启
+还是要重启R
+attempt to select less than one element in get1index
