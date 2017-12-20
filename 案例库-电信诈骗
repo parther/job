@@ -43,4 +43,12 @@ news2 <- news2[sample(nrows(news),500),]
 组件需要勾选右边
 中文分词 http://blog.csdn.net/wzgl__wh/article/details/72036263
 unlist(stopword) 转成factor
-
+使用tm包转矩阵出现乱码 http://bbs.pinggu.org/thread-5537823-1-1.html http://ask.csdn.net/questions/650641
+sessionInfo()
+Sys.getlocale("LC_CTYPE")
+Sys.setlocale(locale="English")
+Sys.setlocale(locale="Chinese (Simplified)_People's Republic of China.936")
+Corpus(VectorSource(new.gj))
+remove.packages("tm")
+detach("package:tm")
+还是要重启
