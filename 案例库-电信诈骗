@@ -53,3 +53,6 @@ remove.packages("tm")
 detach("package:tm")
 还是要重启R
 attempt to select less than one element in get1index
+时间包 lubridate https://zhuanlan.zhihu.com/p/27612862
+unable to find an inherited method for function ‘dbWriteTable’  输出数据格式不对
+
