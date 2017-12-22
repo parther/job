@@ -13,5 +13,31 @@
 
 Rwordseg中文分词包安装1 http://blog.csdn.net/qq_34941023/article/details/51405988
 Rwordseg中文分词包安装2 http://www.mamicode.com/info-detail-1179140.html
+Rwordseg中文分词包 http://bbs.pinggu.org/thread-4662142-1-1.html
+unlist 可以将list转换
+b <- ('a','b') Error: unexpected ',' in "b <- ('a',"
+? 行数不对 L.mean$group <- rep(c(1,2,3),c(4,7,6)) 
+listDict()
+? 细胞词库上传
+ [exception] Error in output[[params$id]] : subscript out of bounds
+
+
+t1 <- read.table("词库/对象.txt",encoding = "gbk")
+t2 <- read.table("词库/关键信息.txt",encoding = "gbk")
+t3 <- rbind(t1,t2)
+write.csv(news, "news3.csv", row.names = F)
+write.table(t3, "词库/对象及信???.txt", row.names = F, quote = F)
+
+t1 <- read.table("词库/对象及信???.csv", header = T,encoding = "gbk",stringsAsFactors = F)
+remove.packages("tm")
+
+write.csv(news, "news3.csv", row.names = F)
+news3 <- read.csv('news3.csv', header = T, stringsAsFactors = F)
+str(news3)
+new.terms
+df <- data.frame(new.terms)
+
+rep(x,times),x为要复制的数据 times是要重复的次数 replication
+
 
 
