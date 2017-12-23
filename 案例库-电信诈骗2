@@ -38,6 +38,8 @@ new.terms
 df <- data.frame(new.terms)
 
 rep(x,times),x为要复制的数据 times是要重复的次数 replication
+少了一条数据，是否删除情感词
+L.mean$group <- rep(c(1,2,3),c(4,7,6)) 没有抽取这么多的日期
 
 
 
