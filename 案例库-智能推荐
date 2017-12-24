@@ -42,18 +42,12 @@
 无法用R连接到远程数据库
 采用复制的方法将sql文件转成csv
 -
-R的问题：
-? 选取dataframe指定行
-? w.combine是什么意思 w.combine <- ldply(web, rbind)
-? do.data是啥意思 do.data <- data.frame((combine[, c(1, 4)]), stringsAsFactors = F)
-? do.call函数在数据框中执行函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
-? 列表转数据框 http://blog.csdn.net/sinat_18722475/article/details/54562525
-? info_p3 <- as.data.frame(info_p2) 为啥不行呢
-怎么一下子少了数据 3362变2362 info_p <- predict(info_re, info, n = 5)：ip去重
-少了html :本来就有这样的网页
-R跑的慢 减少数据量：傻等
+R的问题： 
+do.call 告诉list或dataframe一个函数，所有元素执行这个函数 http://blog.sina.com.cn/s/blog_792cb9410101ja5o.html
+dataframe基本处理函数 http://blog.csdn.net/sinat_26917383/article/details/50676894
+as.data.frame(list)
 更改R皮肤 http://blog.sina.com.cn/s/blog_c685f68e0102wc50.html
-- 是什么意思，为什么要这个代码 infol <- info_d[-(which(sapply(stri_p, length) != 3)), ] ：-是去除的意思，筛选
+info_d[-(which(sapply(stri_p, length) != 3)), ] ：-是去除的意思，筛选
 
 读取文件 read.csv(file = "ask02.csv", header = T, stringsAsFactors = F) 
 安装包 install.packages("plyr")
