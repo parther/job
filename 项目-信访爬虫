@@ -6,48 +6,57 @@
 跑出想要的结果，梦圆认同
 =
 # 计划:
-0102-0106
-熟悉爬虫
-正则表达式
-scrapy的框架
-0108-0113
-正式开始爬虫
+0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
+0103 周三 跟着案例学爬虫并用Python实现它
+0104 周四 更高级的爬虫案例并且实现
+0105 周五 从天涯爬取内容
+0106 周六 从天涯爬取内容
+0108-0113 正式开始爬虫
 ===
+
+# 爬虫：
+定义：
+网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
+爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
+-
+流程：
+获取数据-从数据中获取想要的数据
+=
+# 爬虫学习文档
 python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
 Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
 Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
 简单爬虫的通用步骤 https://zhuanlan.zhihu.com/p/29017712
 =
-爬虫的流程以及使用到的技术：
-安装Python
-anaconda 
+# 安装anaconda
 是Python数据分析的发行版本，集成大量第三方的包，再也不用担心安装包的问题了 https://www.jianshu.com/p/169403f7e40c
-打开jupyter anaconda prompt-jupyter notebook
-更改jupyter路径 anaconda - cd c:\on -jupyter notebook
+打开jupyter： anaconda prompt-jupyter notebook
+更改jupyter路径： anaconda - cd c:\on -jupyter notebook
 安装包：
-anaconda prompt-anaconda install package_name
-anaconda navigator
+1 anaconda prompt-anaconda install package_name
+2 anaconda navigator
 包只会安装最新的
 =
+# 使用爬虫会遇到的困难：
+需要模拟浏览器方式访问
+需要登录
+需要cookie
+需要动态验证码
+跑不动，对方通过行为判定爬虫行为
+=
+# 使用爬虫会用到的知识
+正则表达式
+scrapy的框架
 request对象和response对象 http://blog.csdn.net/a859522265/article/details/7259115
 客户机与服务器交换数据时用到，由服务器创立
+===
+
+# 例子：
+python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
 ? response.info
 ? 二进制格式转换为str格式
 ? 文件读取与写入 http://dwz.cn/7bnhGl
 ? read http://www.runoob.com/python/python-file-read.html
-=
-流程：
-获取数据-从数据中获取想要的数据
-=
-爬虫遇到的困难：
-模拟浏览器访问数据
-爬取需要登录的网页
-需要cookie
-动态验证码
-=
-爬虫技术
-通过HTTP协议，客户机向服务器发送请求，获得html文档
-网页是html文档，从html文章中挑选自己想要的东西
 
 
