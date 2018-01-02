@@ -1,1 +1,36 @@
+目的：
+从天涯论坛，新浪微博爬取关于上访的内容
+完成时间：
+0113 周六
+考核：
+跑出想要的结果，梦圆认同
+=
+计划:
+0102-0106
+熟悉爬虫
+正则表达式
+scrapy的框架
+0108-0113
+正式开始爬虫
+=
+python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
+Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
+简单爬虫的通用步骤 https://zhuanlan.zhihu.com/p/29017712
+Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
+
+=
+爬虫的流程以及使用到的技术：
+安装Python
+anaconda 
+是Python数据分析的发行版本，集成大量第三方的包，再也不用担心安装包的问题了 https://www.jianshu.com/p/169403f7e40c
+打开jupyter anaconda prompt-jupyter notebook
+更改jupyter路径 anaconda - cd c:\on -jupyter notebook
+安装包：
+anaconda prompt-anaconda install package_name
+anaconda navigator
+包只会安装最新的
+
+
+=
+
 
