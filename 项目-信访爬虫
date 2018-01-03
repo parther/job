@@ -9,7 +9,7 @@
 0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
 0103 周三 跟着案例学爬虫并用Python实现它
 0104 周四 更高级的爬虫案例并且实现
-0105 周五 从天涯爬取内容
+0105 周五 从天涯爬取内容；和嘉敏确定爬虫字段，并且统一格式
 0106 周六 从天涯爬取内容
 0108-0113 正式开始爬虫
 ===
@@ -27,7 +27,6 @@ python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
 Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
 Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
-简单爬虫的通用步骤 https://zhuanlan.zhihu.com/p/29017712
 网易云课堂
 =
 # 安装anaconda
@@ -64,7 +63,20 @@ python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
 搜索-一级页面-二级页面
 =
 scrapy
+Scrapy是一个为了爬取网站数据提取结构性数据而编写的应用框架，省去造轮子的时间
 入门教程 http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html
+https://doc.scrapy.org/en/1.5/topics/commands.html
 unknown command : crawl :指定到文件夹路径
+流程：url-request-response-spider-items
+Python爬虫进阶一之爬虫框架概述 https://cuiqingcai.com/2433.html
+scrapy操作步骤：
+
+=
+scrapy 输出的文件为空。网站设置了路障
+spider not found：spider文件名 name
+爬取豆瓣电影 
+http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
+http://blog.csdn.net/dylanzr/article/details/51764694
+http://blog.csdn.net/konglei1996/article/details/72511632
 
 
