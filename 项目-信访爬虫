@@ -28,6 +28,7 @@ Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer
 Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
 网易云课堂
+Scrapy https://www.jianshu.com/p/e71ff6173302
 =
 # 安装anaconda
 是Python数据分析的发行版本，集成大量第三方的包，再也不用担心安装包的问题了 https://www.jianshu.com/p/169403f7e40c
@@ -48,35 +49,71 @@ Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https:
 # 使用爬虫会用到的知识
 正则表达式
 scrapy的框架
-request对象和response对象 http://blog.csdn.net/a859522265/article/details/7259115
+request对象和response对象:
+http://blog.csdn.net/a859522265/article/details/7259115
 客户机与服务器交换数据时用到，由服务器创立
 ===
 
-# 例子：
-python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
-? response.info
-? 二进制格式转换为str格式
-? 文件读取与写入 http://dwz.cn/7bnhGl
-? read http://www.runoob.com/python/python-file-read.html
-=
-天涯论坛
-搜索-一级页面-二级页面
-=
-scrapy
-Scrapy是一个为了爬取网站数据提取结构性数据而编写的应用框架，省去造轮子的时间
-入门教程 http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html
+# scrapy
+Python爬虫进阶一之爬虫框架概述： 
+https://cuiqingcai.com/2433.html
+http://aljun.me/post/4
+Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
+入门教程： 
 https://doc.scrapy.org/en/1.5/topics/commands.html
+http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html
+工作流程：
+获取url-发送request-接收response-使用spider解析-发送到pipelines存储成想要的形式
+-
+主文件的作用：
+item 用来储存要爬下来的数据的存放容器，类似orm的写法
+spider文件 爬虫文件，解析response的html和xml
+pipeline 执行保存数据的操作
+settings.py 系统设置，主要是反扒操作
+获得response-解析response-存储到item
+-
+出现的错误：
 unknown command : crawl :指定到文件夹路径
-流程：url-request-response-spider-items
-Python爬虫进阶一之爬虫框架概述 https://cuiqingcai.com/2433.html
-scrapy操作步骤：
-
-=
-scrapy 输出的文件为空。网站设置了路障
+scrapy 输出的文件为空。网站设置了路障，或者根本没爬到内容
 spider not found：spider文件名 name
+=
+# 实际案例学习：
+问题：
+? 二进制格式转换为str格式
+-
 爬取豆瓣电影 
-http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
+1 
+scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
 http://blog.csdn.net/dylanzr/article/details/51764694
 http://blog.csdn.net/konglei1996/article/details/72511632
+问题：
+爬取到的结果少了排名201-225的数据
+第二次爬出来的重复
+2
+用scrapy对豆瓣top250页面爬取 
+http://aljun.me/post/5
+http://aljun.me/post/4
+问题：
+crawled 0 pages 没有采集到内容
+3 http://blog.csdn.net/u010814042/article/details/74127309
+-
+需要学习的知识：
+文件读取与写入 http://dwz.cn/7bnhGl
+read http://www.runoob.com/python/python-file-read.html
+类：
+class Student(object)
+object类，这是所有类最终都会继承的类
+yield 变成迭代器 http://dwz.cn/6CFZJh
+问题：
+? def process_item(self, item, spider): item, spider应该是上面已经自动生成的
+===
+
+# 天涯论坛
+http://search.tianya.cn/
+搜索-一级页面-二级页面
+获得xpath 审查元素-copy-copy xpath
+link = response.xpath('//*[@id="main"]/div[@class="searchListOne]/ul/li[1]/div/h3/a/@href').extract()
+不要全盘复制黏贴，因为本身有固定的代码
+must be real number, not str
 
 
