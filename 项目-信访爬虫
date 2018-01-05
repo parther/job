@@ -9,8 +9,8 @@
 0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
 0103 周三 跟着案例学爬虫并用Python实现它
 0104 周四 更高级的爬虫案例并且实现
-0105 周五 从天涯爬取内容；和嘉敏确定爬虫字段，并且统一格式
-0106 周六 从天涯爬取内容
+0105 周五 从天涯爬取内容；和嘉敏确定爬虫字段，并且统一格式；解决翻页的问题
+0106 周六 从天涯爬取内容；解决二级页面爬取的问题
 0108-0113 正式开始爬虫
 ===
 
@@ -84,8 +84,8 @@ spider not found：spider文件名 name
 爬取豆瓣电影 
 1 
 scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-http://blog.csdn.net/dylanzr/article/details/51764694
-http://blog.csdn.net/konglei1996/article/details/72511632
+爬取多个页面的另一个方法 http://blog.csdn.net/dylanzr/article/details/51764694
+爬取单个页面 http://blog.csdn.net/konglei1996/article/details/72511632
 问题：
 爬取到的结果少了排名201-225的数据
 第二次爬出来的重复
@@ -96,6 +96,10 @@ http://aljun.me/post/4
 问题：
 crawled 0 pages 没有采集到内容
 3 http://blog.csdn.net/u010814042/article/details/74127309
+问题：
+返回的是二进制的文件:转编码格式就行了
+爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
+不懂翻页的方法
 -
 需要学习的知识：
 文件读取与写入 http://dwz.cn/7bnhGl
@@ -112,8 +116,20 @@ yield 变成迭代器 http://dwz.cn/6CFZJh
 http://search.tianya.cn/
 搜索-一级页面-二级页面
 获得xpath 审查元素-copy-copy xpath
-link = response.xpath('//*[@id="main"]/div[@class="searchListOne]/ul/li[1]/div/h3/a/@href').extract()
+修改xpath代码即可
 不要全盘复制黏贴，因为本身有固定的代码
+输出的文件有乱码
+输出文件隔行为空
+步骤：
+单页一个字段-单页两个字段-单页二级页面-多页字段及二级页面
+爬虫的原因：
+网上信访人信息和动态
+http://www.tianya.cn/121479133
+姓名 地址 注册时间 发帖数 回帖数 粉丝数
+字段标准：准确，工作量，实现难度
+http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 must be real number, not str
+Rule 指定页面爬取
+
 
 
