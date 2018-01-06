@@ -95,11 +95,11 @@ scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929
 用scrapy对豆瓣top250页面爬取 
 http://aljun.me/post/5
 http://aljun.me/post/4
-scrapy 项目名：douban_spider
+scrapy 项目名：douban_spider 运行失败
 问题：
 crawled 0 pages 没有采集到内容
 3 http://blog.csdn.net/u010814042/article/details/74127309
-scrapy 项目名：top250
+scrapy 项目名：top250 
 问题：
 返回的是二进制的文件:转编码格式就行了
 爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
