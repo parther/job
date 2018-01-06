@@ -84,6 +84,7 @@ spider not found：spider文件名 name
 -
 爬取豆瓣电影 
 1 
+scrapy 项目名：douban
 scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
 爬取多个页面的另一个方法 http://blog.csdn.net/dylanzr/article/details/51764694
 爬取单个页面 http://blog.csdn.net/konglei1996/article/details/72511632
@@ -94,9 +95,11 @@ scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929
 用scrapy对豆瓣top250页面爬取 
 http://aljun.me/post/5
 http://aljun.me/post/4
+scrapy 项目名：douban_spider
 问题：
 crawled 0 pages 没有采集到内容
 3 http://blog.csdn.net/u010814042/article/details/74127309
+scrapy 项目名：top250
 问题：
 返回的是二进制的文件:转编码格式就行了
 爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
