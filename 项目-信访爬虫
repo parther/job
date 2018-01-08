@@ -13,6 +13,7 @@
 0106 周六 实战，并且用更简洁的代码；再次尝试翻页的rule及其他方法
 0106 周六 临时调整工作 协助怡婷整理文档
 0108-0113 正式开始爬虫
+0108 周一 实战爬取一级页面，并且用更简洁的代码；再次尝试翻页的rule及其他方法
 ===
 
 # 爬虫：
@@ -86,7 +87,7 @@ spider not found：spider文件名 name
 1 
 scrapy 项目名：douban
 scrapy爬取豆瓣TOP250电影（转成csv） http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-爬取多个页面的另一个方法 http://blog.csdn.net/dylanzr/article/details/51764694
+爬取多个页面的另一个方法 不使用rule 使用request http://blog.csdn.net/dylanzr/article/details/51764694
 爬取单个页面 http://blog.csdn.net/konglei1996/article/details/72511632
 问题：
 爬取到的结果少了排名201-225的数据
@@ -99,6 +100,7 @@ scrapy 项目名：douban_spider 运行失败
 问题：
 crawled 0 pages 没有采集到内容
 3 http://blog.csdn.net/u010814042/article/details/74127309
+同样的方法加代码解释 http://blog.csdn.net/xiaopihaierletian/article/details/68065505
 scrapy 项目名：top250 
 问题：
 返回的是二进制的文件:转编码格式就行了
@@ -119,7 +121,7 @@ yield 变成迭代器 http://dwz.cn/6CFZJh
 # 天涯论坛
 http://search.tianya.cn/
 流程：
-确定爬取页-确定爬取的字段-采用关联表格，整理到数据库
+确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
 爬虫的原因：
 掌握网上信访人信息和动态
 技术实现战略：
@@ -134,5 +136,8 @@ scrapy项目名称：xinfang0104
 不要全盘复制黏贴，因为本身有固定的代码
 must be real number, not str: 
 -
+./TOP250.csv 根目录
+缩进
+
 
 
