@@ -164,5 +164,7 @@ yield 只能在function里面使用
 -
 二级页面
 使用或不使用for都没有关系
+-
+CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
 
 
