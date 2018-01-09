@@ -27,7 +27,7 @@
 =
 # 爬虫学习文档
 python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
-Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
+
 Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
 网易云课堂
@@ -96,6 +96,7 @@ scrapy爬取豆瓣TOP250电影（转成csv）使用for的方法 http://blog.csdn
 用scrapy对豆瓣top250页面爬取 
 http://aljun.me/post/5
 http://aljun.me/post/4
+Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
 问题：
 crawled 0 pages 没有采集到内容
 3 scrapy 项目名：top250 
@@ -131,13 +132,24 @@ scrapy项目名称：xinfang0104
 问题：
 无法用Rule实现所有页面的爬取，它代替了正则表达式
 输出文件隔行为空
+? 爬取完全没有规律的几个网页内容
 经验：
 获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
 复制文本，再点击审查元素会更快获得xpath路径
 不要全盘复制黏贴，因为本身有固定的代码
 must be real number, not str: 
+可能不能在一个scrapy项目里面使用spider文件
+每一个项目完了以后检查
+xpath不是万能的，对于某些代码是没办法解析的
+将yield放入parse会多出starturl结果
+回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
+以项目为主
+Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
+rule 主要用于爬取二级页面
+反斜杠转义\
 -
 用于尝试的页面 http://blog.csdn.net/u010814042/article/list/1
+xpath 无法执行任务
 -
 单页面：
 项目文件：summary-single_page
@@ -148,7 +160,7 @@ yield 只能在function里面使用
 -
 多页面：
 1 使用for的方法
-2 使用rule的方法
+2 使用rule的方法 失败
 -
 二级页面
 使用或不使用for都没有关系
