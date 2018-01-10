@@ -15,7 +15,7 @@
 0108-0113 正式开始爬虫
 0108 周一 实战爬取一级页面，并且用更简洁的代码；再次尝试翻页的rule及其他方法
 0109 周二 复盘爬取经验；实现二级页面的爬取
-0110 周三 天涯多页面二级页面的爬取。爬虫经验的复盘
+0110 周三 天涯多页面二级页面的爬取。爬虫经验的复盘；爬一个页面
 ===
 
 # 爬虫：
@@ -125,7 +125,7 @@ http://search.tianya.cn/
 流程：
 确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
 爬虫的原因：
-掌握网上信访人信息和动态
+掌握网上信访人信息和动态，近半年的动态
 技术实现战略：
 实现难度
 scrapy项目名称：xinfang0104
@@ -133,7 +133,7 @@ scrapy项目名称：xinfang0104
 问题：
 无法用Rule实现所有页面的爬取，它代替了正则表达式
 输出文件隔行为空
-? 爬取完全没有规律的几个网页内容
+? 爬取完全没有规律的几个网页内容，在starturl能解决不
 经验：
 获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
 复制文本，再点击审查元素会更快获得xpath路径
@@ -146,7 +146,7 @@ xpath不是万能的，对于某些代码是没办法解析的
 回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
 以项目为主
 Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
-rule 主要用于爬取二级页面
+rule 主要用于爬取二级页面，从开始的url找。第一个表示递归页面，第二个是要爬取的页面
 反斜杠转义\
 -
 用于尝试的页面 http://blog.csdn.net/u010814042/article/list/1
@@ -169,5 +169,14 @@ yield 只能在function里面使用
 CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
 正则表达式表示数字1到65
 网页从starturl开始爬，爬取的内容可能会重复
-
+爬虫并不是按照顺序爬取
+用for循环存在效率低下的问题
+timesleep 随机休眠
+500 Servlet Exception
+有些结果就是爬不下来
+可能会用到js代码
+数据探索。发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
+最多通过自己的发帖回帖
+ip和session
+如何判断谁是谁的内容
 
