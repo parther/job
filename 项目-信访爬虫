@@ -16,6 +16,8 @@
 0108 周一 实战爬取一级页面，并且用更简洁的代码；再次尝试翻页的rule及其他方法
 0109 周二 复盘爬取经验；实现二级页面的爬取
 0110 周三 天涯多页面二级页面的爬取。爬虫经验的复盘；爬一个页面
+0111 周四 从实际出发，爬取二级页面，爬取最终页面
+0112 周五 爬取多页 二级页面 最终页面
 ===
 
 # 爬虫：
@@ -23,16 +25,8 @@
 网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
 爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
 -
-流程：
-获取数据-从数据中获取想要的数据-存储
-=
-# 爬虫学习文档
-python3 爬虫之路 http://blog.csdn.net/column/details/python3-spider.html
-
-Python爬虫学习系列教程 https://cuiqingcai.com/1052.html
-Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
-网易云课堂
-Scrapy https://www.jianshu.com/p/e71ff6173302
+request对象和response对象。客户机与服务器交换数据时用到，由服务器创立
+http://blog.csdn.net/a859522265/article/details/7259115
 =
 # 安装anaconda
 是Python数据分析的发行版本，集成大量第三方的包，再也不用担心安装包的问题了 https://www.jianshu.com/p/169403f7e40c
@@ -42,141 +36,96 @@ Scrapy https://www.jianshu.com/p/e71ff6173302
 1 anaconda prompt-anaconda install package_name
 2 anaconda navigator
 包只会安装最新的
-=
-# 使用爬虫会遇到的困难：
-需要模拟浏览器方式访问
-需要登录
-需要cookie
-需要动态验证码
-跑不动，对方通过行为判定爬虫行为
-=
-# 使用爬虫会用到的知识
-正则表达式
-scrapy的框架
-request对象和response对象:
-http://blog.csdn.net/a859522265/article/details/7259115
-客户机与服务器交换数据时用到，由服务器创立
 ===
 
 # scrapy
+Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
 Python爬虫进阶一之爬虫框架概述： 
 https://cuiqingcai.com/2433.html
 http://aljun.me/post/4
-Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
 入门教程： 
 https://doc.scrapy.org/en/1.5/topics/commands.html
-http://scrapy-chs.readthedocs.io/zh_CN/latest/intro/tutorial.html
 工作流程：
 获取url-发送request-接收response-使用spider解析-发送到pipelines存储成想要的形式
 -
 主文件的作用：
-item 用来储存要爬下来的数据的存放容器，类似orm的写法
 spider文件 爬虫文件，解析response的html和xml
-pipeline 执行保存数据的操作
+item 用来储存要爬下来的数据的存放容器，类似orm的写法
 settings.py 系统设置，主要是反扒操作
-获得response-解析response-存储到item
+pipeline 执行保存数据的操作
 -
-出现的错误：
+Scrapy报错：
 unknown command : crawl :指定到文件夹路径
-scrapy 输出的文件为空。网站设置了路障，或者根本没爬到内容
-spider not found：spider文件名 name
+403。网站屏蔽了IP
+-
+经验：
+Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
 =
-# 实际案例学习：
-问题：
-? 二进制格式转换为str格式
--
-爬取豆瓣电影 
-1 scrapy 项目名：douban
-scrapy爬取豆瓣TOP250电影（转成csv）使用for的方法 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-爬取多个页面的另一个方法 不使用rule 使用request http://blog.csdn.net/dylanzr/article/details/51764694
-爬取多个页面的另一个方法2 不使用rule http://blog.csdn.net/konglei1996/article/details/72511632
-问题：
-爬取到的结果少了排名201-225的数据
-第二次爬出来的重复
-2 scrapy 项目名：douban_spider 运行失败
-用scrapy对豆瓣top250页面爬取 
-http://aljun.me/post/5
-http://aljun.me/post/4
-Python 3 网络爬虫学习建议 https://www.zhihu.com/question/41277528/answer/96409506
-问题：
-crawled 0 pages 没有采集到内容
-3 scrapy 项目名：top250 
+# 从案例学习scrapy
 用rule爬取到2级页面 http://blog.csdn.net/u010814042/article/details/74127309
-同样的方法加代码解释 http://blog.csdn.net/xiaopihaierletian/article/details/68065505
-问题：
-返回的是二进制的文件:转编码格式就行了
-爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
-不懂翻页的方法
-ip被封掉
+使用for方法爬取多页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
+爬取多页 http://blog.csdn.net/konglei1996/article/details/72511632
+爬取多页2 request http://blog.csdn.net/dylanzr/article/details/51764694
 -
-需要学习的知识：
+问题：
+class Student(object)，object类，这是所有类最终都会继承的类
 文件读取与写入 http://dwz.cn/7bnhGl
 read http://www.runoob.com/python/python-file-read.html
-类：
-class Student(object)
-object类，这是所有类最终都会继承的类
 yield 变成迭代器 http://dwz.cn/6CFZJh
-问题：
-? def process_item(self, item, spider): item, spider应该是上面已经自动生成的
+-
+经验：
+爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
+def process_item(self, item, spider): item, spider应该是上面已经自动生成的
 ===
 
 # 天涯论坛
 http://search.tianya.cn/
-流程：
-确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
+http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 爬虫的原因：
 掌握网上信访人信息和动态，近半年的动态
-技术实现战略：
-实现难度
-scrapy项目名称：xinfang0104
+流程：
+确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
+数据探索：
+发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
+最多通过自己的发帖回帖
 -
 问题：
-无法用Rule实现所有页面的爬取，它代替了正则表达式
 输出文件隔行为空
-? 爬取完全没有规律的几个网页内容，在starturl能解决不
+有些结果就是爬不下来
+限制匹配个数 如只能匹配3个字符
+多级页面爬取 如何匹配id和内容
+用for方法的爬取顺序乱
+-
 经验：
+每运行完一个spider文件，吃透它
+从返回命令中找失败的原因
+从成功中总结经验，并且不断测试，形成固定的方法论
+从项目入手，测试需要的结果
+注重效率，不用怕犯错
+八爪鱼试试
+
 获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
 复制文本，再点击审查元素会更快获得xpath路径
 不要全盘复制黏贴，因为本身有固定的代码
-must be real number, not str: 
-可能不能在一个scrapy项目里面使用spider文件
-每一个项目完了以后检查
+must be real number, not str: 一般是正则表达的问题
+''' 与下行的缩进保持一致才不会报错
+rule 用于爬取二级页面
+CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
+Selector和response的用法没有差别，可互相替换
+用for语句存储item才能保证爬取的字符在Excel中单独显示
 xpath不是万能的，对于某些代码是没办法解析的
 将yield放入parse会多出starturl结果
 回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
-以项目为主
+爬虫并不是按照顺序爬取
+500 Servlet Exception 直接输入链接可以解决
+
 Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
-rule 主要用于爬取二级页面，从开始的url找。第一个表示递归页面，第二个是要爬取的页面
 反斜杠转义\
--
-用于尝试的页面 http://blog.csdn.net/u010814042/article/list/1
-xpath 无法执行任务
--
-单页面：
-项目文件：summary-single_page
-Selector和response的用法没有差别，可互相替换
-''' 与下行的缩进保持一致才不会报错
-用for语句存储item才能保证爬取的字符在Excel中单独显示
 yield 只能在function里面使用
 -
-多页面：
-1 使用for的方法
-2 使用rule的方法 失败
--
-二级页面
-使用或不使用for都没有关系
--
-CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
-正则表达式表示数字1到65
-网页从starturl开始爬，爬取的内容可能会重复
-爬虫并不是按照顺序爬取
-用for循环存在效率低下的问题
+http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5 是可以用rule爬到4级页面的
+不同的项目文件，结果竟然会不一样。可能原因是网址变了
+Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
 timesleep 随机休眠
-500 Servlet Exception
-有些结果就是爬不下来
-可能会用到js代码
-数据探索。发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
-最多通过自己的发帖回帖
-ip和session
-如何判断谁是谁的内容
+
 
