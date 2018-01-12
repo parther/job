@@ -17,8 +17,8 @@
 0109 周二 复盘爬取经验；实现二级页面的爬取
 0110 周三 天涯多页面二级页面的爬取。爬虫经验的复盘；爬一个页面
 0111 周四 从实际出发，爬取二级页面，爬取最终页面
-0112 周五 实现天涯单页多级页面的爬取v；爬取最终页的内容和评论v-；下午4点跟梦圆讨论下
-0113 周六 多页多级爬取
+0112 周五 实现天涯单页多级页面的爬取v；爬取最终页的内容和评论v；下午4点跟梦圆讨论下
+0113 周六 从实际出发，各级别页面小规模测试；解决csv隔行等问题；大规模页面爬取，使用反扒措施
 ===
 
 # 爬虫：
@@ -90,63 +90,10 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
 最多通过自己的发帖回帖
 图片是少数
--
-问题：
-输出文件隔行为空
-有些结果就是爬不下来
-限制匹配个数 如只能匹配3个字符
-多级页面爬取 如何匹配id和内容
-用for方法的爬取顺序乱
--
-经验：
-每运行完一个spider文件，吃透它
-从返回命令中找失败的原因
-从成功中总结经验，并且不断测试，形成固定的方法论
-从项目入手，测试需要的结果
-注重效率，不用怕犯错
-八爪鱼试试
-
-获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
-复制文本，再点击审查元素会更快获得xpath路径
-不要全盘复制黏贴，因为本身有固定的代码
-must be real number, not str: 一般是正则表达的问题
-''' 与下行的缩进保持一致才不会报错
-rule 用于爬取二级页面
-CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
-Selector和response的用法没有差别，可互相替换
-用for语句存储item才能保证爬取的字符在Excel中单独显示
-xpath不是万能的，对于某些代码是没办法解析的
-将yield放入parse会多出starturl结果
-回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
-爬虫并不是按照顺序爬取
-500 Servlet Exception 直接输入链接可以解决
-
-Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
-反斜杠转义\
-yield 只能在function里面使用
--
-http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5 是可以用rule爬到4级页面的
-不同的项目文件，结果竟然会不一样。可能原因是网址变了
-Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
-timesleep 随机休眠
-文章中有图片该如何处理
-没有评论的内容 该如何处理
-能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
-分布式 提高爬虫的效率
 一般针对评论的回复比较少，上图的也少
-针对主贴评论人分析昵称所指的人
-昵称会变，如何确定
-if not a ;if a=='' ;if a 判断为空
-response.xpath 返回的是list数据
-scrapy crawl 不能直接跟py文件
-设置notepad 消灭空格 技术产生进步 
-评论为独立的模块
-寻找xpath，可以将多个要爬取的xpath拿出来比较而得出规律
-多条评论与id衔接的问题
-list out of range 条目不对
-只显示第一评论 因为有的条目只有一条
-'//div[@class="bbs-content"]/text()' xpath的另一种方式
+昵称会变，如何确定。针对主贴评论人分析昵称所指的人，但有可能是专门帮忙发帖的
 天涯盖楼最多可以盖到100楼
+-
 主表结构：
 1 姓名-基本信息
 2 姓名-帖子标题及内容
@@ -157,8 +104,6 @@ list out of range 条目不对
 单页多级
 多页/多页多内容
 多页多级
-
--
 4级页面-主贴页需要抓取的内容：
 标题v
 姓名v
@@ -170,6 +115,56 @@ list out of range 条目不对
 回帖时间v
 回帖内容v
 针对回帖的打赏、评论、回复、赞
+-
+问题：
+输出文件隔行为空 之前在item文件里面写，看是否有其他方法 
+有些结果就是爬不下来
+限制匹配个数 如只能匹配3个字符
+多级页面爬取 如何匹配id和内容
+用for方法的爬取顺序乱
+文章中有图片该如何处理
+-
+经验：
+每运行完一个spider文件，吃透它
+从返回命令中找失败的原因
+从成功中总结经验，并且不断测试，形成固定的方法论
+从项目入手，测试需要的结果
+注重效率，不用怕犯错
+八爪鱼试试
+设置notepad 消灭空格 技术产生进步
 
+获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
+复制文本，再点击审查元素会更快获得xpath路径
+寻找xpath，可以将多个要爬取的xpath拿出来比较而得出规律
+'//div[@class="bbs-content"]/text()' xpath的另一种方式
+xpath不是万能的，对于某些代码是没办法解析的
+不要全盘复制黏贴，因为本身有固定的代码
+must be real number, not str: 一般是正则表达的问题
+''' 与下行的缩进保持一致才不会报错
+rule 用于爬取二级页面
+CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
+Selector和response的用法没有差别，可互相替换
+用for语句存储item才能保证爬取的字符在Excel中单独显示
+将yield放入parse会多出starturl结果
+回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
+爬虫并不是按照顺序爬取
+500 Servlet Exception 直接输入链接可以解决
+http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5 是可以用rule爬到4级页面的
+不同的项目文件，结果竟然会不一样。可能原因是网址变了
+response.xpath 返回的是list数据
+scrapy crawl 不能直接跟py文件
+
+Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
+反斜杠转义\
+yield 只能在function里面使用
+if not a ;if a=='' ;if a 判断为空
+list out of range 条目不对
+-
+
+Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
+timesleep 随机休眠
+能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
+分布式 提高爬虫的效率
+csv顺序 https://www.jianshu.com/p/fd6f7eba6abe
 
 
