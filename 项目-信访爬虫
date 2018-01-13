@@ -18,7 +18,8 @@
 0110 周三 天涯多页面二级页面的爬取。爬虫经验的复盘；爬一个页面
 0111 周四 从实际出发，爬取二级页面，爬取最终页面
 0112 周五 实现天涯单页多级页面的爬取v；爬取最终页的内容和评论v；下午4点跟梦圆讨论下
-0113 周六 从实际出发，各级别页面小规模测试；解决csv隔行等问题；大规模页面爬取，使用反扒措施
+0113 周六 从实际出发，各级别页面小规模测试；大规模页面爬取，使用反扒措施；解决csv隔行等问题
+0115-0120 大规模爬取
 ===
 
 # 爬虫：
@@ -86,6 +87,7 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 掌握网上信访人信息和动态，近半年的动态
 流程：
 确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
+-
 数据探索：
 发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
 最多通过自己的发帖回帖
@@ -93,17 +95,35 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 一般针对评论的回复比较少，上图的也少
 昵称会变，如何确定。针对主贴评论人分析昵称所指的人，但有可能是专门帮忙发帖的
 天涯盖楼最多可以盖到100楼
+猜测 昵称会变，但是个人主页uid是不会变
+能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
 -
 主表结构：
 1 姓名-基本信息
 2 姓名-帖子标题及内容
 3 姓名-帖子标题及内容-评论及姓名
 4 姓名-帖子标题及内容-评论及姓名-回复
+5 姓名-回帖内容
 页面处理的层次：
 单页/单页多内容
 单页多级
 多页/多页多内容
 多页多级
+2级页面-个人主页需要抓取的内容：
+昵称
+关注个数 
+粉丝个数 说明影响力
+积分 说明活跃度
+注册日期 说明上访事件发生的节点
+生日
+地区
+行业
+职业
+标签
+个人介绍
+主贴数 说明活跃度
+回帖数 说明活跃度
+3及页面-关注和粉丝：
 4级页面-主贴页需要抓取的内容：
 标题v
 姓名v
@@ -117,12 +137,18 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 针对回帖的打赏、评论、回复、赞
 -
 问题：
-输出文件隔行为空 之前在item文件里面写，看是否有其他方法 
+输出文件隔行为空
+http://blog.csdn.net/kangqianglong/article/details/53173575
+https://segmentfault.com/q/1010000010632474
 有些结果就是爬不下来
 限制匹配个数 如只能匹配3个字符
 多级页面爬取 如何匹配id和内容
 用for方法的爬取顺序乱
 文章中有图片该如何处理
+抽取链接后的数字如 http://www.tianya.cn/130935919
+用for方法翻页无法实现自动化采集，但是可以作为权宜之计
+分布式 提高爬虫的效率
+爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
 -
 经验：
 每运行完一个spider文件，吃透它
@@ -130,7 +156,7 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 从成功中总结经验，并且不断测试，形成固定的方法论
 从项目入手，测试需要的结果
 注重效率，不用怕犯错
-八爪鱼试试
+使用现成的爬虫工具如八爪鱼
 设置notepad 消灭空格 技术产生进步
 
 获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
@@ -153,6 +179,9 @@ http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5 是可以用rule爬到4级页面�
 不同的项目文件，结果竟然会不一样。可能原因是网址变了
 response.xpath 返回的是list数据
 scrapy crawl 不能直接跟py文件
+存储路径的两种写法：
+FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
+FEED_URI = './xf_info.csv'
 
 Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
 反斜杠转义\
@@ -163,8 +192,17 @@ list out of range 条目不对
 
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
 timesleep 随机休眠
-能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
-分布式 提高爬虫的效率
-csv顺序 https://www.jianshu.com/p/fd6f7eba6abe
+IP 代理池 http://blog.csdn.net/u011781521/article/details/70194744?locationNum=4&fps=1
+利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
+
+1 js动态页面加载，内容在源码里是看不到的
+post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
+火狐firebug可看动态加载的内容
+Python爬虫利器五之Selenium的用法 https://cuiqingcai.com/2599.html
+Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
+2 数据能读取到，但是xpath没有规律 信息列的。直接全部爬取下来
+https://www.jianshu.com/p/4e6e42945f05
+http://www.tianya.cn/134503625
+http://www.tianya.cn/113953041
 
 
