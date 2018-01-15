@@ -23,7 +23,7 @@
 0115 周一 设置代理反爬，爬取info
 0116 周二 设置代理反爬，爬取info
 0117 周三 爬取post、reply、comment
-0118 周四
+0118 周四 再次解决各类问题
 0119 周五
 0120 周六
 ===
@@ -197,9 +197,16 @@ must be real number, not str: 一般是正则表达的问题
 ---
 
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
+ip 限制
+模拟登陆
+验证码
+ajax动态加载
+cookie限制
 timesleep 随机休眠
-IP 代理池 http://blog.csdn.net/u011781521/article/details/70194744?locationNum=4&fps=1
+Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744?locationNum=4&fps=1
 利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
+为什么scrapy没法爬中纪委网站 scrapy https://www.zhihu.com/question/31015275
+在Scrapy中使用IP池或用户代理更新版（python3） https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
 
 1 js动态页面加载，内容在源码里是看不到的
 post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
@@ -210,5 +217,41 @@ Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
 https://www.jianshu.com/p/4e6e42945f05
 http://www.tianya.cn/134503625
 http://www.tianya.cn/113953041
+parse_item callback指向要准确
+成功运行的记录，每次都要重复劳动，必须保存运行成功的文件
+
+使用rule提取不到内容 会不会是xpath的问题，获取没获取到js
+有时爬的到，有时爬不到
+//div[@class="portrait"]/h2/a[1]/text() 一定要双引号 
+爬取出来的信息少了，scrapy的自动去重机制，rule
+用for使用多页爬取，结合rules多级，返回503错误。与网站有关，服务器过载或者直接把我禁掉了
+为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间
+更换user-agent设置、更换访问IP
+保存Cookie然后再用Cookie登陆就好
+被天涯判断为爬虫，出现robot.txt文档 修改是否遵守约定
+国内高匿代理IP http://www.xicidaili.com/nn/2640
+python获取代理 http://blog.csdn.net/hellohaibo/article/details/77601380
+从最终目的开始跑 要设置小范围测试，并且保存结果
+Scrapy遇到的坑 http://blog.csdn.net/fengzheku/article/details/53929694
+翻到第2页 没有找到帖子
+10个条目，一个重复，还有一个没有显示出来 该用户已经被删除
+用于测试 http://blog.csdn.net/fengzheku/article/list/1
+
+scrapy 集合https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
+提升性能 https://segmentfault.com/a/1190000009321902
+查看header
+部分反爬策略即是基于单位时间内的请求数，降低爬虫的并发访问数量 CONCURRENT_REQUESTS = 100
+并且延长各个请求之间的间隔时间 DOWMLOAD_DELY=3
+设置随机DOWMLOAD_DELY
+更改header
+更换访问IP
+查看header的方法 审查元素-Ctrl+r刷新-all-name-header
+解决方法：
+某一次获取失败之后，重启将url放入待抓取队列 https://www.zhihu.com/question/53709410
+设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
+因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058
+更换user-agent设置、更换访问IP https://www.zhihu.com/question/34505058
+翻页的间隔。for方法
+官方自带翻页方法，可能要解决JavaScript的问题
 
 
