@@ -216,7 +216,7 @@ csdn http://blog.csdn.net/fengzheku/article/list/1
 预计是ip代理中间件的问题
 关于代理：
 Scrapy突破反爬虫的限制 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-Scrapy突破反爬虫的限制 useragent 和 iphttps://www.cnblogs.com/jinxiao-pu/p/6665180.html
+Scrapy突破反爬虫的限制 useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6665180.html
 在Scrapy中使用IP池或用户代理 https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
 在Scrapy中使用IP池或用户代理-分页模式 http://jinbitou.net/2016/12/01/2229.html
 Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744
