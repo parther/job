@@ -203,26 +203,24 @@ list out of range 条目不对
 must be real number, not str: 一般是正则表达的问题
 ''' 与下行的缩进保持一致才不会报错
 查看header的方法 审查元素-Ctrl+r刷新-all-name-header
+anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代码
+国内高匿代理IP http://www.xicidaili.com/nn/2640
+利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
+直接使用list获得useragent http://blog.csdn.net/LCYong_/article/details/72854470
 ---
 用于测试的网址：
 csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
 ---
+使用ip代理出现404错误：
+预计是ip代理中间件的问题
 关于代理：
-Scrapy突破反爬虫的限制 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-https://github.com/pujinxiao
-Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
+Scrapy突破反爬虫的限制 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+Scrapy突破反爬虫的限制 useragent 和 iphttps://www.cnblogs.com/jinxiao-pu/p/6665180.html
+在Scrapy中使用IP池或用户代理 https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
+在Scrapy中使用IP池或用户代理-分页模式 http://jinbitou.net/2016/12/01/2229.html
 Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744
-利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
-为什么scrapy没法爬中纪委网站 scrapy https://www.zhihu.com/question/31015275
-在Scrapy中使用IP池或用户代理更新版（python3） https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
-国内高匿代理IP http://www.xicidaili.com/nn/2640
-python获取代理 http://blog.csdn.net/hellohaibo/article/details/77601380
-Scrapy突破反爬虫的限制 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代码
-直接使用list获得useragent http://blog.csdn.net/LCYong_/article/details/72854470
-Scrapy爬取美女图片第四集 突破反爬虫(上) https://www.cnblogs.com/qiyeboy/p/5577036.html
-Scrapy学习笔记(6)-反爬虫与反反爬虫策略 http://jinbitou.net/2016/12/01/2229.html
+洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
