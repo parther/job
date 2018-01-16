@@ -209,13 +209,20 @@ csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 
 ---
 关于代理：
+Scrapy突破反爬虫的限制 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+https://github.com/pujinxiao
 Python爬虫|深入请求（四）常见的反爬机制以及应对方法 https://zhuanlan.zhihu.com/p/21558661
-Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744?locationNum=4&fps=1
+Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744
 利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
 为什么scrapy没法爬中纪委网站 scrapy https://www.zhihu.com/question/31015275
 在Scrapy中使用IP池或用户代理更新版（python3） https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
 国内高匿代理IP http://www.xicidaili.com/nn/2640
 python获取代理 http://blog.csdn.net/hellohaibo/article/details/77601380
+Scrapy突破反爬虫的限制 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代码
+直接使用list获得useragent http://blog.csdn.net/LCYong_/article/details/72854470
+Scrapy爬取美女图片第四集 突破反爬虫(上) https://www.cnblogs.com/qiyeboy/p/5577036.html
+Scrapy学习笔记(6)-反爬虫与反反爬虫策略 http://jinbitou.net/2016/12/01/2229.html
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
@@ -230,16 +237,17 @@ http://www.tianya.cn/113953041
 -
 多页面多条目二级爬取，部分结果无法爬出，返回503错误
 503解决方法：
-1 某一次获取失败之后，重启将url放入待抓取队列 https://www.zhihu.com/question/53709410
-设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
-2 因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058
+2 因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
 scrapy 集合https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
 提升性能 https://segmentfault.com/a/1190000009321902
 部分反爬策略即是基于单位时间内的请求数，降低爬虫的并发访问数量 CONCURRENT_REQUESTS = 100
 并且延长各个请求之间的间隔时间 DOWMLOAD_DELY=3
+第二天早上再次爬取，能够爬取到想要的结果
 3 更换user-agent设置、更换访问IP https://www.zhihu.com/question/34505058
-3 翻页的间隔
+1 某一次获取失败之后，重启将url放入待抓取队列 https://www.zhihu.com/question/53709410
+设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
+4 翻页的间隔
 for方法，随机间隔
-4 官方自带翻页方法，可能要解决JavaScript的问题
+5 官方自带翻页方法，可能要解决JavaScript的问题
 
 
