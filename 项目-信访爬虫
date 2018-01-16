@@ -206,7 +206,7 @@ must be real number, not str: 一般是正则表达的问题
 ---
 用于测试的网址：
 csdn http://blog.csdn.net/fengzheku/article/list/1
-豆瓣 
+豆瓣 https://movie.douban.com/top250
 ---
 关于代理：
 Scrapy突破反爬虫的限制 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
