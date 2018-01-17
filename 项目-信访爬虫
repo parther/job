@@ -222,6 +222,13 @@ Scrapy突破反爬虫的限制 useragent 和 ip https://www.cnblogs.com/jinxiao-
 Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744
 洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
 -
+10060 错误：
+1 内部网络的问题，本机ip没问题。本网络对于外网的访问策略限制 I have switcheed on another network and it worked
+https://stackoverflow.com/questions/46055295/scrapy-set-tcp-connect-timeout
+使用startURL的方法 http://blog.csdn.net/loguat/article/details/74740229
+可能是网速不稳定
+scrapy脚本滞后
+-
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
 post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
