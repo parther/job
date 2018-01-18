@@ -232,7 +232,7 @@ https://stackoverflow.com/questions/46055295/scrapy-set-tcp-connect-timeout
 可能是网速不稳定
 scrapy脚本滞后
 没有写端口的地址
-用下别人电脑ip
+用下别人电脑ip 使用代理服务器
 -
 重新测试：
 1 
