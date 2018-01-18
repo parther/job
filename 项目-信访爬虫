@@ -53,6 +53,7 @@ https://cuiqingcai.com/2433.html
 http://aljun.me/post/4
 入门教程： 
 https://doc.scrapy.org/en/1.5/topics/commands.html
+中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
 工作流程：
 获取url-发送request-接收response-使用spider解析-发送到pipelines存储成想要的形式
 -
@@ -223,11 +224,20 @@ Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u0117
 洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
 -
 10060 错误：
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
 1 内部网络的问题，本机ip没问题。本网络对于外网的访问策略限制 I have switcheed on another network and it worked
 https://stackoverflow.com/questions/46055295/scrapy-set-tcp-connect-timeout
 使用startURL的方法 http://blog.csdn.net/loguat/article/details/74740229
 可能是网速不稳定
 scrapy脚本滞后
+没有写端口的地址
+用下别人电脑ip
+-
+重新测试：
+1 
+http://www.codes51.com/itwd/3912345.html
+《Learning Scrapy》（中文版） https://www.jianshu.com/p/9d1e00dc40e4
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
