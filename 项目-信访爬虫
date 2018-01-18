@@ -65,7 +65,6 @@ pipeline 执行保存数据的操作
 -
 Scrapy报错：
 unknown command : crawl :指定到文件夹路径
-403。网站屏蔽了IP
 -
 经验：
 Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
@@ -156,6 +155,7 @@ https://segmentfault.com/q/1010000010632474
 抽取链接后的数字如 http://www.tianya.cn/130935919
 用for方法翻页无法实现自动化采集，但是可以作为权宜之计
 分布式 提高爬虫的效率
+使用ip代理出现404错误：
 -
 经验：
 每运行完一个spider文件，吃透它
@@ -195,6 +195,11 @@ FEED_URI = './xf_info.csv'
 //div[@class="portrait"]/h2/a[1]/text() 一定要双引号 
 被天涯判断为爬虫，出现robot.txt文档 修改是否遵守约定
 翻到第2页，没有找到帖子，是偶尔情况
+不使用框架开代理 http://blog.csdn.net/loguat/article/details/74740229
+ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
+scrapy案例参考 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
+提升scrapy的性能 https://segmentfault.com/a/1190000009321902
+获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
 -
 Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
 反斜杠转义\
@@ -213,33 +218,18 @@ anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代�
 csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
 ---
-使用ip代理出现404错误：
-预计是ip代理中间件的问题
-关于代理：
-Scrapy突破反爬虫的限制 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-Scrapy突破反爬虫的限制 useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6665180.html
-在Scrapy中使用IP池或用户代理 https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
-在Scrapy中使用IP池或用户代理-分页模式 http://jinbitou.net/2016/12/01/2229.html
-Python爬虫系列之----Scrapy(七)使用IP代理池 http://blog.csdn.net/u011781521/article/details/70194744
+设置ip代理和user-agent：
+随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6665180.html
+useragent 和 ip 2  https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
+自动更新IP池 http://blog.csdn.net/u011781521/article/details/70194744
 洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
--
-10060 错误：
-twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 
-由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
-1 内部网络的问题，本机ip没问题。本网络对于外网的访问策略限制 I have switcheed on another network and it worked
-https://stackoverflow.com/questions/46055295/scrapy-set-tcp-connect-timeout
-使用startURL的方法 http://blog.csdn.net/loguat/article/details/74740229
-可能是网速不稳定
-scrapy脚本滞后
-没有写端口的地址
-用下别人电脑ip 使用代理服务器
+使用的ip必须开代理，必须加端口
 API提取
 -
-重新测试：
-1 
-http://www.codes51.com/itwd/3912345.html
-《Learning Scrapy》（中文版） https://www.jianshu.com/p/9d1e00dc40e4
-ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
+twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 
+由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
+使用的ip没有填写端口地址
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
@@ -252,22 +242,10 @@ https://www.jianshu.com/p/4e6e42945f05
 http://www.tianya.cn/134503625
 http://www.tianya.cn/113953041
 -
-多页面多条目二级爬取，部分结果无法爬出，返回503错误
+多页面多条目二级爬取，部分结果无法爬出，返回503错误：
+因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
 设置翻页间隔为6秒
-503解决方法：
-2 因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
-scrapy 集合https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
-提升性能 https://segmentfault.com/a/1190000009321902
-部分反爬策略即是基于单位时间内的请求数，降低爬虫的并发访问数量 CONCURRENT_REQUESTS = 100
-并且延长各个请求之间的间隔时间 DOWMLOAD_DELY=3
 第二天早上再次爬取，能够爬取到想要的结果
-3 更换user-agent设置、更换访问IP https://www.zhihu.com/question/34505058
-1 某一次获取失败之后，重启将url放入待抓取队列 https://www.zhihu.com/question/53709410
-设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
-4 翻页的间隔
-for方法，随机间隔
-5 官方自带翻页方法，可能要解决JavaScript的问题
+? 翻页的间隔
 
-1 useragent
-2 
 
