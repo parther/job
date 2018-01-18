@@ -233,11 +233,13 @@ https://stackoverflow.com/questions/46055295/scrapy-set-tcp-connect-timeout
 scrapy脚本滞后
 没有写端口的地址
 用下别人电脑ip 使用代理服务器
+API提取
 -
 重新测试：
 1 
 http://www.codes51.com/itwd/3912345.html
 《Learning Scrapy》（中文版） https://www.jianshu.com/p/9d1e00dc40e4
+ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
@@ -251,6 +253,7 @@ http://www.tianya.cn/134503625
 http://www.tianya.cn/113953041
 -
 多页面多条目二级爬取，部分结果无法爬出，返回503错误
+设置翻页间隔为6秒
 503解决方法：
 2 因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
 scrapy 集合https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
@@ -265,4 +268,6 @@ scrapy 集合https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A
 for方法，随机间隔
 5 官方自带翻页方法，可能要解决JavaScript的问题
 
+1 useragent
+2 
 
