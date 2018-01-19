@@ -244,8 +244,9 @@ twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060:
 ? 爬取10个页面时，出现8个500 错误
 -
 post
-三级页面获取不到，四级页面
-贪婪匹配，4级根本没有获取到
+三级页面获取不到
+在页面中抓取不到地址
+曾经的4级根本没有获取到，是在原链接中已有的
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
 post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
@@ -257,3 +258,9 @@ https://www.jianshu.com/p/4e6e42945f05
 http://www.tianya.cn/134503625
 http://www.tianya.cn/113953041
 -
+梦圆建议：
+设置从某一天开始爬
+使用request一级一级爬，以防被封掉
+
+
+
