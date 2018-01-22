@@ -26,6 +26,14 @@
 0118 周四 再次解决各类问题
 0119 周五 解决翻页获取的问题
 0120 周六
+-
+0122-0127 大规模爬取
+0122 周一 用meta解决翻页的问题
+0123 周二 翻页加js爬取
+0124 周三 停车总结
+0125 周四 连接mysql
+0126 周五 个页面就绪
+
 ===
 
 # 爬虫：
@@ -217,6 +225,8 @@ anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代�
 用于测试的网址：
 csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
+http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
+http://quotes.toscrape.com
 ---
 设置ip代理和user-agent：
 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
@@ -253,10 +263,8 @@ post
 2 逐级爬取
 3 
 meta 二级页面 爬虫
-http://www.maiziedu.com/wiki/crawler/multi/
-https://www.jianshu.com/p/fe8a75284f9b
-https://www.cnblogs.com/zhangtianyuan/p/6829781.html
-https://www.cnblogs.com/rubinorth/p/5963066.html
+有案例 但是没有完整的代码 http://www.maiziedu.com/wiki/crawler/multi/
+案例有问题 https://www.jianshu.com/p/fe8a75284f9b
 -
 关于js：
 1 js动态页面加载，内容在源码里是看不到的
@@ -273,6 +281,8 @@ http://www.tianya.cn/113953041
 设置从某一天开始爬
 使用request一级一级爬，以防被封掉
 数据存储到数据库
-PyCharm
-
+PyCharm http://www.sohu.com/a/130930939_468739
+爬虫教程 https://cuiqingcai.com/1052.html
+Scrapy配合Selenium和PhantomJS爬取动态网页 http://blog.csdn.net/Julkot/article/details/77312116
+http://blog.csdn.net/column/details/python3-spider.html
 
