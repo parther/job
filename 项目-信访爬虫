@@ -284,9 +284,22 @@ http://www.tianya.cn/113953041
 数据存储到数据库
 PyCharm http://www.sohu.com/a/130930939_468739
 爬虫教程 https://cuiqingcai.com/1052.html
-Scrapy配合Selenium和PhantomJS爬取动态网页 http://blog.csdn.net/Julkot/article/details/77312116
-http://blog.csdn.net/column/details/python3-spider.html
+爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
 response.url 本链接
 总结 无法显示的内容 翻页js
+scrapy js的两种处理技巧 http://www.maiziedu.com/wiki/crawler/js/
+利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
+利用Scrapy-Splash抓取JS动态渲染的网页数据 https://www.mylonly.com/15052000291680.html
+
+Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
+Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
+http://blog.csdn.net/kangqianglong/article/details/62045982
+
+无界面依赖的浏览器引擎 Casperjs、Phantomjs
+PhantomJS就是一个没有界面的浏览器，提供了JavaScript接口
+Python爬虫利器四之PhantomJS的用法 https://cuiqingcai.com/2577.html
+chromedriver_installer https://www.jianshu.com/p/f8606dda4d8c
+对比网页执行
+环境变量
 
 
