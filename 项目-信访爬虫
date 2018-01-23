@@ -227,6 +227,7 @@ csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
 http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
 http://quotes.toscrape.com
+http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 ---
 设置ip代理和user-agent：
 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
@@ -285,4 +286,7 @@ PyCharm http://www.sohu.com/a/130930939_468739
 爬虫教程 https://cuiqingcai.com/1052.html
 Scrapy配合Selenium和PhantomJS爬取动态网页 http://blog.csdn.net/Julkot/article/details/77312116
 http://blog.csdn.net/column/details/python3-spider.html
+response.url 本链接
+总结 无法显示的内容 翻页js
+
 
