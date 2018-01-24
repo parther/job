@@ -307,11 +307,21 @@ GitHub 搜索代码
 设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
 
 利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
-利用Scrapy-Splash抓取JS动态渲染的网页数据 https://www.mylonly.com/15052000291680.html
+利用Scrapy-Splash抓取JS动态渲染的网页数据 二级页面 https://www.mylonly.com/15052000291680.html
 windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
 Splash 安装docker https://www.jianshu.com/p/4052926bc12c
 Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
-http://www.cnblogs.com/shaosks/p/6932319.html
-https://www.cnblogs.com/shaosks/p/6950358.html
-https://www.cnblogs.com/shaosks/p/6961951.html
+Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
+scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
+scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
+360 搜索继续解决问题 github https://github.com/docker/toolbox/issues/317
+使用 kitematic
+https://edu.hellobi.com/course/157/lessons
+https://edu.hellobi.com/course/156/lessons
+小白进阶之Scrapy第五篇 https://cuiqingcai.com/4725.html
+qq群改名字
+本地查看渲染情况 http://192.168.99.100:8050/
+scrapy-splash Lua
+
+
 
