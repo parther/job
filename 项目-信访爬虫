@@ -288,8 +288,7 @@ PyCharm http://www.sohu.com/a/130930939_468739
 response.url 本链接
 总结 无法显示的内容 翻页js
 scrapy js的两种处理技巧 http://www.maiziedu.com/wiki/crawler/js/
-利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
-利用Scrapy-Splash抓取JS动态渲染的网页数据 https://www.mylonly.com/15052000291680.html
+
 
 Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
 Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
@@ -301,5 +300,16 @@ Python爬虫利器四之PhantomJS的用法 https://cuiqingcai.com/2577.html
 chromedriver_installer https://www.jianshu.com/p/f8606dda4d8c
 对比网页执行
 环境变量
+? 天涯 调用Selenium却什么都爬不到
+? jd界面 调用和不调用Selenium都能获得数据，没有区别
+? 需要request吗
+GitHub 搜索代码
+设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
+
+利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
+利用Scrapy-Splash抓取JS动态渲染的网页数据 https://www.mylonly.com/15052000291680.html
+windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
+Splash 安装docker https://www.jianshu.com/p/4052926bc12c
+Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
 
 
