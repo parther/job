@@ -303,10 +303,6 @@ https://www.jianshu.com/p/4e6e42945f05
 http://www.tianya.cn/134503625
 http://www.tianya.cn/113953041
 -
-梦圆建议：
-设置从某一天开始爬
-使用request一级一级爬，以防被封掉
-数据存储到数据库
 PyCharm http://www.sohu.com/a/130930939_468739
 爬虫教程 https://cuiqingcai.com/1052.html
 爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
@@ -357,14 +353,17 @@ Docker容器修改hosts文件重启不变 http://dockone.io/question/400
 抓取上访人的内容
 Compose 命令说明 http://www.runoob.com/docker/docker-run-command.html
 Docker run 命令 http://wiki.jikexueyuan.com/project/docker-technology-and-combat/commands.html
-XHR-copy link-address 
+-
+XHR-copy link-address
+解析json页面 https://www.cnblogs.com/voidsky/p/5490786.html
 先使用简单的方法
-解析json页面
-按照自己的思路来，再看参考
-关于js的问题还是没搞清楚就开始做了
-js和json不一样
-200状态却没有爬取结果，一般是没加yield item
-search页爬取不完全 https://www.tuicool.com/articles/iqQFBn
-使用find定位数字 last_login_time[i].find('录')+2
+先按照自己的思路来，再看参考
+关于js的问题还是没搞清楚就开始做了，js和json不一样
 
+200状态却没有爬取结果，一般是没加yield item
+xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn
+使用find定位数字 last_login_time[i].find('录')+2
+解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
+
+还是要读官方文档
 
