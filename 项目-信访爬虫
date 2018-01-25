@@ -113,8 +113,33 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
 ---
 表结构：
-1 姓名-基本信息 info
-2 姓名-帖子标题及内容 post
+1 搜索页
+userID 昵称 最后登录时间
+2 个人主页
+userID 昵称 等级 等级标签 关注 粉丝 积分 注册日期
+生日 地区 行业 职业 标签 个人介绍 主贴数 回帖数
+3 发帖页
+userID 昵称 主贴标题
+4 回帖页
+userID 昵称 回帖标题
+5 帖子内容页
+userID 昵称 主贴标题 发布时间 点击数 回复数 内容 回帖内容 回帖时间 回帖人 
+6 关注页
+userID 昵称 关注
+7 粉丝页
+userID 昵称 粉丝
+8 帖子内容页-个人主页
+9 关注页-个人主页
+10 粉丝页-个人主页
+
+
+
+
+1 上访人信息表 info
+2 上访人发帖表 post
+id 昵称 标题 内容
+3 上访人发帖回复表
+id 昵称 标题 回帖内容 回帖人
 3 姓名-帖子标题及内容-评论及姓名 reply
 4 姓名-帖子标题及内容-评论及姓名-回复 to_reply
 5 姓名-回帖内容 comment
@@ -227,7 +252,7 @@ csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
 http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
 http://quotes.toscrape.com
-http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
+http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 ---
 设置ip代理和user-agent：
 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
@@ -315,6 +340,9 @@ Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932
 scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
 scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
 360 搜索继续解决问题 github https://github.com/docker/toolbox/issues/317
+$ docker-machine rm default
+$ docker-machine create --driver virtualbox default
+同时开虚拟界面
 使用 kitematic
 https://edu.hellobi.com/course/157/lessons
 https://edu.hellobi.com/course/156/lessons
@@ -322,6 +350,21 @@ https://edu.hellobi.com/course/156/lessons
 qq群改名字
 本地查看渲染情况 http://192.168.99.100:8050/
 scrapy-splash Lua
-
+IP 又获取不到
+-add-host puppetmaster:192.168.0.3 
+docker run命令的--add-host参数来为容器添加host与ip的映射关系
+Docker容器修改hosts文件重启不变 http://dockone.io/question/400
+抓取上访人的内容
+Compose 命令说明 http://www.runoob.com/docker/docker-run-command.html
+Docker run 命令 http://wiki.jikexueyuan.com/project/docker-technology-and-combat/commands.html
+XHR-copy link-address 
+先使用简单的方法
+解析json页面
+按照自己的思路来，再看参考
+关于js的问题还是没搞清楚就开始做了
+js和json不一样
+200状态却没有爬取结果，一般是没加yield item
+search页爬取不完全 https://www.tuicool.com/articles/iqQFBn
+使用find定位数字 last_login_time[i].find('录')+2
 
 
