@@ -32,7 +32,8 @@
 0123 周二 翻页加js爬取
 0124 周三 停车总结
 0125 周四 连接mysql
-0126 周五 个页面就绪
+0126 周五 个人主页爬全
+0127 周六 所有单页爬全
 
 ===
 
@@ -116,7 +117,7 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 1 搜索页
 userID 昵称 最后登录时间
 2 个人主页
-userID 昵称 等级 等级标签 关注 粉丝 积分 注册日期
+userID 昵称 等级 等级标签 被禁 关注 粉丝 积分 注册日期
 生日 地区 行业 职业 标签 个人介绍 主贴数 回帖数
 3 发帖页
 userID 昵称 主贴标题
@@ -252,7 +253,7 @@ csdn http://blog.csdn.net/fengzheku/article/list/1
 豆瓣 https://movie.douban.com/top250
 http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
 http://quotes.toscrape.com
-http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
+http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF&pn=1
 ---
 设置ip代理和user-agent：
 随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
@@ -366,4 +367,21 @@ xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn
 解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
 
 还是要读官方文档
+feedexporter object has no attribute slot 导出时文件关闭
+xpath 教程 ttp://www.w3school.com.cn/xpath
+可能没有文章 http://www.tianya.cn/133971751 这个要注意了
+可能被封杀 http://www.tianya.cn/106991820
+xpath定位的问题 https://www.cnblogs.com/xxyBlogs/p/4244073.html
+python去除空格和换行符的实现方法 http://www.jb51.net/article/101979.htm
+? xpath 去除空格的问题
+xpath中normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
+home_0dbcb92.js
 
+[python爬虫]处理js文件的三个方法 https://www.cnblogs.com/greenteemo/p/6745404.html 
+Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
+python 爬虫如何获取js里面的内容 http://blog.csdn.net/hanchaobiao/article/details/73150405
+Python 爬虫如何获取 JS 生成的 URL 和网页内容 https://www.zhihu.com/question/21471960
+
+Selenium + PhantomJS  http://blog.csdn.net/And_w/article/details/73611325
+Selenium with Python中文翻译文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
+Selenium与PhantomJS操作 https://www.cnblogs.com/mayi0312/p/7231242.html
