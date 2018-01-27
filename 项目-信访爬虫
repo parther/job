@@ -385,3 +385,6 @@ Python 爬虫如何获取 JS 生成的 URL 和网页内容 https://www.zhihu.com
 Selenium + PhantomJS  http://blog.csdn.net/And_w/article/details/73611325
 Selenium with Python中文翻译文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
 Selenium与PhantomJS操作 https://www.cnblogs.com/mayi0312/p/7231242.html
+鲲鹏免 费HTTP代理列表 http://www.site-digger.com/html/articles/20110516/proxieslist.html
+trs = browser.find_element_by_xpath('//*[@id="proxies_table"]/tbody/tr[1]/td[1]')
+trs.text.split(' ') trs为str
