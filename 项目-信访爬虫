@@ -390,4 +390,4 @@ trs = browser.find_element_by_xpath('//*[@id="proxies_table"]/tbody/tr[1]/td[1]'
 trs.text.split(' ') trs为str
 
 start_url的问题
-
+使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
