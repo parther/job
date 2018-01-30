@@ -114,22 +114,24 @@ http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
 能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
 ---
 表结构：
-1 搜索页
+1 搜索页 search
 userID 昵称 最后登录时间
-2 个人主页
+2 个人主页 info
 userID 昵称 等级 等级标签 被禁 关注 粉丝 积分 注册日期
 生日 地区 行业 职业 标签 个人介绍 主贴数 回帖数
-3 发帖页
+3 发帖页 post
 userID 昵称 主贴标题 链接 发帖时间
-4 回帖页
+4 回帖页 reply
 userID 昵称 回帖标题
-5 帖子内容页
-userID 昵称 主贴标题 发布时间 点击数 回复数 内容 回帖内容 回帖时间 回帖人 
-6 关注页
+5 帖子内容页 post_content
+帖子链接 主贴标题 发布时间 点击数 回复数 内容 
+8 帖子内容页-回帖人个人主页 post_content_reply
+帖子链接 回帖内容 回帖时间 回帖人 回帖人id
+6 关注页 follow
 userID 昵称 关注
-7 粉丝页
+7 粉丝页 followed
 userID 昵称 粉丝
-8 帖子内容页-个人主页
+
 9 关注页-个人主页
 10 粉丝页-个人主页
 
@@ -393,4 +395,18 @@ start_url的问题
 使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
 主页打开没内容的情况 ip被封 重启电脑 延迟抓取
 redirect 有道 181:9999
+ip 导致 json.decoder.jsondecodererror
+feedexporter object has no attribute slot  生成数据的时候没有关生成文件
+阿布云 代理
+网页总是跳转到有道
+拼网址 网页劫持
+? json文件只能抓到部分25个条目 http://www.tianya.cn/41331964/bbs?t=post
+? 利用两个for 显示双倍的重复数据 用两个url能解决不；xpath yield会不会出问题了
+http://www.tianya.cn/12188710/bbs?t=post 只有11条帖子 但显示16条
 
+抓取js会不会太慢了 item['post_url'] = response.xpath('//div[@class="atl-menu clearfix js-bbs-act"]/@js_pageurl').extract()
+? 页面请求太久了 可能是网络有问题
+不要随便删文件，搞得要用时找不到
+回帖有重复 
+? 回帖中1是不显示的
+? http://bbs.tianya.cn/post-news-364310-1.shtm  帖子爬下来数量少了
