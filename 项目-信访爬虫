@@ -38,7 +38,6 @@
 0131-0206 收工
 0131 成果展示v；代码总结；优化；关注表；粉丝表
 ===
-
 数据探索：
 发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
 最多通过自己的发帖回帖
@@ -53,6 +52,7 @@
 ===
 
 技术指导 https://github.com/parther/others/blob/master/spider
+考虑数据的更新
 =
 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 1 上访用户表 user_list 4个字段
@@ -66,25 +66,31 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
 主贴数post_number 回帖数reply_number
 问题：
-json文件不能获取到所有的帖子列表 http://bbs.tianya.cn/post-news-364310-1.shtm  帖子爬下来数量少了
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
-无法获取到 主贴数 回帖数
-回帖中1是不显示的
+无法获取到 主贴数 回帖数 用xhr能解决，关键是眼睛要看清楚
+
 =
 3 上访用户发帖列表 post_list 4个字段
 userID 帖子链接post_url 标题post_title 板块post_section
+问题：
+无法关联到用户id，必须显示用户id
+json文件不能获取到所有的帖子列表 http://bbs.tianya.cn/post-news-364310-1.shtm  帖子爬下来数量少了
+帖子内容有重复的
 =
 4 上访用户发帖内容表 post_content 8个字段
-帖子链接post_url 标题post_title 内容post_text 发布时间post_time 发帖终端post_terminal
-点击数click_number 回复数click_reply_number 点赞数like_number
+帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
+点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
+打赏数 
 问题：
 图片是否要爬取下来
+识别谁打赏了
 =
 5 上访用户发帖的回复表 reply_post_content 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
 回帖终端reply_terminal 回帖楼层reply_order
 问题：
-关联回复人
+关联回复人。谁是楼主，谁回复了谁
+回帖中1是不显示的
 =
 6 上访用户关注列表 follow_list 3个字段
 userID 昵称follow_nickname 个人主页 follow_homepage_url
@@ -109,5 +115,6 @@ userID 帖子链接reply_url 标题reply_title 板块reply_section
 帖子链接reply_url 回帖内容reply_text 回帖人reply_userID
 =
 12 动态表 未完成
+他的随记主要是由博文组成的
 
 
