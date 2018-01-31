@@ -96,7 +96,6 @@ userID 帖子链接reply_post_url 标题reply_post_title 板块reply_post_sectio
 9 上访用户回帖内容表 reply_post_content 12个 未完成
 帖子链接reply_post_url 回帖内容reply_reply_post_text 回帖时间reply_reply_post_time 
 回帖终端reply_reply_post_terminal 回帖楼层reply_reply_post_order
-
 标题reply_post_title 内容reply_post_text 发布时间reply_post_time 发帖终端reply_post_terminal
 点击数reply_post__click_number 回复数reply_post_click_reply_number 点赞数reply_post__like_number
 =
