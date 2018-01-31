@@ -1,9 +1,9 @@
 # 目的：
-从天涯论坛，新浪微博爬取关于上访的内容
+从天涯论坛爬取上访用户的相关内容
 完成时间：
-0113 周六
+0206 周二
 考核：
-跑出想要的结果，梦圆认同
+所有内容能够爬取下来，梦圆，杨老师认同
 =
 # 计划:
 0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
@@ -34,99 +34,32 @@
 0125 周四 连接mysql
 0126 周五 个人主页爬全
 0127 周六 所有单页爬全
-
+-
+0131-0206 收工
+0131 成果展示v；代码总结；优化；关注表；粉丝表
 ===
 
-# 爬虫：
-定义：
-网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
-爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
+1 上访用户表 user_list 3个字段
+userID 个人主页homepage_url 最后登录时间last_login_time
 -
-request对象和response对象。客户机与服务器交换数据时用到，由服务器创立
-http://blog.csdn.net/a859522265/article/details/7259115
-=
-# 安装anaconda
-是Python数据分析的发行版本，集成大量第三方的包，再也不用担心安装包的问题了 https://www.jianshu.com/p/169403f7e40c
-打开jupyter： anaconda prompt-jupyter notebook
-更改jupyter路径： anaconda - cd c:\on -jupyter notebook
-安装包：
-1 anaconda prompt-anaconda install package_name
-2 anaconda navigator
-包只会安装最新的
-===
-
-# scrapy
-Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
-Python爬虫进阶一之爬虫框架概述： 
-https://cuiqingcai.com/2433.html
-http://aljun.me/post/4
-入门教程： 
-https://doc.scrapy.org/en/1.5/topics/commands.html
-中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
-工作流程：
-获取url-发送request-接收response-使用spider解析-发送到pipelines存储成想要的形式
+2 上访用户个人信息表 user_info 17个字段
+userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 积分point 
+注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
+主贴数post_number 回帖数reply_number
 -
-主文件的作用：
-spider文件 爬虫文件，解析response的html和xml
-item 用来储存要爬下来的数据的存放容器，类似orm的写法
-settings.py 系统设置，主要是反扒操作
-pipeline 执行保存数据的操作
+3 上访用户发帖列表 post_list 4个字段
+userID 帖子链接post_url 标题post_title 板块post_section
 -
-Scrapy报错：
-unknown command : crawl :指定到文件夹路径
+4 上访用户发帖内容表 post_content 6个字段
+帖子链接post_url 标题post_title 内容post_text 发布时间post_time 点击数click_number 回复数click_reply_number
 -
-经验：
-Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
-=
-# 从案例学习scrapy
-用rule爬取到2级页面 http://blog.csdn.net/u010814042/article/details/74127309
-使用for方法爬取多页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-爬取多页 http://blog.csdn.net/konglei1996/article/details/72511632
-爬取多页2 request http://blog.csdn.net/dylanzr/article/details/51764694
+5 上访用户发帖的回复表 post_content_reply
+帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
+reply_terminal
 -
-问题：
-class Student(object)，object类，这是所有类最终都会继承的类
-文件读取与写入 http://dwz.cn/7bnhGl
-read http://www.runoob.com/python/python-file-read.html
-yield 变成迭代器 http://dwz.cn/6CFZJh
--
-经验：
-爬取的时间较长：因为设置了等待时间，以防服务器认定为爬虫
-def process_item(self, item, spider): item, spider应该是上面已经自动生成的
-===
-
-# 爬取天涯论坛
-http://search.tianya.cn/
-http://search.tianya.cn/bbs?q=%E4%B8%8A%E8%AE%BF&pn=1
-爬虫的原因：
-掌握网上信访人信息和动态，近半年的动态
-流程：
-确定爬取页-确定爬取的字段-数据清洗-采用关联表格，整理到数据库
----
-数据探索：
-发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
-最多通过自己的发帖回帖
-图片是少数
-一般针对评论的回复比较少，上图的也少
-猜测 昵称会变，但是个人主页uid是不会变
-针对主贴评论人分析昵称所指的人，但有可能是专门帮忙发帖的
-天涯盖楼最多可以盖到100楼
-能够从文章的内容中提取出上访人的身份信息 上访人一般实名举报
----
-表结构：
-1 搜索页 search
-userID 昵称 最后登录时间
-2 个人主页 info
-userID 昵称 等级 等级标签 被禁 关注 粉丝 积分 注册日期
-生日 地区 行业 职业 标签 个人介绍 主贴数 回帖数
-3 发帖页 post
-userID 昵称 主贴标题 链接 发帖时间
 4 回帖页 reply
 userID 昵称 回帖标题
-5 帖子内容页 post_content
-帖子链接 主贴标题 发布时间 点击数 回复数 内容 
-8 帖子内容页-回帖人个人主页 post_content_reply
-帖子链接 回帖内容 回帖时间 回帖人 回帖人id
+
 6 关注页 follow
 userID 昵称 关注
 7 粉丝页 followed
@@ -138,275 +71,4 @@ userID 昵称 粉丝
 
 
 
-1 上访人信息表 info
-2 上访人发帖表 post
-id 昵称 标题 内容
-3 上访人发帖回复表
-id 昵称 标题 回帖内容 回帖人
-3 姓名-帖子标题及内容-评论及姓名 reply
-4 姓名-帖子标题及内容-评论及姓名-回复 to_reply
-5 姓名-回帖内容 comment
--
-表结构抓取内容：
-1 姓名-基本信息 info
-昵称
-关注个数 
-粉丝个数 说明影响力
-积分 说明活跃度
-注册日期 说明上访事件发生的节点
-生日
-地区
-行业
-职业
-标签
-个人介绍
-主贴数 说明活跃度
-回帖数 说明活跃度
-3及页面-关注和粉丝：
-4级页面-主贴页需要抓取的内容：
-标题v
-姓名v
-时间v
-点击v
-回复v
-主贴内容v
-回帖人v
-回帖时间v
-回帖内容v
-针对回帖的打赏、评论、回复、赞
--
-页面处理的层次：
-单页/单页多内容
-单页多级
-多页/多页多内容
-多页多级
----
-问题：
-输出文件隔行为空
-http://blog.csdn.net/kangqianglong/article/details/53173575
-https://segmentfault.com/q/1010000010632474
-限制匹配个数 如只能匹配3个字符
-爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
-文章中有图片该如何处理
-抽取链接后的数字如 http://www.tianya.cn/130935919
-用for方法翻页无法实现自动化采集，但是可以作为权宜之计
-分布式 提高爬虫的效率
-使用ip代理出现404错误：
--
-经验：
-每运行完一个spider文件，吃透它
-从返回命令中找失败的原因
-从成功中总结经验，并且不断测试，形成固定的方法论
-从项目入手，测试需要的结果
-注重效率，不用怕犯错
-使用现成的爬虫工具如八爪鱼
-设置notepad 消灭空格 技术产生进步
-有些结果就是爬不下来
-不要全盘复制黏贴，因为本身有固定的代码
-成功运行的记录，必须保存运行成功的文件并配上描述，避免重复劳动和方便纠错
-测试与最终内容一致，只是某些内容精简，这样可以提高效率
--
-获得xpath 审查元素-copy-copy xpath，修改xpath代码的div即可
-复制文本，再点击审查元素会更快获得xpath路径
-寻找xpath，可以将多个要爬取的xpath拿出来比较而得出规律
-'//div[@class="bbs-content"]/text()' xpath的另一种方式
-xpath不是万能的，对于某些代码是没办法解析的
-rule 用于爬取多级页面
-不同的项目文件，结果竟然会不一样。可能原因是网址变了
-http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5 是可以用rule爬到4级页面的
-CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
-Selector和response的用法没有差别，可互相替换
-用for语句存储item才能保证爬取的字符在Excel中单独显示
-将yield放入parse会多出starturl结果
-回调函数  把主函数的参数传入另一函数处理 https://en.wikipedia.org/wiki/Callback_(computer_programming)#Python
-500 Servlet Exception 直接输入链接可以解决
-response.xpath 返回的是list数据
-scrapy crawl 不能直接跟py文件
-存储路径的两种写法：
-FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
-FEED_URI = './xf_info.csv'
-使用rule提取不到内容，没有返回服务器状态，是xpath问题
-爬取出来的信息少了，没有报错，scrapy结合rule使用的自动去重功能
-10个条目，一个重复，还有一个没有显示出来 该用户已经被删除
-//div[@class="portrait"]/h2/a[1]/text() 一定要双引号 
-被天涯判断为爬虫，出现robot.txt文档 修改是否遵守约定
-翻到第2页，没有找到帖子，是偶尔情况
-不使用框架开代理 http://blog.csdn.net/loguat/article/details/74740229
-ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
-scrapy案例参考 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
-提升scrapy的性能 https://segmentfault.com/a/1190000009321902
-获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
--
-Python正则表达式 http://www.runoob.com/python/python-reg-expressions.html
-反斜杠转义\
-yield 只能在function里面使用
-if not a ;if a=='' ;if a 判断为空
-list out of range 条目不对
-must be real number, not str: 一般是正则表达的问题
-''' 与下行的缩进保持一致才不会报错
-查看header的方法 审查元素-Ctrl+r刷新-all-name-header
-anaconda 无法安装 fake_useragent 可以直接使用命令窗pip install 代码
-国内高匿代理IP http://www.xicidaili.com/nn/2640
-利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
-直接使用list获得useragent http://blog.csdn.net/LCYong_/article/details/72854470
----
-用于测试的网址：
-csdn http://blog.csdn.net/fengzheku/article/list/1
-豆瓣 https://movie.douban.com/top250
-http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
-http://quotes.toscrape.com
-http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF&pn=1
----
-设置ip代理和user-agent：
-随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6665180.html
-useragent 和 ip 2  https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
-自动更新IP池 http://blog.csdn.net/u011781521/article/details/70194744
-洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
-使用的ip必须开代理，必须加端口
-API提取
--
-twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 
-由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
-使用的ip没有填写端口地址
--
-多页面多条目二级爬取，部分结果无法爬出，返回503错误：
-因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
-设置翻页间隔为6秒
-第二天早上再次爬取，能够爬取到想要的结果
-? 翻页的间隔
--
-没有报错，没有结果
-一般是链接的源码没有获取到，可能是正则表达式出问题了
--
-存到本地数据库
-? 爬取10个页面时，出现8个500 错误
--
-post
-天涯 三级页面获取不到
-原因：
-在页面源代码中抓取不到地址
-曾经的4级根本没有获取到，是在原链接中已有的
-解决方法:
-1 用LinkExtractor获取隐藏页面
-2 逐级爬取
-3 
-meta 二级页面 爬虫
-有案例 但是没有完整的代码 http://www.maiziedu.com/wiki/crawler/multi/
-案例有问题 https://www.jianshu.com/p/fe8a75284f9b
--
-关于js：
-1 js动态页面加载，内容在源码里是看不到的
-post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
-火狐firebug可看动态加载的内容
-Python爬虫利器五之Selenium的用法 https://cuiqingcai.com/2599.html
-Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
-2 数据能读取到，但是xpath没有规律 信息列的。直接全部爬取下来
-https://www.jianshu.com/p/4e6e42945f05
-http://www.tianya.cn/134503625
-http://www.tianya.cn/113953041
--
-PyCharm http://www.sohu.com/a/130930939_468739
-爬虫教程 https://cuiqingcai.com/1052.html
-爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
-response.url 本链接
-总结 无法显示的内容 翻页js
-scrapy js的两种处理技巧 http://www.maiziedu.com/wiki/crawler/js/
 
-
-Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
-Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
-http://blog.csdn.net/kangqianglong/article/details/62045982
-
-无界面依赖的浏览器引擎 Casperjs、Phantomjs
-PhantomJS就是一个没有界面的浏览器，提供了JavaScript接口
-Python爬虫利器四之PhantomJS的用法 https://cuiqingcai.com/2577.html
-chromedriver_installer https://www.jianshu.com/p/f8606dda4d8c
-对比网页执行
-环境变量
-? 天涯 调用Selenium却什么都爬不到
-? jd界面 调用和不调用Selenium都能获得数据，没有区别
-? 需要request吗
-GitHub 搜索代码
-设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
-
-利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
-利用Scrapy-Splash抓取JS动态渲染的网页数据 二级页面 https://www.mylonly.com/15052000291680.html
-windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
-Splash 安装docker https://www.jianshu.com/p/4052926bc12c
-Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
-Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
-scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
-scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
-360 搜索继续解决问题 github https://github.com/docker/toolbox/issues/317
-$ docker-machine rm default
-$ docker-machine create --driver virtualbox default
-同时开虚拟界面
-使用 kitematic
-https://edu.hellobi.com/course/157/lessons
-https://edu.hellobi.com/course/156/lessons
-小白进阶之Scrapy第五篇 https://cuiqingcai.com/4725.html
-qq群改名字
-本地查看渲染情况 http://192.168.99.100:8050/
-scrapy-splash Lua
-IP 又获取不到
--add-host puppetmaster:192.168.0.3 
-docker run命令的--add-host参数来为容器添加host与ip的映射关系
-Docker容器修改hosts文件重启不变 http://dockone.io/question/400
-抓取上访人的内容
-Compose 命令说明 http://www.runoob.com/docker/docker-run-command.html
-Docker run 命令 http://wiki.jikexueyuan.com/project/docker-technology-and-combat/commands.html
--
-XHR-copy link-address
-解析json页面 https://www.cnblogs.com/voidsky/p/5490786.html
-先使用简单的方法
-先按照自己的思路来，再看参考
-关于js的问题还是没搞清楚就开始做了，js和json不一样
-
-200状态却没有爬取结果，一般是没加yield item
-xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn
-使用find定位数字 last_login_time[i].find('录')+2
-解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
-
-还是要读官方文档
-feedexporter object has no attribute slot 导出时文件关闭
-xpath 教程 ttp://www.w3school.com.cn/xpath
-可能没有文章 http://www.tianya.cn/133971751 这个要注意了
-可能被封杀 http://www.tianya.cn/106991820
-xpath定位的问题 https://www.cnblogs.com/xxyBlogs/p/4244073.html
-python去除空格和换行符的实现方法 http://www.jb51.net/article/101979.htm
-? xpath 去除空格的问题
-xpath中normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
-home_0dbcb92.js
-
-[python爬虫]处理js文件的三个方法 https://www.cnblogs.com/greenteemo/p/6745404.html 
-Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
-python 爬虫如何获取js里面的内容 http://blog.csdn.net/hanchaobiao/article/details/73150405
-Python 爬虫如何获取 JS 生成的 URL 和网页内容 https://www.zhihu.com/question/21471960
-
-Selenium + PhantomJS  http://blog.csdn.net/And_w/article/details/73611325
-Selenium with Python中文翻译文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
-Selenium与PhantomJS操作 https://www.cnblogs.com/mayi0312/p/7231242.html
-鲲鹏免 费HTTP代理列表 http://www.site-digger.com/html/articles/20110516/proxieslist.html
-trs = browser.find_element_by_xpath('//*[@id="proxies_table"]/tbody/tr[1]/td[1]')
-trs.text.split(' ') trs为str
-
-start_url的问题
-使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
-主页打开没内容的情况 ip被封 重启电脑 延迟抓取
-redirect 有道 181:9999
-ip 导致 json.decoder.jsondecodererror
-feedexporter object has no attribute slot  生成数据的时候没有关生成文件
-阿布云 代理
-网页总是跳转到有道
-拼网址 网页劫持
-? json文件只能抓到部分25个条目 http://www.tianya.cn/41331964/bbs?t=post
-? 利用两个for 显示双倍的重复数据 用两个url能解决不；xpath yield会不会出问题了
-http://www.tianya.cn/12188710/bbs?t=post 只有11条帖子 但显示16条
-
-抓取js会不会太慢了 item['post_url'] = response.xpath('//div[@class="atl-menu clearfix js-bbs-act"]/@js_pageurl').extract()
-? 页面请求太久了 可能是网络有问题
-不要随便删文件，搞得要用时找不到
-回帖有重复 
-? 回帖中1是不显示的
-? http://bbs.tianya.cn/post-news-364310-1.shtm  帖子爬下来数量少了
