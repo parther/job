@@ -80,9 +80,11 @@ userID 帖子链接post_url 标题post_title 板块post_section
 问题：
 图片是否要爬取下来
 =
-5 上访用户发帖的回复表 post_content_reply 7个字段
+5 上访用户发帖的回复表 reply_post_content 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
 回帖终端reply_terminal 回帖楼层reply_order
+问题：
+关联回复人
 =
 6 上访用户关注列表 follow_list 3个字段
 userID 昵称follow_nickname 个人主页 follow_homepage_url
@@ -91,18 +93,21 @@ userID 昵称follow_nickname 个人主页 follow_homepage_url
 userID 昵称followed_nickname 个人主页 followed_homepage_url
 =
 8 上访用户回帖列表 reply_list 4个字段
-userID 帖子链接reply_post_url 标题reply_post_title 板块reply_post_section
+userID 帖子链接reply_url 标题reply_title 板块reply_section
 =
-9 上访用户回帖内容表 reply_post_content 12个 未完成
-帖子链接reply_post_url 回帖内容reply_reply_post_text 回帖时间reply_reply_post_time 
-回帖终端reply_reply_post_terminal 回帖楼层reply_reply_post_order
-标题reply_post_title 内容reply_post_text 发布时间reply_post_time 发帖终端reply_post_terminal
-点击数reply_post__click_number 回复数reply_post_click_reply_number 点赞数reply_post__like_number
-=
-10 上访用户发帖的回复的回复表 post_content_reply_2 7个字段 未完成
-帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
+9 上访用户回帖内容表 reply_content 5个 
+帖子链接reply_url 回帖内容reply_text 回帖时间reply_time 
 回帖终端reply_terminal 回帖楼层reply_order
+问题：
+名字与前文有重复
 =
-11 动态表
+10 上访用户回帖针对的帖子表 post_reply_content 8个 
+帖子链接reply_url 标题reply_title 内容post_text 发布时间post_time 发帖终端post_terminal
+点击数click_number 回复数click_reply_number 点赞数like_number
+=
+11 上访用户发帖的回复的回复表 reply_reply_post_content 7个字段 未完成
+帖子链接reply_url 回帖内容reply_text 回帖人reply_userID
+=
+12 动态表 未完成
 
 
