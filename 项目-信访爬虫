@@ -39,6 +39,9 @@
 0131 成果展示v；代码总结；优化；关注表；粉丝表
 ===
 
+技术指导 https://github.com/parther/others/blob/master/spider
+=
+
 1 上访用户表 user_list 3个字段
 userID 个人主页homepage_url 最后登录时间last_login_time
 -
@@ -50,25 +53,31 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 3 上访用户发帖列表 post_list 4个字段
 userID 帖子链接post_url 标题post_title 板块post_section
 -
-4 上访用户发帖内容表 post_content 6个字段
-帖子链接post_url 标题post_title 内容post_text 发布时间post_time 点击数click_number 回复数click_reply_number
+4 上访用户发帖内容表 post_content 8个字段
+帖子链接post_url 标题post_title 内容post_text 发布时间post_time 发帖终端post_terminal
+点击数click_number 回复数click_reply_number 点赞数like_number
 -
-5 上访用户发帖的回复表 post_content_reply
+5 上访用户发帖的回复表 post_content_reply 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
-reply_terminal
+回帖终端reply_terminal 回帖楼层reply_order
 -
-4 回帖页 reply
-userID 昵称 回帖标题
-
-6 关注页 follow
-userID 昵称 关注
-7 粉丝页 followed
-userID 昵称 粉丝
-
-9 关注页-个人主页
-10 粉丝页-个人主页
-
-
-
+6 上访用户关注列表 follow 3个字段
+userID 昵称follow_nickname 个人主页 follow_homepage_url
+-
+7 上访用户粉丝列表 followed 3个字段
+userID 昵称followed_nickname 个人主页 followed_homepage_url
+-
+8 上访用户回帖列表 reply_list 4个字段
+userID 帖子链接reply_post_url 标题reply_post_title 板块reply_post_section
+-
+9 上访用户回帖内容表 reply_post_content 12个字段
+帖子链接reply_post_url 回帖内容reply_post_text 回帖时间reply_post_time 
+回帖终端reply_post_terminal 回帖楼层reply_post_order
+标题reply_post_title 内容reply_post_text 发布时间reply_post_time 发帖终端reply_post_terminal
+点击数reply_click_number 回复数reply_click_reply_number 点赞数reply_like_number
+-
+10 上访用户发帖的回复的回复表 post_content_reply_2 7个字段
+帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
+回帖终端reply_terminal 回帖楼层reply_order
 
 
