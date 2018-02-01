@@ -42,6 +42,7 @@ yield 变成迭代器 http://dwz.cn/6CFZJh
 yield 只能在function里面使用
 if not a ;if a=='' ;if a 判断为空
 使用find定位数字 last_login_time[i].find('录')+2
+python去除空格和换行符的实现方法 http://www.jb51.net/article/101979.htm
 =
 # 问题
 unknown command : crawl :指定到文件夹路径
@@ -70,36 +71,41 @@ must be real number, not str: 一般是正则表达的问题
 测试与最终内容一致，只是某些内容精简，这样可以提高效率
 不要随便删文件，搞得要用时找不到
 
+=
+# xpath：
+? 用xpath 去除所选元素的空格 normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
+xpath官方文档 ttp://www.w3school.com.cn/xpath
+xpath定位 https://www.cnblogs.com/xxyBlogs/p/4244073.html
 -
-xpath：
 使用Chrome获得xpath 鼠标移动到指定文本-审查元素-copy-copy xpath
 将多个要爬取的xpath拿出来比较能够更快看出规律
 xpath的另一种方式 '//div[@class="bbs-content"]/text()' 
 //div[@class="portrait"]/h2/a[1]/text() @class="portrait"一定要双引号 
 Selector和response的用法没有差别，可互相替换
 response.xpath 返回的是list数据
-xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn
-还是要读官方文档
+xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn response.xpath('//*[@id="bd"]').xpath('string(.)').extract()
+选取含某属性的标签内容 //div[contains(@class, 'demo')] https://segmentfault.com/q/1010000000779093 v
+选取同级元素 response.xpath('//*[@class="user-location"]/following-sibling::text()').extract()
+
+# scrapy 使用心得
+item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
+response.url 取得从上级拿下来的url
+=
+# 其他
+notepad 减少缩进:Shift+Tab v
+=
+# scrapy报错
 feedexporter object has no attribute slot 导出时文件关闭
-xpath 教程 ttp://www.w3school.com.cn/xpath
-
-xpath定位的问题 https://www.cnblogs.com/xxyBlogs/p/4244073.html
-python去除空格和换行符的实现方法 http://www.jb51.net/article/101979.htm
-? xpath 去除空格的问题
-xpath中normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
-home_0dbcb92.js
-
-
-用for语句存储item才能保证爬取的字符在Excel中换行显示
+返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
+用for语句存储item才能保证爬取的字符在csv中换行显示
 存储路径的两种写法：
 FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
 FEED_URI = './xf_info.csv'
 ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
 
-返回状态200却没有抓取到内容，是xpath问题
-200状态却没有爬取结果，一般是没加yield item
+
 爬取出来的信息少了，没有报错，scrapy结合rule使用的自动去重功能
-10个条目，一个重复，还有一个没有显示出来 该用户已经被删除
+10个条目，一个重复，还有一个没有显示出来 该用户已经被删除错误
 提升scrapy的性能 https://segmentfault.com/a/1190000009321902
 获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
 
