@@ -39,25 +39,14 @@
 0131 成果展示v；代码总结；优化；关注表；粉丝表
 0201 周四 优化；关注表；粉丝表
 ===
-数据探索：
-发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
-最多通过自己的发帖回帖
-图片是少数
-一般针对评论的回复比较少，上图的也少
-猜测 昵称会变，但是个人主页uid是不会变
-针对主贴评论人分析昵称所指的人，但有可能是专门帮忙发帖的
-天涯盖楼最多可以盖到100楼
-能够从文章的内容中提取出上访人的身份信息 上访人一般实名举
-可能没有文章 http://www.tianya.cn/133971751 这个要注意了
-可能被封杀 http://www.tianya.cn/106991820
-===
 
 技术指导 https://github.com/parther/others/blob/master/spider
 考虑数据的更新
+命名规则
 =
 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 1 上访用户表 user_list 4个字段
-userID 昵称nickname 个人主页homepage_url 最后登录时间last_login_time
+userID 昵称nickname 个人主页homepage 最后登录时间last_login_time
 问题：
 能否设置自动翻页
 用xpath清洗数据 last_login_time[i]
@@ -71,6 +60,8 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
 无法获取到 主贴数 回帖数 用xhr能解决，关键是眼睛要看清楚 v
 用xpath去除空格 industry[i].strip()
+可能没有文章 http://www.tianya.cn/133971751
+可能被封杀 http://www.tianya.cn/106991820
 
 =
 3 上访用户发帖列表 post_list 4个字段
@@ -84,24 +75,26 @@ json文件不能获取到所有的帖子列表 http://www.tianya.cn/41331964/bbs
 帖子内容有重复的 http://www.tianya.cn/128336392
 
 =
-4 上访用户发帖内容表 post_content 8个字段
+4 上访用户发帖内容表 post 8个字段
 帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
 问题：
 打赏人数number_of_reward 总赏金total_reward获取不到js http://bbs.tianya.cn/post-news-364310-1.shtml
-图片是否要爬取下来
+图片是否要爬取下来，图片是少数
 4个赞 点击：1955 回复：66 用xpath将数据清洗
 打赏人数和总赏金可以通过回帖统计
-//div[contains(@class, 'demo')] https://segmentfault.com/q/1010000000779093 v
+
 
 =
-5 上访用户发帖的回复表 reply_post_content 7个字段
-帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
+5 上访用户发帖的回复表 reply_post 7个字段
+帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
 回帖终端reply_terminal 回帖楼层reply_order
 问题：
 关联回复人。谁是楼主，谁回复了谁
 回帖中1是不显示的
+如何命名的问题
+天涯盖楼最多可以盖到100楼
 =
 6 上访用户关注列表 follow_list 3个字段
 userID 昵称follow_nickname 个人主页 follow_homepage_url
@@ -112,13 +105,13 @@ userID 昵称followed_nickname 个人主页 followed_homepage_url
 8 上访用户回帖列表 reply_list 4个字段
 userID 帖子链接reply_url 标题reply_title 板块reply_section
 =
-9 上访用户回帖内容表 reply_content 5个 
+9 上访用户回帖内容表 reply 5个 
 帖子链接reply_url 回帖内容reply_text 回帖时间reply_time 
 回帖终端reply_terminal 回帖楼层reply_order
 问题：
 名字与前文有重复
 =
-10 上访用户回帖针对的帖子表 post_reply_content 8个 
+10 上访用户回帖针对的帖子表 post_reply 8个 
 帖子链接reply_url 标题reply_title 内容post_text 发布时间post_time 发帖终端post_terminal
 点击数click_number 回复数click_reply_number 点赞数like_number
 =
