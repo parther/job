@@ -37,6 +37,7 @@
 -
 0131-0206 收工
 0131 成果展示v；代码总结；优化；关注表；粉丝表
+0201 周四 优化；关注表；粉丝表
 ===
 数据探索：
 发帖者只是为了反映自己的情况，帖子数一般是1个左右，回帖不会超过10
@@ -59,31 +60,41 @@ http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 userID 昵称nickname 个人主页homepage_url 最后登录时间last_login_time
 问题：
 能否设置自动翻页
+用xpath清洗数据 last_login_time[i]
 
 =
 2 上访用户个人信息表 user_info 17个字段
-userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 积分point 
-注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
-主贴数post_number 回帖数reply_number
+userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 
+积分point 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
+? 主贴数post_number ? 回帖数reply_number
 问题：
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
-无法获取到 主贴数 回帖数 用xhr能解决，关键是眼睛要看清楚
+无法获取到 主贴数 回帖数 用xhr能解决，关键是眼睛要看清楚 v
+用xpath去除空格 industry[i].strip()
 
 =
 3 上访用户发帖列表 post_list 4个字段
 userID 帖子链接post_url 标题post_title 板块post_section
 问题：
-无法关联到用户id，必须显示用户id
-json文件不能获取到所有的帖子列表 http://bbs.tianya.cn/post-news-364310-1.shtm  帖子爬下来数量少了
-帖子内容有重复的
+无法关联到用户id，必须显示用户id v
+item的文件随时可以显示 v
+notepad 减少缩进:Shift+Tab v
+response.url 取得从上级拿下来的url 注意看官方文档 v 
+json文件不能获取到所有的帖子列表 http://www.tianya.cn/41331964/bbs?t=post  至多显示25条数据
+帖子内容有重复的 http://www.tianya.cn/128336392
+
 =
 4 上访用户发帖内容表 post_content 8个字段
 帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
-打赏数 
+? 打赏人数number_of_reward ? 总赏金total_reward
 问题：
+打赏人数number_of_reward 总赏金total_reward获取不到js http://bbs.tianya.cn/post-news-364310-1.shtml
 图片是否要爬取下来
-识别谁打赏了
+4个赞 点击：1955 回复：66 用xpath将数据清洗
+打赏人数和总赏金可以通过回帖统计
+//div[contains(@class, 'demo')] https://segmentfault.com/q/1010000000779093 v
+
 =
 5 上访用户发帖的回复表 reply_post_content 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人reply_userID
