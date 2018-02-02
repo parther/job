@@ -87,19 +87,26 @@ userID 帖子链接post_url 标题post_title 板块post_section
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
 回帖终端reply_terminal 回帖楼层reply_order
 =
-回帖数与回帖人数不一致
-replace("\xa0", " ")
+回帖数与回帖人数不一致 replace("\xa0", " ")
 楼层数据断开 http://bbs.tianya.cn/post-news-364310-1.shtml
 首要还是看代码
+string解决list不能用
 1 没有显示
 所有回帖人包括盖楼的都会显示在回帖列表内
 关联回复人。谁是楼主，谁回复了谁
 回帖中1是不显示的
 如何命名的问题
 天涯盖楼最多可以盖到100楼
+"".join(l) 将list转为str
 =
 6 上访用户关注列表 follow_list 3个字段
 userID 昵称follow_nickname 个人主页 follow_homepage_url
+设置为至多爬5页，大部分上访人不会有那么多的粉丝和关注
+先看下是不是json处理
+效率太低，要形成方法论
+re.findall(r'(\d+)&params', s)[0]
+start_url 没啥用
+得出来的结果重复 需要去重吗
 =
 7 上访用户粉丝列表 followed_list 3个字段
 userID 昵称followed_nickname 个人主页 followed_homepage_url
