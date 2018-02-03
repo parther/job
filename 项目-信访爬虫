@@ -109,7 +109,8 @@ start_url 没啥用
 得出来的结果重复 需要去重吗
 =
 7 上访用户粉丝列表 followed_list 3个字段
-userID 昵称followed_nickname 个人主页 followed_homepage_url
+userID 昵称followed_nickname 个人主页 followed_homepage没有
+itemmeta doesnot support item assign 没加括号
 =
 8 上访用户回帖列表 reply_list 4个字段
 userID 帖子链接reply_url 标题reply_title 板块reply_section
