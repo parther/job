@@ -43,7 +43,7 @@
 0205-0209 结束吧
 0205 回帖列表；回帖内容表；上访用户回帖针对的帖子表
 0206 上访用户发帖的回复的回复表
-0207
+0207 2上访用户个人信息表 主贴数 回帖数 放在一起解析；8上访用户回帖列表 截取出来的不对
 0208 周四 优化考虑分析的问题
 0209 周五 跑出所有的结果，看能否连接数据库
 ===
@@ -69,19 +69,14 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 积分point 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
 ? 主贴数post_number ? 回帖数reply_number
 -
-? 如何用xpath去除空格 industry[i].strip()
+? 主贴数 回帖数 能否放在一起解析
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
-主贴数 回帖数 能否放在一起解析
-可能没有文章 http://www.tianya.cn/133971751
-可能被封杀 http://www.tianya.cn/106991820
 
 =
 3 上访用户发帖列表 post_list 4个字段
 userID 帖子链接post_url 标题post_title 板块post_section
 -
-? json文件不能获取到所有的帖子列表 http://www.tianya.cn/41331964/bbs?t=post  至多显示25条数据
-帖子内容有重复的 http://www.tianya.cn/128336392
-看要不要加链接页码
+根据实际情况，只选择至多25条数据
 
 =
 4 上访用户发帖内容表 post 8个字段
@@ -89,63 +84,40 @@ userID 帖子链接post_url 标题post_title 板块post_section
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
 -
-? 打赏人数number_of_reward 总赏金total_reward获取不到js http://bbs.tianya.cn/post-news-364310-1.shtmlru
-? 如何爬取图片
-图片是少数, 图片是否要爬下来
-4个赞 点击：1955 回复：66 用xpath将数据清洗
-打赏人数和总赏金可以通过回帖统计
+打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtmlru
+图片暂时不爬取，图片是少数
+数据清洗 4个赞 点击：1955 回复：66 
 
 =
 5 上访用户发帖的回帖表 reply_post 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
 回帖终端reply_terminal 回帖楼层reply_order
-=
-回帖数与回帖人数不一致 replace("\xa0", " ")
-楼层数据断开 http://bbs.tianya.cn/post-news-364310-1.shtml
-首要还是看代码
-string解决list不能用
-1 没有显示
-所有回帖人包括盖楼的都会显示在回帖列表内
-关联回复人。谁是楼主，谁回复了谁
-回帖中1是不显示的
-如何命名的问题
-天涯盖楼最多可以盖到100楼
-"".join(l) 将list转为str
+-
+
 =
 6 上访用户关注列表 follow_list 3个字段
-userID 昵称follow_nickname 个人主页 follow_homepage_url
-设置为至多爬5页，大部分上访人不会有那么多的粉丝和关注
-先看下是不是json处理
-效率太低，要形成方法论
-re.findall(r'(\d+)&params', s)[0]
-start_url 没啥用
-得出来的结果重复 需要去重吗
+userID 昵称follow_nickname 个人主页follow_homepage
+-
+结果去重的问题
+设置为至多爬2页，大部分上访人不会有那么多的粉丝和关注
+
 =
 7 上访用户粉丝列表 followed_list 3个字段
-userID 昵称followed_nickname 个人主页 followed_homepage没有
-itemmeta doesnot support item assign 没加括号
+userID 昵称followed_nickname 个人主页followed_homepage
+
 =
 
 8 上访用户回帖列表 reply_list 4个字段
-userID 帖子链接reply_url 标题reply_title
+userID 帖子链接reply_url 标题reply_title 发帖板块reply_section
 -
-? 如何获取所有的回帖列表 直接修改pagesize
-? 链接中的页码如何获取到 大部分在第一页
-id 提取出来的数字不对
+? id 提取出来的数字不对
 =
 9 上访用户回帖内容表 reply 5个 
 帖子链接reply_url 回帖内容reply_text 回帖时间reply_time 
 回帖终端reply_terminal 回帖楼层reply_order
-尽然没有23楼
-
-问题：
-? 回复中的回复需要翻页的 取不到数据 pyv8 https://www.zhihu.com/question/20626694/answer/15675919 Xhr
-回复跟@是不一样的,盖楼是有独立的楼层的
-直接回复 http://bbs.tianya.cn/post-funinfo-7535040-168.shtml#16782_273034125
-回复中的回复 http://bbs.tianya.cn/post-feeling-4314034-1.shtml#21_90352747
-response.url 自动去除网址后多余的内容 使用其他符号代替#看行不行
-
-
+-
+? 有的楼层被删除消失了，需要加一个字段判断报错
+回复中的回复需要翻页的 暂不考虑  pyv8 https://www.zhihu.com/question/20626694/answer/15675919 Xhr
 
 =
 10 上访用户回帖针对的帖子表 post_reply 8个 未完成
