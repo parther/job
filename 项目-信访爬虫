@@ -47,10 +47,14 @@
 0208 周四 优化考虑分析的问题
 0209 周五 跑出所有的结果，看能否连接数据库
 ===
-
+照片先不爬
+回帖先不爬
+能够爬取的内容固定下来。个人信息表 主贴 主贴回复
+目的是为了掌握事情的发展路径
 技术指导 https://github.com/parther/others/blob/master/spider
-考虑数据的更新
+考虑数据的更新 上访用户贴的更新
 命名规则
+与信访局相结合，能否识别此人在信访局有记录
 =
 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 1 上访用户表 user_list 4个字段
@@ -67,6 +71,7 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 -
 ? 如何用xpath去除空格 industry[i].strip()
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
+主贴数 回帖数 能否放在一起解析
 可能没有文章 http://www.tianya.cn/133971751
 可能被封杀 http://www.tianya.cn/106991820
 
@@ -91,7 +96,7 @@ userID 帖子链接post_url 标题post_title 板块post_section
 打赏人数和总赏金可以通过回帖统计
 
 =
-5 上访用户发帖的回复表 reply_post 7个字段
+5 上访用户发帖的回帖表 reply_post 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
 回帖终端reply_terminal 回帖楼层reply_order
 =
@@ -126,22 +131,24 @@ userID 帖子链接reply_url 标题reply_title
 -
 ? 如何获取所有的回帖列表 直接修改pagesize
 ? 链接中的页码如何获取到 大部分在第一页
+id 提取出来的数字不对
 =
 9 上访用户回帖内容表 reply 5个 
 帖子链接reply_url 回帖内容reply_text 回帖时间reply_time 
-response.url 自动去除网址后多余的内容 使用其他符号代替#看行不行
 回帖终端reply_terminal 回帖楼层reply_order
+尽然没有23楼
+
 问题：
 ? 回复中的回复需要翻页的 取不到数据 pyv8 https://www.zhihu.com/question/20626694/answer/15675919 Xhr
 回复跟@是不一样的,盖楼是有独立的楼层的
 直接回复 http://bbs.tianya.cn/post-funinfo-7535040-168.shtml#16782_273034125
 回复中的回复 http://bbs.tianya.cn/post-feeling-4314034-1.shtml#21_90352747
-
+response.url 自动去除网址后多余的内容 使用其他符号代替#看行不行
 
 
 
 =
-10 上访用户回帖针对的帖子表 post_reply 8个 
+10 上访用户回帖针对的帖子表 post_reply 8个 未完成
 帖子链接reply_url 标题reply_title 内容post_text 发布时间post_time 发帖终端post_terminal
 点击数click_number 回复数click_reply_number 点赞数like_number
 =
