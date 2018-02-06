@@ -17,6 +17,7 @@ https://doc.scrapy.org/en/1.5/topics/commands.html
 中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
 Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
 CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
+start_url 鸡肋功能
 =
 
 # 从案例学习scrapy
@@ -43,6 +44,9 @@ yield 只能在function里面使用
 if not a ;if a=='' ;if a 判断为空
 使用find定位数字 last_login_time[i].find('录')+2
 python去除空格和换行符的实现方法 http://www.jb51.net/article/101979.htm
+replace("\xa0", " ")
+"".join(l) 将list转为str
+re.findall(r'(\d+)&params', s)[0]
 =
 # 问题
 unknown command : crawl :指定到文件夹路径
@@ -95,6 +99,7 @@ response.url 取得从上级拿下来的url
 notepad 减少缩进:Shift+Tab v
 =
 # scrapy报错
+itemmeta doesnot support item assign 没加括号
 feedexporter object has no attribute slot 导出时文件关闭
 返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
 用for语句存储item才能保证爬取的字符在csv中换行显示
