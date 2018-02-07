@@ -43,7 +43,7 @@
 0205-0209 结束吧
 0205 回帖列表；回帖内容表；上访用户回帖针对的帖子表
 0206 上访用户发帖的回复的回复表
-0207 2上访用户个人信息表 主贴数 回帖数 放在一起解析；8上访用户回帖列表 截取出来的不对
+0207 8上访用户回帖列表 截取出来的不对；2上访用户个人信息表 主贴数 回帖数 放在一起解析；
 0208 周四 优化考虑分析的问题
 0209 周五 跑出所有的结果，看能否连接数据库
 ===
@@ -71,10 +71,12 @@ userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数
 -
 ? 主贴数 回帖数 能否放在一起解析
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
+JSONDecodeError 一般是json链接的格式不对，删除var
+response.url 是 str格式
 
 =
 3 上访用户发帖列表 post_list 4个字段
-userID 帖子链接post_url 标题post_title 板块post_section
+发帖id post_id  帖子链接post_url 标题post_title 板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
 
@@ -106,11 +108,10 @@ userID 昵称follow_nickname 个人主页follow_homepage
 userID 昵称followed_nickname 个人主页followed_homepage
 
 =
-
 8 上访用户回帖列表 reply_list 4个字段
-userID 帖子链接reply_url 标题reply_title 发帖板块reply_section
+用户id-userID 回帖id 帖子链接reply_url 标题reply_title 发帖板块reply_section
 -
-? id 提取出来的数字不对
+
 =
 9 上访用户回帖内容表 reply 5个 
 帖子链接reply_url 回帖内容reply_text 回帖时间reply_time 
