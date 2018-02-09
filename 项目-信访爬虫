@@ -46,33 +46,31 @@
 0207 8上访用户回帖列表 截取出来的不对；2上访用户个人信息表 主贴数 回帖数 放在一起解析；
 0208 周四 优化考虑分析的问题
 0209 周五 优化代码，跑出所有的结果
+-
+0223 周五 继续爬取其他完全数据
 ===
-照片先不爬
-回帖先不爬
-能够爬取的内容固定下来。个人信息表 主贴 主贴回复
-目的是为了掌握事情的发展路径
-技术指导 https://github.com/parther/others/blob/master/spider
-考虑数据的更新 上访用户贴的更新
-命名规则
-与信访局相结合，能否识别此人在信访局有记录
+目的：是为了掌握信访事件的发展路径，将事件扼杀在苗头
+分析任务：
+识别上访人
 =
+技术指导 https://github.com/parther/others/blob/master/spider
 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 1 上访用户表 user_list 4个字段
-userID 昵称nickname 个人主页homepage 最后登录时间last_login_time
+user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
 ? 能否设置自动翻页
 ? 用xpath清洗数据 last_login_time[i]
 
 =
 2 上访用户个人信息表 user_info 17个字段
-userID 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 
+user_id 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 
 积分point 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
-? 主贴数post_number ? 回帖数reply_number
+主贴数post_number 回帖数reply_number
 -
-? 主贴数 回帖数 能否放在一起解析
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
 JSONDecodeError 一般是json链接的格式不对，删除var
 response.url 是 str格式
+item['label'] 为str
 
 =
 3 上访用户发帖列表 post_list 4个字段
