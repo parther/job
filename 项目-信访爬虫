@@ -48,6 +48,7 @@
 0209 周五 优化代码，跑出所有的结果
 -
 0223 周五 继续爬取其他完全数据
+
 ===
 目的：是为了掌握信访事件的发展路径，将事件扼杀在苗头
 分析任务：
@@ -67,10 +68,7 @@ user_id 昵称nickname 等级level 等级标签level_label 被禁banned 关注�
 积分point 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
 主贴数post_number 回帖数reply_number
 -
-主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post
-JSONDecodeError 一般是json链接的格式不对，删除var
-response.url 是 str格式
-item['label'] 为str
+主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post 可能是有删帖
 
 =
 3 上访用户发帖列表 post_list 4个字段
