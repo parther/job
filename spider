@@ -4,6 +4,7 @@
 从返回命令中找失败的原因，因为这个更准确
 注重效率，不用怕犯错，因为害怕也没用
 技术产生进步，采用一切能提高效率的方法
+GitHub 搜索代码
 
 ===
 # 爬虫：
@@ -12,37 +13,6 @@
 1 获取源代码。网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
 ===
-
-# scrapy 概述
-Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
-Python爬虫进阶一之爬虫框架概述： 
-https://cuiqingcai.com/2433.html
-https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-入门教程： 
-https://doc.scrapy.org/en/1.5/topics/commands.html
-中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
-Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
-? start_request的用法
-
-# scrapy报错解决
-unknown command : crawl :指定到文件夹路径
-list out of range 条目不对
-must be real number, not str: 一般是正则表达的问题
-''' 与下行的缩进保持一致才不会报错
-多页面多条目二级爬取，部分结果无法爬出，返回503错误：
-因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 
-解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
-爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
-
-# 从案例学习scrapy
-爬虫教程 https://cuiqingcai.com/1052.html
-爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
-使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
-写入数据库；翻页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-翻页 http://blog.csdn.net/dylanzr/article/details/51764694
-优秀代码 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
-=
-
 # 与Python相关知识点
 class Student(object)，object类，这是所有类最终都会继承的类
 文件读取与写入 http://dwz.cn/7bnhGl
@@ -58,14 +28,71 @@ replace("\xa0", " ")
 re.findall(r'(\d+)&params', s)[0]
 限制匹配个数 如只能匹配3个字符
 =
+# 其他
+notepad 减少缩进:Shift+Tab v
+查看header的方法 审查元素-Ctrl+r刷新-all-name-header
+PyCharm http://www.sohu.com/a/130930939_468739
+=
 
+# scrapy 概述
+Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
+Python爬虫进阶一之爬虫框架概述： 
+https://cuiqingcai.com/2433.html
+https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+入门教程： 
+https://doc.scrapy.org/en/1.5/topics/commands.html
+中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
+Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
+提升scrapy的性能 https://segmentfault.com/a/1190000009321902
+? start_request的用法
+item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
+response.url 取得从上级拿下来的url
+response.url 是 str格式
+item['label'] 为str
+=
 
+# scrapy报错解决
+unknown command : crawl :指定到文件夹路径
+list out of range 条目不对
+must be real number, not str: 一般是正则表达的问题
+''' 与下行的缩进保持一致才不会报错
+多页面多条目二级爬取，部分结果无法爬出，返回503错误：
+因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 
+itemmeta doesnot support item assign 没加括号
+feedexporter object has no attribute slot 导出时文件关闭
+返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
+JSONDecodeError 一般是json链接的格式不对，删除var
+-
+解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
+爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
+获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
+存储路径的两种写法：
+FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
+FEED_URI = './xf_info.csv'
+ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
+用for语句存储item才能保证爬取的字符在csv中换行显示
+=
+# 从案例学习scrapy
+爬虫教程 https://cuiqingcai.com/1052.html
+爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
+使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
+写入数据库；翻页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
+翻页 http://blog.csdn.net/dylanzr/article/details/51764694
+优秀代码 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
 
+=
+# scrapy 二级爬取
+使用meta的方法 https://www.jianshu.com/p/fe8a75284f9b 此案例的二级页面结果重复
+=
+# scrapy 翻页
+for 结合 start_urls
+? phase 页面内提交自己解析
 =
 # xpath：
 ? 用xpath 去除所选元素的空格 normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
 xpath官方文档 ttp://www.w3school.com.cn/xpath
 xpath定位 https://www.cnblogs.com/xxyBlogs/p/4244073.html
+Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
 -
 使用Chrome获得xpath 鼠标移动到指定文本-审查元素-copy-copy xpath
 将多个要爬取的xpath拿出来比较能够更快看出规律
@@ -76,33 +103,8 @@ response.xpath 返回的是list数据
 xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn response.xpath('//*[@id="bd"]').xpath('string(.)').extract()
 选取含某属性的标签内容 //div[contains(@class, 'demo')] https://segmentfault.com/q/1010000000779093 v
 选取同级元素 response.xpath('//*[@class="user-location"]/following-sibling::text()').extract()
-
-# scrapy 使用心得
-item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
-response.url 取得从上级拿下来的url
 =
-# 其他
-notepad 减少缩进:Shift+Tab v
-=
-# scrapy报错
-itemmeta doesnot support item assign 没加括号
-feedexporter object has no attribute slot 导出时文件关闭
-返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
-用for语句存储item才能保证爬取的字符在csv中换行显示
-存储路径的两种写法：
-FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
-FEED_URI = './xf_info.csv'
-ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
-
-
-爬取出来的信息少了，没有报错，scrapy结合rule使用的自动去重功能
-10个条目，一个重复，还有一个没有显示出来 该用户已经被删除错误
-提升scrapy的性能 https://segmentfault.com/a/1190000009321902
-获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
-
-查看header的方法 审查元素-Ctrl+r刷新-all-name-header
-
-# 爬虫代理
+# scrapy 爬虫代理
 不使用框架开代理 http://blog.csdn.net/loguat/article/details/74740229
 国内高匿代理IP http://www.xicidaili.com/nn/2640
 利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
@@ -114,96 +116,47 @@ useragent 和 ip 2  https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
 洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
 使用的ip必须开代理，必须加端口
 API提取
-twisted.internet.error.TCPTimedOutError: TCP connection timed out: 10060: 
-由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。.
-使用的ip没有填写端口地址
-
-# 分页
-meta 二级页面 爬虫
-有案例 但是没有完整的代码 http://www.maiziedu.com/wiki/crawler/multi/
-案例有问题 https://www.jianshu.com/p/fe8a75284f9b
+使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
 
 # 关于js
-1 js动态页面加载，内容在源码里是看不到的
-post_number = response.xpath('//div[@class="mod-hd"]/span/a[1]/text()').extract()
-火狐firebug可看动态加载的内容
+方法有二：手动获取；模拟浏览器获取
+-
+Selenium：
 Python爬虫利器五之Selenium的用法 https://cuiqingcai.com/2599.html
-Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
-2 数据能读取到，但是xpath没有规律 信息列的。直接全部爬取下来
-https://www.jianshu.com/p/4e6e42945f05
-http://www.tianya.cn/134503625
-http://www.tianya.cn/113953041
-PyCharm http://www.sohu.com/a/130930939_468739
-response.url 本链接
-scrapy js的两种处理技巧 http://www.maiziedu.com/wiki/crawler/js/
 Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
 Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
-http://blog.csdn.net/kangqianglong/article/details/62045982
-无界面依赖的浏览器引擎 Casperjs、Phantomjs
-PhantomJS就是一个没有界面的浏览器，提供了JavaScript接口
-Python爬虫利器四之PhantomJS的用法 https://cuiqingcai.com/2577.html
-chromedriver_installer https://www.jianshu.com/p/f8606dda4d8c
-对比网页执行
-环境变量
-? 天涯 调用Selenium却什么都爬不到
-? jd界面 调用和不调用Selenium都能获得数据，没有区别
-? 需要request吗
-GitHub 搜索代码
-设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
-利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
-利用Scrapy-Splash抓取JS动态渲染的网页数据 二级页面 https://www.mylonly.com/15052000291680.html
-windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
-Splash 安装docker https://www.jianshu.com/p/4052926bc12c
-Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
-Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
-scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
-scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
-360 搜索继续解决问题 github https://github.com/docker/toolbox/issues/317
-$ docker-machine rm default
-$ docker-machine create --driver virtualbox default
-同时开虚拟界面
-使用 kitematic
-https://edu.hellobi.com/course/157/lessons
-https://edu.hellobi.com/course/156/lessons
-小白进阶之Scrapy第五篇 https://cuiqingcai.com/4725.html
-qq群改名字
-本地查看渲染情况 http://192.168.99.100:8050/
-scrapy-splash Lua
-IP 又获取不到
--add-host puppetmaster:192.168.0.3 
-docker run命令的--add-host参数来为容器添加host与ip的映射关系
-Docker容器修改hosts文件重启不变 http://dockone.io/question/400
-抓取上访人的内容
-Compose 命令说明 http://www.runoob.com/docker/docker-run-command.html
-Docker run 命令 http://wiki.jikexueyuan.com/project/docker-technology-and-combat/commands.html
-[python爬虫]处理js文件的三个方法 https://www.cnblogs.com/greenteemo/p/6745404.html 
-Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
-python 爬虫如何获取js里面的内容 http://blog.csdn.net/hanchaobiao/article/details/73150405
-Python 爬虫如何获取 JS 生成的 URL 和网页内容 https://www.zhihu.com/question/21471960
-
-Selenium + PhantomJS  http://blog.csdn.net/And_w/article/details/73611325
 Selenium with Python中文翻译文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
 Selenium与PhantomJS操作 https://www.cnblogs.com/mayi0312/p/7231242.html
-鲲鹏免 费HTTP代理列表 http://www.site-digger.com/html/articles/20110516/proxieslist.html
+实例： http://blog.csdn.net/kangqianglong/article/details/62045982
+实例：python 爬虫如何获取js里面的内容 http://blog.csdn.net/hanchaobiao/article/details/73150405
+实例：http://blog.csdn.net/And_w/article/details/73611325
+设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
 trs = browser.find_element_by_xpath('//*[@id="proxies_table"]/tbody/tr[1]/td[1]')
 trs.text.split(' ') trs为str
+-
+splash：
+利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
+实例：利用scrapy-splash爬取腾讯的证券新闻 https://www.mylonly.com/15052000291680.html
+实例：scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
+实例：scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
+实例：https://edu.hellobi.com/course/156/lessons
+windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
 
+Docker安装：
+Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
+Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
+IP 获取不到 github https://github.com/docker/toolbox/issues/317：
+$ docker-machine rm default
+$ docker-machine create --driver virtualbox default
+本地查看渲染情况 http://192.168.99.100:8050/
+-
+Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
+=
 # 解析json
 XHR-copy link-address
 解析json页面 https://www.cnblogs.com/voidsky/p/5490786.html
 先使用简单的方法
 先按照自己的思路来，再看参考
 关于js的问题还是没搞清楚就开始做了，js和json不一样
-===
-
-使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
-主页打开没内容的情况 ip被封 重启电脑 延迟抓取
-ip问题 导致 json.decoder.jsondecodererror
-feedexporter object has no attribute slot  生成数据的时候没有关生成文件
-阿布云 代理
-网页总是跳转到有道 拼网址 网页劫持
-
-? 利用两个for 显示双倍的重复数
-表字段的设置
 
 
