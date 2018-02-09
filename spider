@@ -1,10 +1,16 @@
+经验：
+一切从实际的项目入手
+吃透问题，因为你肯定还会遇到这个问题。下午5点是复盘时间
+从返回命令中找失败的原因，因为这个更准确
+注重效率，不用怕犯错，因为害怕也没用
+技术产生进步，采用一切能提高效率的方法
+
+===
 # 爬虫：
-定义：
-网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
-爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
--
-request对象和response对象。客户机与服务器交换数据时用到，由服务器创立
-http://blog.csdn.net/a859522265/article/details/7259115
+定义：从网站批量获取数据的技术
+两个步骤：
+1 获取源代码。网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
+2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
 ===
 
 # scrapy 概述
@@ -16,22 +22,25 @@ https://www.cnblogs.com/jinxiao-pu/p/6762636.html
 https://doc.scrapy.org/en/1.5/topics/commands.html
 中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
 Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
-CrawSpider中rules中的使用 https://www.cnblogs.com/zhangjpn/p/6802583.html
-start_url 鸡肋功能
-=
+? start_request的用法
+
+# scrapy报错解决
+unknown command : crawl :指定到文件夹路径
+list out of range 条目不对
+must be real number, not str: 一般是正则表达的问题
+''' 与下行的缩进保持一致才不会报错
+多页面多条目二级爬取，部分结果无法爬出，返回503错误：
+因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 
+解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
+爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
 
 # 从案例学习scrapy
+爬虫教程 https://cuiqingcai.com/1052.html
+爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
 使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
 写入数据库；翻页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
 翻页 http://blog.csdn.net/dylanzr/article/details/51764694
-https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
-爬虫教程 https://cuiqingcai.com/1052.html
-爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
-用于测试的网址：
-csdn http://blog.csdn.net/fengzheku/article/list/1
-豆瓣 https://movie.douban.com/top250
-http://wiki.mbalib.com/wiki/%E9%A6%96%E9%A1%B5
-http://quotes.toscrape.com
+优秀代码 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
 =
 
 # 与Python相关知识点
@@ -47,33 +56,10 @@ python去除空格和换行符的实现方法 http://www.jb51.net/article/101979
 replace("\xa0", " ")
 "".join(l) 将list转为str
 re.findall(r'(\d+)&params', s)[0]
-=
-# 问题
-unknown command : crawl :指定到文件夹路径
-start_request的用法
-解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
-爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
 限制匹配个数 如只能匹配3个字符
-文章中有图片该如何处理
-多页面多条目二级爬取，部分结果无法爬出，返回503错误：
-因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 v
-list out of range 条目不对
-must be real number, not str: 一般是正则表达的问题
-''' 与下行的缩进保持一致才不会报错
--
-经验：
-每运行完一个spider文件，吃透它
-从返回命令中找失败的原因
-从成功中总结经验，并且不断测试，形成固定的方法论
-从项目入手，测试需要的结果
-注重效率，不用怕犯错
-使用现成的爬虫工具如八爪鱼
-设置notepad 消灭空格 技术产生进步
-有些结果就是爬不下来
-不要全盘复制黏贴，因为本身有固定的代码
-成功运行的记录，必须保存运行成功的文件并配上描述，避免重复劳动和方便纠错
-测试与最终内容一致，只是某些内容精简，这样可以提高效率
-不要随便删文件，搞得要用时找不到
+=
+
+
 
 =
 # xpath：
