@@ -48,19 +48,22 @@
 0209 周五 优化代码，跑出所有的结果
 -
 0223 周五 继续爬取其他完全数据
+0224 周六 所有帖子；帖子的评论；做表连接
 
 ===
 目的：是为了掌握信访事件的发展路径，将事件扼杀在苗头
 分析任务：
 识别上访人
+北京
 =
-技术指导 https://github.com/parther/others/blob/master/spider
-http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
+技术问题和总结 https://github.com/parther/others/blob/master/spider
+搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
+-
+? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
+
 1 上访用户表 user_list 4个字段
 user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
-? 能否设置自动翻页
-? 用xpath清洗数据 last_login_time[i]
 
 =
 2 上访用户个人信息表 user_info 17个字段
@@ -77,20 +80,22 @@ user_id 昵称nickname 等级level 等级标签level_label 被禁banned 关注�
 根据实际情况，只选择至多25条数据
 
 =
-4 上访用户发帖内容表 post 8个字段
-帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
+4 上访用户发帖内容表 post 9个字段
+发帖id post_id 帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
 -
-打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtmlru
+打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtml
 图片暂时不爬取，图片是少数
-数据清洗 4个赞 点击：1955 回复：66 
-
+s[4:] 顺序不一样
+? 固定爬取的顺序
 =
+
 5 上访用户发帖的回帖表 reply_post 7个字段
 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
 回帖终端reply_terminal 回帖楼层reply_order
 -
+? 如何显示到最早的评论
 
 =
 6 上访用户关注列表 follow_list 3个字段
