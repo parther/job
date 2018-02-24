@@ -7,9 +7,10 @@
 GitHub 搜索代码
 采用复制 而不是剪切
 
+
 ===
 # 爬虫：
-定义：从网站批量获取数据的技术
+定义：用自动化的方式，从网站批量获取公开数据的技术
 两个步骤：
 1 获取源代码。网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
@@ -29,7 +30,8 @@ replace("\xa0", " ")
 re.findall(r'(\d+)&params', s)[0]
 ? 限制匹配个数 如只能匹配3个字符
 'float' object is not subscriptable 传入的数据类型可能为空值
-? 查找指定字符在字符串中第二次出现的位置
+? 查找指定字符在字符串中第二次出现的位置 
+a = [m.start() for m in re.finditer(word, str)]  
 ? A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
