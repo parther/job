@@ -62,8 +62,12 @@
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 -
+更新：
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 最后登录不一定是新用户
+反爬：
+每100条数据采集
+
 =
 1 上访用户表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
@@ -79,7 +83,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post 可能是有删帖
 
 =
-3 上访用户发帖列表 post_list 5个字段
+3 上访用户发帖列表 post_list 5个字段 共781条数据
 发帖id post_id  帖子链接post_url 帖子标题post_title 发帖板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
@@ -92,8 +96,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 -
 打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtml
 图片暂时不爬取，图片是少数
-? 固定爬取的顺序
-? 将表3中的数据导入清洗去重以后再放入爬虫
+? 将表3中的数据导入清洗去重以后再放入爬虫 存入mysql再考虑
 ? 考虑3和4同时抓取
 =
 
