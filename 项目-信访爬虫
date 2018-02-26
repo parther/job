@@ -61,10 +61,11 @@
 =
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
--
-更新：
+=
+更新：每天7点更新第一页的数据
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 最后登录不一定是新用户
+=
 反爬：
 每100条数据采集
 
@@ -97,14 +98,15 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtml
 图片暂时不爬取，图片是少数
 ? 将表3中的数据导入清洗去重以后再放入爬虫 存入mysql再考虑
-? 考虑3和4同时抓取
+? 考虑3和4同时抓取 代码优化再考虑
 =
 
 5 上访用户发帖的回帖表 reply_post 7个字段
 回帖id reply_id 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 
 回帖人主页reply_user_homepage 回帖终端reply_terminal 回帖楼层reply_order 发帖id post_id
 -
-? 尚未核对爬虫未爬取到的数据，可能3个左右
+? 尚未核对爬虫未爬取到的数据，可能3个左右 代码优化后再考虑
+发给别人邮件，如果有需要说明的，最好附件中也加上文档
 
 =
 6 上访用户关注列表 follow_list 3个字段
