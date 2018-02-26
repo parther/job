@@ -7,7 +7,6 @@
 GitHub 搜索代码
 采用复制 而不是剪切
 
-
 ===
 # 爬虫：
 定义：用自动化的方式，从网站批量获取公开数据的技术
@@ -72,7 +71,7 @@ feedexporter object has no attribute slot 导出时文件关闭
 JSONDecodeError 一般是json链接的格式不对，删除var
 -
 解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
-爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
+? 固定爬取的顺序 爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
 获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
 存储路径的两种写法：
 FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
