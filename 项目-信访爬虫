@@ -51,6 +51,7 @@
 0224 周六 所有帖子；帖子的评论；做表连接
 -
 0226 周一 表格整理并提交；更新策略
+0227 周二 存入mysql；代码加注释，优化
 
 ===
 目的：是为了掌握信访事件的发展路径，将事件扼杀在苗头
@@ -62,22 +63,24 @@
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 -
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
-
-1 上访用户表 user_list 4个字段
-user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
+最后登录不一定是新用户
+=
+1 上访用户表 user_list 4个字段 576条数据
+用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
 
 =
 2 上访用户个人信息表 user_info 17个字段
-user_id 昵称nickname 等级level 等级标签level_label 被禁banned 关注数follow_number 粉丝followed_number 
-积分point 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签tag 个人介绍self_introduction 
-主贴数post_number 回帖数reply_number
+user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注数follow_number 粉丝followed_number 
+积分point 主贴数post_number 回帖数reply_number
+注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签label 个人介绍self_introduction 
+
 -
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post 可能是有删帖
 
 =
-3 上访用户发帖列表 post_list 4个字段
-发帖id post_id  帖子链接post_url 标题post_title 板块post_section 用户id user_id
+3 上访用户发帖列表 post_list 5个字段
+发帖id post_id  帖子链接post_url 帖子标题post_title 发帖板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
 
@@ -91,13 +94,15 @@ user_id 昵称nickname 等级level 等级标签level_label 被禁banned 关注�
 图片暂时不爬取，图片是少数
 s[4:] 顺序不一样
 ? 固定爬取的顺序
+? 将表3中的数据导入清洗去重以后再放入爬虫
+? 考虑3和4同时抓取
 =
 
 5 上访用户发帖的回帖表 reply_post 7个字段
-帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 回帖人主页reply_user_homepage
-回帖终端reply_terminal 回帖楼层reply_order
+回帖id reply_id 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 
+回帖人主页reply_user_homepage 回帖终端reply_terminal 回帖楼层reply_order 发帖id post_id
 -
-? 如何显示到最早的评论
+? 尚未核对爬虫未爬取到的数据，可能3个左右
 
 =
 6 上访用户关注列表 follow_list 3个字段
