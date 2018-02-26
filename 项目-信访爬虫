@@ -92,7 +92,6 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 -
 打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtml
 图片暂时不爬取，图片是少数
-s[4:] 顺序不一样
 ? 固定爬取的顺序
 ? 将表3中的数据导入清洗去重以后再放入爬虫
 ? 考虑3和4同时抓取
