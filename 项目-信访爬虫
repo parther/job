@@ -67,11 +67,18 @@
 =
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
+
 =
 更新：每天7点自动更新搜索页第一页用户的数据
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 最后登录不一定是新用户
-mysql-关联-定时
+mysql-关联-定时u
+? 导入完csv文件user_list后提示 unhandled exception ascii codec cant encode character in position 36-37
+? 导入的csv文件(原本为gbk转为utf-8格式)user_list 字段名user_id 变成了user id 并且无法查询 将文件转为utf无bom格式
+? 关掉mysqlworkbench 的 SQL additions 板块
+? 导入到workbench的 user_list 字段last_login_time 时间少了秒，时间格式由-变成了/
+核实 检查 每个值
+
 =
 反爬：
 每100条数据采集
