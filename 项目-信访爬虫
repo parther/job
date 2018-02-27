@@ -62,9 +62,10 @@
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
 =
-更新：每天7点更新第一页的数据
+更新：每天7点自动更新搜索页第一页用户的数据
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 最后登录不一定是新用户
+mysql-关联-定时
 =
 反爬：
 每100条数据采集
