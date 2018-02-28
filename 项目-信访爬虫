@@ -58,6 +58,7 @@
 0303 周六 实现多个爬虫文件的的定时爬取
 -
 0305 周一 实现多个爬虫文件的的定时爬取
+0306 文档优化；Python 能够连接数据库做分析
 
 ===
 目的：是为了掌握信访事件的发展路径，将事件扼杀在苗头
@@ -72,13 +73,25 @@
 更新：每天7点自动更新搜索页第一页用户的数据
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 最后登录不一定是新用户
-mysql-关联-定时u
+-
 ? 导入完csv文件user_list后提示 unhandled exception ascii codec cant encode character in position 36-37
 ? 导入的csv文件(原本为gbk转为utf-8格式)user_list 字段名user_id 变成了user id 并且无法查询 将文件转为utf无bom格式
 ? 关掉mysqlworkbench 的 SQL additions 板块
 ? 导入到workbench的 user_list 字段last_login_time 时间少了秒，时间格式由-变成了/
-核实 检查 每个值
+导入到workbench的 user_list 修改字段last_login_time类型为datetime，数据无法读出
+英文名csv能用pd.read_csv直接读出，中文名却不行
+使用Python读取的表格的列名尽量用英文
+更新数据库 Ghttp://blog.csdn.net/ljm_9615/article/details/76715696
+alter table user_list6 change column last_login_time last_login_time DATETIME
+Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
+delete from user_list where user_id in (select t.user_id from (select * from user_list limit 1,570) as t )
+https://www.cnblogs.com/azhqiang/p/5942093.html
+Error Code: 1175. You are using safe update mode and you tried to update a table without a 
+WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+SET SQL_SAFE_UPDATES = 0
+https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
 
+user_info 数据不修改。数据变动的可能性不大，且昵称应该不能再次修改
 =
 反爬：
 每100条数据采集
