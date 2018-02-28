@@ -1,4 +1,5 @@
 经验：
+为什么要加快效率呢？留出时间处理未知的bug，接受新的任务
 一切从实际的项目入手
 吃透问题，因为你肯定还会遇到这个问题。下午5点是复盘时间
 从返回命令中找失败的原因，因为这个更准确
@@ -9,8 +10,12 @@ GitHub 搜索代码
 
 ===
 # 问题：
-? A value is trying to be set on a copy of a slice from a DataFrame.
-Try using .loc[row_indexer,col_indexer] = value insteads[4:] 
+代码太长换行 跳出 EOL while scanning string literal 错误
+导入到workbench的 user_list 修改字段last_login_time类型为datetime，数据无法读出
+导入完csv文件user_list后提示 unhandled exception ascii codec cant encode character in position 36-37
+导入的csv文件(原本为gbk转为utf-8格式)user_list 字段名user_id 变成了user id 并且无法查询 将文件转为utf无bom格式
+关掉mysqlworkbench 的 SQL additions 板块
+A value is trying to be set on a copy of a slice from a DataFrame.
 =
 # 爬虫：
 定义：用自动化的方式，从网站批量获取公开数据的技术
@@ -22,8 +27,20 @@ Try using .loc[row_indexer,col_indexer] = value insteads[4:]
 notepad 减少缩进:Shift+Tab v
 查看header的方法 审查元素-Ctrl+r刷新-all-name-header
 PyCharm http://www.sohu.com/a/130930939_468739
-=
+Python中操作mysql的pymysql模块详解 http://www.cnblogs.com/wt11/p/6141225.html
 
+=
+# MySQL
+Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
+delete from user_list where user_id in (select t.user_id from (select * from user_list limit 1,570) as t )
+https://www.cnblogs.com/azhqiang/p/5942093.html
+-
+Error Code: 1175. You are using safe update mode and you tried to update a table without a 
+WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
+SET SQL_SAFE_UPDATES = 0
+https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
+
+=
 # scrapy 概述
 Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
 Python爬虫进阶一之爬虫框架概述： 
@@ -52,6 +69,7 @@ itemmeta doesnot support item assign 没加括号
 feedexporter object has no attribute slot 导出时文件关闭
 返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
 JSONDecodeError 一般是json链接的格式不对，删除var
+
 -
 解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
 ? 固定爬取的顺序 爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
@@ -61,6 +79,7 @@ FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
 FEED_URI = './xf_info.csv'
 ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
 用for语句存储item才能保证爬取的字符在csv中换行显示
+更新数据库的方法 http://blog.csdn.net/ljm_9615/article/details/76715696
 =
 # 从案例学习scrapy
 爬虫教程 https://cuiqingcai.com/1052.html
