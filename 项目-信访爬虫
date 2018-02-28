@@ -75,6 +75,7 @@
 -
 user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
 user_info 数据不修改。数据变动的可能性不大，且昵称应该不能再次修改
+pymysql.err.interfaceerror # self.conn.close() # 断开数据库连接
 
 =
 # 反爬：
