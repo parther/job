@@ -10,6 +10,8 @@ GitHub 搜索代码
 
 ===
 # 问题：
+导入的表格少数据 5060943 602781 987660 341744 6767600 无法导入mysql
+将csv数据导入已存在的table没法成功
 代码太长换行 跳出 EOL while scanning string literal 错误
 导入到workbench的 user_list 修改字段last_login_time类型为datetime，数据无法读出
 导入完csv文件user_list后提示 unhandled exception ascii codec cant encode character in position 36-37
