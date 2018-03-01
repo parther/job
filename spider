@@ -47,6 +47,7 @@ Error Code: 1175. You are using safe update mode and you tried to update a table
 WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
 SET SQL_SAFE_UPDATES = 0
 https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
+把Preference中的标签由General切换到SQL Queries标签，然后支去掉safe updates前的选项框
 pymysql.err.interfaceerror # self.conn.close() 断开数据库连接 https://stackoverflow.com/questions/6650940/interfaceerror-0
 mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
 导入数据多列变成一列 设置seperate
