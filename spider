@@ -16,6 +16,7 @@ GitHub 搜索代码
 导入的csv文件(原本为gbk转为utf-8格式)user_list 字段名user_id 变成了user id 并且无法查询 将文件转为utf无bom格式
 关掉mysqlworkbench 的 SQL additions 板块
 A value is trying to be set on a copy of a slice from a DataFrame.
+存成csv文件多出1列
 =
 # 爬虫：
 定义：用自动化的方式，从网站批量获取公开数据的技术
@@ -28,7 +29,10 @@ notepad 减少缩进:Shift+Tab v
 查看header的方法 审查元素-Ctrl+r刷新-all-name-header
 PyCharm http://www.sohu.com/a/130930939_468739
 Python中操作mysql的pymysql模块详解 http://www.cnblogs.com/wt11/p/6141225.html
-
+将nan 换成none df_remove_nan = df.where(df.notnull(), None)
+df_post[df_post['post_id']==5060943 |df_post['post_id']==6767600] 提示 
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+df[(df.nickname =='退伍军人在上访') | (df.nickname =='准许我上访')] http://bluewhale.cc/2016-08-06/use-pandas-filter-and-sort.html
 =
 # MySQL
 Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
@@ -39,7 +43,9 @@ Error Code: 1175. You are using safe update mode and you tried to update a table
 WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
 SET SQL_SAFE_UPDATES = 0
 https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
-
+pymysql.err.interfaceerror # self.conn.close() 断开数据库连接 https://stackoverflow.com/questions/6650940/interfaceerror-0
+mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
+导入数据多列变成一列 设置seperate
 =
 # scrapy 概述
 Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
