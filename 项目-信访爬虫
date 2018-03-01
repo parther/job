@@ -72,25 +72,19 @@
 =
 # 更新：每天7点自动更新搜索页第一页用户的数据
 ? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
+流程：导入数据-修改主文件-修改pipe文件-测试
 -
 user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
 user_info 数据只更新不修改。数据变动的可能性不大，且昵称应该不能再次修改
 post_list 数据只更新不修改。
-
-pymysql.err.interfaceerror # self.conn.close() # 断开数据库连接 https://stackoverflow.com/questions/6650940/interfaceerror-0
-如无必要，不要增加。剃刀原理
-df_remove_nan = df.where(df.notnull(), None)
-mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
-下午5点，梳理做事的流程
-? post_list csv导出有多一行，有些却没有
-导入数据多列变成一列 设置seperate
+post 数据只更新不修改。
 
 
 =
 # 反爬：
 每100条数据采集
 
-=
+===
 1 上访用户表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
