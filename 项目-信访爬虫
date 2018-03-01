@@ -76,10 +76,12 @@
 -
 user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
 user_info 数据只更新不修改。数据变动的可能性不大，且昵称应该不能再次修改
-post_list 数据只更新不修改。
+post_list 数据只更新不修改。少6个数据
 post 数据只更新不修改。
+reply_post 数据只更新不修改。少了30个数据
 
-
+post 94个链接，只出来63个，出现404 HTTP status code is not handled or allowed ，单个抓取不会
+HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
 =
 # 反爬：
 每100条数据采集
@@ -116,7 +118,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 ? 考虑3和4同时抓取 代码优化再考虑
 =
 
-5 上访用户发帖的回帖表 reply_post 7个字段
+5 上访用户发帖的回帖表 reply_post 7个字段 7935数据
 回帖id reply_id 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 
 回帖人主页reply_user_homepage 回帖终端reply_terminal 回帖楼层reply_order 发帖id post_id
 -
