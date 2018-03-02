@@ -85,6 +85,8 @@ HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/detail
 i.xpath('div[2]/div[2]/div[2]/a[contains(@href, "http://www.tianya.cn/mobile/")]/text()').extract() list无法用[0]还原
 只能用"".join(user_id)
 MySQL server version for the right syntax to use near 就是语法错误，不管是否返回正确结果
+筛选30个数据 df[(df.post_id ==5060943) | (df.post_id ==602781)|
+
 =
 # 反爬：
 每100条数据采集
