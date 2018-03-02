@@ -37,6 +37,10 @@ Python中操作mysql的pymysql模块详解 http://www.cnblogs.com/wt11/p/6141225
 df_post[df_post['post_id']==5060943 |df_post['post_id']==6767600] 提示 
 ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
 df[(df.nickname =='退伍军人在上访') | (df.nickname =='准许我上访')] http://bluewhale.cc/2016-08-06/use-pandas-filter-and-sort.html
+i.xpath('div[2]/div[2]/div[2]/a[contains(@href, "http://www.tianya.cn/mobile/")]/text()').extract() list无法用[0]还原
+只能用"".join(user_id)
+筛选30个数据 df[(df.post_id ==5060943) | (df.post_id ==602781)|
+df_reply_post[df_reply_post['reply_id'].isin(l)]
 =
 # MySQL
 Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
@@ -51,6 +55,7 @@ https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
 pymysql.err.interfaceerror # self.conn.close() 断开数据库连接 https://stackoverflow.com/questions/6650940/interfaceerror-0
 mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
 导入数据多列变成一列 设置seperate
+MySQL server version for the right syntax to use near 就是语法错误，不管是否返回正确结果
 =
 # scrapy 概述
 Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
@@ -91,6 +96,8 @@ FEED_URI = './xf_info.csv'
 ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
 用for语句存储item才能保证爬取的字符在csv中换行显示
 更新数据库的方法 http://blog.csdn.net/ljm_9615/article/details/76715696
+post 94个链接，只出来63个，出现404 HTTP status code is not handled or allowed ，单个抓取不会
+HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
 =
 # 从案例学习scrapy
 爬虫教程 https://cuiqingcai.com/1052.html
