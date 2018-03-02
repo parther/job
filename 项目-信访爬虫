@@ -82,6 +82,9 @@ reply_post 数据只更新不修改。少了30个数据
 
 post 94个链接，只出来63个，出现404 HTTP status code is not handled or allowed ，单个抓取不会
 HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
+i.xpath('div[2]/div[2]/div[2]/a[contains(@href, "http://www.tianya.cn/mobile/")]/text()').extract() list无法用[0]还原
+只能用"".join(user_id)
+MySQL server version for the right syntax to use near 就是语法错误，不管是否返回正确结果
 =
 # 反爬：
 每100条数据采集
