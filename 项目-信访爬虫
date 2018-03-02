@@ -76,9 +76,9 @@
 -
 user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
 user_info 数据只更新不修改。数据变动的可能性不大，且昵称应该不能再次修改
-post_list 数据只更新不修改。少6个数据
+post_list 数据只更新不修改。
 post 数据只更新不修改。
-reply_post 数据只更新不修改。少了30个数据
+reply_post 数据只更新不修改。
 
 post 94个链接，只出来63个，出现404 HTTP status code is not handled or allowed ，单个抓取不会
 HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
@@ -97,7 +97,7 @@ MySQL server version for the right syntax to use near 就是语法错误，不�
 -
 
 =
-2 上访用户个人信息表 user_info 17个字段
+2 上访用户个人信息表 user_info 17个字段 576条数据
 user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注数follow_number 粉丝followed_number 
 积分point 主贴数post_number 回帖数reply_number
 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签label 个人介绍self_introduction 
@@ -112,7 +112,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 根据实际情况，只选择至多25条数据
 
 =
-4 上访用户发帖内容表 post 9个字段
+4 上访用户发帖内容表 post 9个字段 共781条数据
 发帖id post_id 帖子链接post_url 标题post_title 内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
