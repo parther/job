@@ -81,8 +81,8 @@ post 数据只更新不修改。
 reply_post 数据只更新不修改。
 
 =
-# 反爬：
-每100条数据采集
+# 分析：
+
 
 ===
 1 上访用户表 user_list 4个字段 576条数据
@@ -97,6 +97,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 
 -
 主贴数 回帖数 数据错误 http://www.tianya.cn/12188710/bbs?t=post 可能是有删帖
+每100条数据采集
 
 =
 3 上访用户发帖列表 post_list 5个字段 共781条数据
