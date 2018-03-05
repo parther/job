@@ -1,4 +1,5 @@
 经验：
+每周五下午3点，总结此表
 对比找出问题
 如无必要，不要增加。剃刀原理
 下午5点，解决问题；梳理做事的流程
@@ -30,18 +31,7 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
 =
 # 其他
-notepad 减少缩进:Shift+Tab v
-查看header的方法 审查元素-Ctrl+r刷新-all-name-header
-PyCharm http://www.sohu.com/a/130930939_468739
-Python中操作mysql的pymysql模块详解 http://www.cnblogs.com/wt11/p/6141225.html
-将nan 换成none df_remove_nan = df.where(df.notnull(), None)
-df_post[df_post['post_id']==5060943 |df_post['post_id']==6767600] 提示 
-ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
-df[(df.nickname =='退伍军人在上访') | (df.nickname =='准许我上访')] http://bluewhale.cc/2016-08-06/use-pandas-filter-and-sort.html
-i.xpath('div[2]/div[2]/div[2]/a[contains(@href, "http://www.tianya.cn/mobile/")]/text()').extract() list无法用[0]还原
-只能用"".join(user_id)
-筛选30个数据 df[(df.post_id ==5060943) | (df.post_id ==602781)|
-df_reply_post[df_reply_post['reply_id'].isin(l)]
+
 =
 # MySQL
 Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
