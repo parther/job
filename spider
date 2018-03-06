@@ -1,7 +1,8 @@
 经验：
-每周五下午4点，总结此表
+看官方文档
 对比找出问题
-如无必要，不要增加。剃刀原理
+如无必要，不要增加。剃刀原理。必要是没有太大的错误，没必要推到重来
+每周五下午4点，总结此表
 下午5点，解决问题；梳理做事的流程
 为什么要加快效率呢？留出时间处理未知的bug，接受新的任务
 一切从实际的项目入手
@@ -31,6 +32,11 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
 =
 # 其他
+df_post2.to_csv('df_post2.csv',index=False) 避免生出第一列
+import pandas as pd  
+from sqlalchemy import create_engine
+engine = create_engine('mysql+pymysql://root:12345@127.0.0.1:3306/tianya_scrapy?charset=utf8')  
+df_post.to_sql(name='df_post', con=engine, if_exists='append',index=False,index_label=False) 
 
 =
 # MySQL
@@ -176,5 +182,6 @@ XHR-copy link-address
 先使用简单的方法
 先按照自己的思路来，再看参考
 关于js的问题还是没搞清楚就开始做了，js和json不一样
+fiddler
 
 
