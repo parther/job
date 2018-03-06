@@ -20,7 +20,7 @@
 0303 周六 爬虫策略；分析策略
 -
 0305 周一 10点开会分析；从文档提取身份证号做筛选；改变分析方向 65
-0306 周二 写数据库连接文档；影响力分析
+0306 周二 写数据库连接文档；数据库重新测试；影响力分析
 0307 周三 因子提取
 0308 周四 文本分析研究
 0309 周五 文本分析研究
@@ -51,7 +51,12 @@ user_info 数据只更新不修改。数据变动的可能性不大，且昵称�
 post_list 数据只更新不修改。
 post 数据只更新不修改。
 reply_post 数据只更新不修改。
-
+-
+df_post2.to_csv('df_post2.csv',index=False)
+import pandas as pd  
+from sqlalchemy import create_engine
+engine = create_engine('mysql+pymysql://root:12345@127.0.0.1:3306/tianya_scrapy?charset=utf8')  
+df_post.to_sql(name='df_post', con=engine, if_exists='append',index=False,index_label=False) 
 ===
 1 上访用户列表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
