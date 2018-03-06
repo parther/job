@@ -37,7 +37,6 @@
 =
 # 分析：
 0303 目的：了解上访人天涯天涯发帖行为分析，识别上访人/影响力分析/活跃度分析
-fiddler
 0305 识别上访人。姓名，身份证
 0305 扩散力和影响力；情感分析(先不做)；极端指数
 
@@ -52,14 +51,6 @@ post_list 数据只更新不修改。
 post 数据只更新不修改。
 reply_post 数据只更新不修改。
 -
-df_post2.to_csv('df_post2.csv',index=False)
-import pandas as pd  
-from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://root:12345@127.0.0.1:3306/tianya_scrapy?charset=utf8')  
-df_post.to_sql(name='df_post', con=engine, if_exists='append',index=False,index_label=False) 
-http://www.dcharm.com/?p=584
-慌乱和正确的
-
 
 ===
 1 上访用户列表 user_list 4个字段 576条数据
