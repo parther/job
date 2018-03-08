@@ -1,11 +1,15 @@
 经验：
-画出脑图
+决定事情，先征询一下时间
+讨论，而不是聊一下
+一个团队，保持进度上的一致
+代码习惯 加上表头
+凡事画出脑图
 有目标再分析；以终为始的分析方式
 看官方文档
 对比找出问题
 如无必要，不要增加。剃刀原理。必要是没有太大的错误，没必要推到重来
 每周五下午4点，总结此表
-下午5点，解决问题；梳理做事的流程
+下午5点，解决问题；做事回顾
 为什么要加快效率呢？留出时间处理未知的bug，接受新的任务
 一切从实际的项目入手
 吃透问题，因为你肯定还会遇到这个问题。下午5点是复盘时间
@@ -39,7 +43,12 @@ import pandas as pd
 from sqlalchemy import create_engine
 engine = create_engine('mysql+pymysql://root:12345@127.0.0.1:3306/tianya_scrapy?charset=utf8')  
 df_post.to_sql(name='df_post', con=engine, if_exists='append',index=False,index_label=False) 
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Mar  1 11:23:53 2018
 
+@author: ZB
+"""
 =
 # MySQL
 Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
@@ -55,6 +64,10 @@ pymysql.err.interfaceerror # self.conn.close() 断开数据库连接 https://sta
 mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
 导入数据多列变成一列 设置seperate
 MySQL server version for the right syntax to use near 就是语法错误，不管是否返回正确结果
+
+熵权法简介 http://blog.sina.com.cn/s/blog_710e9b550101aqnv.html
+熵权法的计算方法 https://zhuanlan.zhihu.com/p/28067337
+NumPy和Pandas工具包中的函数 http://blog.csdn.net/baoyan2015/article/details/53503073
 =
 # scrapy 概述
 Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
