@@ -31,11 +31,25 @@ GitHub 搜索代码
 A value is trying to be set on a copy of a slice from a DataFrame.
 存成csv文件多出1列
 =
-# 爬虫：
+# 爬虫
 定义：用自动化的方式，从网站批量获取公开数据的技术
-两个步骤：
+工作流程：
 1 获取源代码。网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
+
+# scrapy
+定义：Scrapy是一个爬虫框架（相当于模板），能够减少工作量，省去造轮子的时间
+工作流程：发送请求-获得回应并解析-将解析内容交由管道存储
+-
+参考：
+官方文档 https://doc.scrapy.org/en/1.5/topics/commands.html
+官方文档-中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
+框架说明 https://cuiqingcai.com/2433.html
+框架说明-工作流程图 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+
+
+
+
 =
 # 其他
 df_post2.to_csv('df_post2.csv',index=False) 避免生出第一列
@@ -69,14 +83,15 @@ MySQL server version for the right syntax to use near 就是语法错误，不�
 熵权法的计算方法 https://zhuanlan.zhihu.com/p/28067337
 NumPy和Pandas工具包中的函数 http://blog.csdn.net/baoyan2015/article/details/53503073
 =
-# scrapy 概述
-Scrapy是一个为了爬取网站数据和提取结构性数据而编写的应用框架，可以省去造轮子的时间
+
+
 Python爬虫进阶一之爬虫框架概述： 
-https://cuiqingcai.com/2433.html
-https://www.cnblogs.com/jinxiao-pu/p/6762636.html
+
+
+
+
 入门教程： 
-https://doc.scrapy.org/en/1.5/topics/commands.html
-中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
+
 Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
 提升scrapy的性能 https://segmentfault.com/a/1190000009321902
 ? start_request的用法
