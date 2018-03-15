@@ -84,6 +84,7 @@ item文件中的条目可以全列出来，不会影响spider文件中的操作�
 response.url 取得从上级拿下来的url
 response.url 是 str格式
 item['label'] 为str
+? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
 =
 
 # scrapy报错解决
