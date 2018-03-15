@@ -44,7 +44,15 @@ reply_post 数据只更新不修改。
 1 唯一性，并且命名准确
 考虑到链接可能改变了
 数据库连接使用专门的外调函数么
-
+注释统一标准统一改
+# 写在什么地方 统一打在上面 需要额外说明再后面
+测试是否有效-先复制再更新
+pymysql http://www.cnblogs.com/wt11/p/6141225.html
+换行
+            sql_update = "update user_info set follow_number = %s \
+            where user_id = %s"
+            
+数据库的相关格式要改 int改为str
 ===
 爬虫尽量拿到原始数据，至于怎么用再做拼接
 
