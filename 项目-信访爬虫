@@ -1,25 +1,12 @@
-# 目的：
+# 
+目的：
 从天涯论坛爬取上访用户的相关内容
-爬取任务2 0315
 完成时间：
-0206 周二
-考核：
-所有内容能够爬取下来，梦圆，杨老师认同
-=
-# 计划:
+0102 - 0206 周二
+成果：
+代码；数据库表；数据库表说明
+计划:
 0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
-0108-0113 正式开始爬虫
-0115-0120 大规模爬取
-0122-0127 大规模爬取
-0131-0206 收工
--
-0226 周一 表格整理并提交
-0227 周二 爬虫结果存入数据库
-0228 周三 爬虫连接数据库，实现数据存储及更新
-0301 周四 5张表格连接数据库；优化34两张表
-0302 周五 第5张表连接数据库。数据未能读取解决。连接方案
-0303 周六 爬虫策略；分析策略
--
 0305 周一 10点开会分析；从文档提取身份证号做筛选；改变分析方向 65
 0306 周二 写数据库连接文档；数据库重新测试；影响力分析
 0307 周三 
@@ -27,7 +14,7 @@
 0309 周五 设置时间参数的工作；供分析用数据提取完毕；使用熵权法确定权重并且排序
 -
 0315 周四 跑代码；优化方案，包括合并爬虫，爬取间隔，注释代码，重新设置数据库主键；新的爬虫任务；scrapy技术文档整理
-
+0316 周五 跑代码；post_reply整合；scrapy技术文档整理；考虑下北京的爬虫
 ===
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
@@ -40,28 +27,28 @@ post_list 数据只更新不修改。
 post 数据只更新不修改。
 reply_post 数据只更新不修改。
 
-# 优化策略
-1 唯一性，并且命名准确
-考虑到链接可能改变了
-数据库连接使用专门的外调函数么
-注释统一标准统一改
-# 写在什么地方 统一打在上面 需要额外说明再后面
-测试是否有效-先复制再更新
-pymysql http://www.cnblogs.com/wt11/p/6141225.html
-换行
-            sql_update = "update user_info set follow_number = %s \
-            where user_id = %s"
-            
-数据库的相关格式要改 int改为str
+# 优化
+策略：
+1 命名符合中文习惯
+2 尽量使用外调库封装常用函数 如数据库连接
+3 注释统一标准统一改
+'#' 放在需要说明的代码上一行
+4 灵活处理相关的参数
+start_url
+5 爬取间隔
+-
+
 ===
+# 表
 爬虫尽量拿到原始数据，至于怎么用再做拼接
 
-1 上访用户列表 user_list 4个字段 576条数据
+
+# 1 上访用户列表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
 
 =
-2 上访用户个人信息表 user_info 17个字段 576条数据
+# 2 上访用户个人信息表 user_info 17个字段 576条数据
 user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注数follow_number 粉丝数followed_number 
 积分point 主贴数post_number 回帖数reply_number
 注册日期registration_date 生日birthday 地区location 行业industry 职业occupation 标签label 个人介绍self_introduction 
@@ -71,13 +58,13 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 每100条数据采集
 
 =
-3 上访用户发帖列表 post_list 5个字段 共781条数据
+# 3 上访用户发帖列表 post_list 5个字段 共781条数据
 发帖id post_id  帖子链接post_url 帖子标题post_title 发帖板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
 
 =
-4 上访用户发帖内容表 post 9个字段 共781条数据
+# 4 上访用户发帖内容表 post_content 9个字段 共781条数据
 发帖id post_id 帖子链接post_url 帖子标题post_title 帖子内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
@@ -88,7 +75,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 ? 考虑3和4同时抓取 代码优化再考虑
 =
 
-5 上访用户发帖的回帖表 reply_post 7个字段 7935数据
+# 5 上访用户发帖的回帖表 post_reply 7个字段 7935数据
 回帖id reply_id 帖子链接post_url 回帖内容reply_text 回帖时间reply_time 回帖人昵称reply_nickname 
 回帖人主页reply_user_homepage 回帖终端reply_terminal 回帖楼层reply_order 发帖id post_id
 -
