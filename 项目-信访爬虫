@@ -6,10 +6,7 @@
 成果：
 代码；数据库表；数据库表说明
 计划:
-0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
--
-0315 周四 跑代码；优化方案，包括合并爬虫，爬取间隔，注释代码，重新设置数据库主键；新的爬虫任务；scrapy技术文档整理
-0316 周五 跑代码；post_reply整合；scrapy技术文档整理；和梦圆讨论下北京的爬虫任务及代码的优化问题
+0319 周一 着手解决按时间提取的问题
 
 ===
 技术问题和总结 https://github.com/parther/others/blob/master/spider
@@ -26,6 +23,7 @@ post_list 数据只更新不修改。
 post 数据只更新不修改。
 reply_post 数据只更新不修改。
 
+=
 # 优化
 策略：
 1 命名符合中文习惯
@@ -34,34 +32,8 @@ reply_post 数据只更新不修改。
 '#' 放在需要说明的代码上一行
 4 爬取间隔 5-10秒 目前暂不考虑
 5 数据库字段的格式及主键 没用到 后面再考虑
--
-post_content 名字还未改
-考虑到我和梦圆代码统一的问题，自己统一的问题
-统一设置数据库字段的类型
-text varchar 的区别
-import pandas as pd
-from pandas import DataFrame,Series
-import numpy as np
-# import re
-# df = pd.read_csv('post_list.csv',encoding='utf-8')
 
-a1 = np.random.randint(1,10,size=(5))
-a2 = np.random.randint(100,1000,size=(5))
-a3 = np.array([1,1,1,1,0.999])
-
-df = pd.DataFrame([a1,a2,a3]).T
-df.columns=['x1','x2','x3']
-
-df_std = (df - df.min())/df.max()
-pij = df_std/df_std.sum()
-
-ej = -(1/np.log(5)) * (np.log(pij)*pij).sum()
-dj = 1 - ej
-wj = dj/dj.sum()
-
-score = (pij*wj).sum(axis=1)
-
-? 表post_content 还是没解决94条数据只爬到64条的问题
+? 表post_content 还是没解决94条数据只爬到64条的问题 奇怪的空值，已经在sql里面去掉了却在Python中还能读到
 ? 表post_list 多的两条数据，查看其来源，同步到content和reply
 ? 表post_content 是94条还是93条数据
 
