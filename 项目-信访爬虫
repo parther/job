@@ -7,14 +7,10 @@
 代码；数据库表；数据库表说明
 计划:
 0102-0106 熟悉爬虫，并且实现爬虫抓取天涯网页内容
-0305 周一 10点开会分析；从文档提取身份证号做筛选；改变分析方向 65
-0306 周二 写数据库连接文档；数据库重新测试；影响力分析
-0307 周三 
-0308 周四 早上跑所有的爬虫；讨论遇到的问题；影响力分析之确定权重，配数据看懂熵权法
-0309 周五 设置时间参数的工作；供分析用数据提取完毕；使用熵权法确定权重并且排序
 -
 0315 周四 跑代码；优化方案，包括合并爬虫，爬取间隔，注释代码，重新设置数据库主键；新的爬虫任务；scrapy技术文档整理
-0316 周五 跑代码；post_reply整合；scrapy技术文档整理；考虑下北京的爬虫
+0316 周五 跑代码；post_reply整合；scrapy技术文档整理；和梦圆讨论下北京的爬虫任务及代码的优化问题
+
 ===
 技术问题和总结 https://github.com/parther/others/blob/master/spider
 搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
@@ -37,7 +33,33 @@ reply_post 数据只更新不修改。
 start_url
 5 爬取间隔
 -
+post_content 名字还未改
+考虑到我和梦圆代码统一的问题
+统一设置数据库字段的类型
+text varchar 的区别
+import pandas as pd
+from pandas import DataFrame,Series
+import numpy as np
+# import re
+# df = pd.read_csv('post_list.csv',encoding='utf-8')
 
+a1 = np.random.randint(1,10,size=(5))
+a2 = np.random.randint(100,1000,size=(5))
+a3 = np.array([1,1,1,1,0.999])
+
+df = pd.DataFrame([a1,a2,a3]).T
+df.columns=['x1','x2','x3']
+
+df_std = (df - df.min())/df.max()
+pij = df_std/df_std.sum()
+
+ej = -(1/np.log(5)) * (np.log(pij)*pij).sum()
+dj = 1 - ej
+wj = dj/dj.sum()
+
+score = (pij*wj).sum(axis=1)
+
+? 表post_content 还是没解决94条数据只爬到64条的问题
 ===
 # 表
 爬虫尽量拿到原始数据，至于怎么用再做拼接
@@ -58,7 +80,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 每100条数据采集
 
 =
-# 3 上访用户发帖列表 post_list 5个字段 共781条数据
+# 3 上访用户发帖列表 post_list 5个字段 共1136条数据 783条不重复数据
 发帖id post_id  帖子链接post_url 帖子标题post_title 发帖板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
