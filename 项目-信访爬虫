@@ -33,9 +33,9 @@ reply_post 数据只更新不修改。
 4 爬取间隔 5-10秒 目前暂不考虑
 5 数据库字段的格式及主键 没用到 后面再考虑
 
-? 表post_content 还是没解决94条数据只爬到64条的问题 奇怪的空值，已经在sql里面去掉了却在Python中还能读到
-? 表post_list 多的两条数据，查看其来源，同步到content和reply
-? 表post_content 是94条还是93条数据
+? 表post_content 还是没解决94条数据只爬到64条的问题 奇怪的空值，已经在sql里面去掉了却在Python中还能读到 url抓到空值后爬虫停止
+? ? 表post_content 是94条还是93条数据  表post_list 多的两条数据，查看其来源，同步到content和reply 还是空值的问题 nan能占两个字符 not a number
+
 
 ===
 # 表
