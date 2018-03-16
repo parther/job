@@ -34,7 +34,7 @@ start_url
 5 爬取间隔
 -
 post_content 名字还未改
-考虑到我和梦圆代码统一的问题
+考虑到我和梦圆代码统一的问题，自己统一的问题
 统一设置数据库字段的类型
 text varchar 的区别
 import pandas as pd
@@ -60,6 +60,9 @@ wj = dj/dj.sum()
 score = (pij*wj).sum(axis=1)
 
 ? 表post_content 还是没解决94条数据只爬到64条的问题
+? 表post_list 多的两条数据，查看其来源，同步到content和reply
+? 表post_content 是94条还是93条数据
+
 ===
 # 表
 爬虫尽量拿到原始数据，至于怎么用再做拼接
