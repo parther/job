@@ -21,4 +21,16 @@ wj = dj/dj.sum()
 
 score = (pij*wj).sum(axis=1)
 
+# 判断两列是否匹配
+import pandas as pd
+df_list = pd.read_csv('post_list.csv',encoding='gbk')
+df_content = pd.read_csv('post_content.csv',encoding='gbk')
+l1 = list(df_list[150:250]['post_id'])
+l2 = list(df_content[151:246]['post_id'])
+for i in l1:
+    if str(i) not in l2:
+        print(i)
+    else:
+        print('yes')
+
 
