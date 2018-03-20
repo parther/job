@@ -7,6 +7,7 @@
 代码；数据库表；数据库表说明
 计划:
 0319 周一 着手解决按时间提取的问题
+0320 周二 user_list，连接数据库；其他表格，设置时间提取规则，连接数据库，更新规则；交给何老师
 
 ===
 技术问题和总结 https://github.com/parther/others/blob/master/spider
