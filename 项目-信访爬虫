@@ -49,6 +49,10 @@ if datetime.datetime.strptime('2018-03-12 01:08:10','%Y-%m-%d %H:%M:%S')>\
     print('yes')
 else:
     print('no')
+   
+select * from article limit 150 into outfile '/test/article.sql'
+The MySQL server is running with the --secure-file-priv option
+http://blog.csdn.net/man_to_home/article/details/54947518 双引号
 
 ===
 # 表
