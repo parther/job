@@ -40,11 +40,14 @@ reply_post 数据只更新不修改。
 ? 表post_content 还是没解决94条数据只爬到64条的问题 奇怪的空值，已经在sql里面去掉了却在Python中还能读到 url抓到空值后爬虫停止
 ? ? 表post_content 是94条还是93条数据  表post_list 多的两条数据，查看其来源，同步到content和reply 还是空值的问题 nan能占两个字符 not a number
 ? 最终大于如何判断 能否像mysql那样简单判断
+? 爬取间隔 3秒
+post_url.remove('') 的使用方法
+? post_content post_url的数据为781，post_list 为783
 
 ===
 # 表
 爬虫尽量拿到原始数据，至于怎么用再做拼接
-
+ 
 
 # 1 上访用户列表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
@@ -61,7 +64,7 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 每100条数据采集
 
 =
-# 3 上访用户发帖列表 post_list 5个字段 共1136条数据 783条不重复数据
+# 3 上访用户发帖列表 post_list 5个字段 共1136条数据 783条不重复数据 1条为nan
 发帖id post_id  帖子链接post_url 帖子标题post_title 发帖板块post_section 用户id user_id
 -
 根据实际情况，只选择至多25条数据
