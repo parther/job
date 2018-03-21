@@ -43,6 +43,12 @@ reply_post 数据只更新不修改。
 ? 爬取间隔 3秒
 post_url.remove('') 的使用方法
 ? post_content post_url的数据为781，post_list 为783
+http://blog.csdn.net/daijiguo/article/details/78283788
+if datetime.datetime.strptime('2018-03-12 01:08:10','%Y-%m-%d %H:%M:%S')>\
+            datetime.datetime.strptime('2018-03-17 01:08:10','%Y-%m-%d %H:%M:%S') :
+    print('yes')
+else:
+    print('no')
 
 ===
 # 表
