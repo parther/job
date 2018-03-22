@@ -45,6 +45,7 @@ reply_post 数据只更新不修改。
 select * from article limit 150 into outfile '/test/article.sql'
 The MySQL server is running with the --secure-file-priv option
 http://blog.csdn.net/man_to_home/article/details/54947518 双引号
+show variables like '%secure%';
 
 ===
 # 表
