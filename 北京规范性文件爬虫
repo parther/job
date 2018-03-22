@@ -15,7 +15,8 @@
 北京规范性文件 beijing_normative_documents
 =
 1 发布规范性文件的单位表 release_unit
-unit_id 级别level 单位unit 单位发布规范性文件表的链接 release_url
+unit_id 
+级别level 单位unit 单位发布规范性文件表的链接 release_url
 
 =
 2 规范性文件表 normative_documents
@@ -23,13 +24,7 @@ post_id
 发文机构post_agency 发文字号post_number	类别category	成文日期written_date	发布日期publish_date	实施日期implementation_date	
 废止日期abolish_date	有效性effectiveness	标题title	正文text 发文链接post_url
 -
-做事流程处理的规范问题，计划表等等
-整理scrapy的处理二级页面的方法
-原始 middleware 里面的内容是否可以将中间件打包呢
-总结能力和吸取教训的能力
-4点处理自己的对外事情
 
-# 
 3 规范性文件条目表 document_items
 item_id 
 发文字号post_number 标题title 法律法规名称law_name  章节序号chapter_number 条目序号item_number 条目内容item_content
