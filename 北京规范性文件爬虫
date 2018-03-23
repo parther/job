@@ -14,14 +14,19 @@
 # 爬虫
 北京规范性文件 beijing_normative_documents
 =
-1 单位发布规范性文件表的链接 release_unit
+1 单位发布规范性文件表的链接的表 release_unit
 unit_id 
 级别level 单位unit 单位发布规范性文件表的链接release_url
 
 =
 2 规范性文件的链接表 post_url
-post_id
+post_url_id
 发文链接post_url 发布时间publish_date 单位发布规范性文件表的链接release_url
+-
+_和首字母大写的命名规则
+id 直接用表明的最后一个单词或者表名
+表明前缀加上tb还是后面
+join代替+ format代替%的用法
 =
 3 规范性文件表 normative_documents
 post_id 
