@@ -27,6 +27,9 @@ _和首字母大写的命名规则
 id 直接用表明的最后一个单词或者表名
 表明前缀加上tb还是后面
 join代替+ format代替%的用法
+.strip('_|.')
+换页有两种方法 xpath和根据页面的规则
+将mysql表结构和数据给别人 server dataexport
 =
 3 规范性文件表 normative_documents
 post_id 
@@ -40,5 +43,6 @@ item_id
 
 ===
 # 入库
+新的表格式入库
 
 
