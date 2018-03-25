@@ -77,60 +77,46 @@ response.xpath 返回的是list数据
 
 =
 # scrapy 爬虫代理
-不使用框架开代理 http://blog.csdn.net/loguat/article/details/74740229
-国内高匿代理IP http://www.xicidaili.com/nn/2640
-利用crawlera神器，无需再寻找代理IP http://blog.csdn.net/xiao4816/article/details/50650075
-设置ip代理和user-agent：
-随机useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-useragent 和 ip https://www.cnblogs.com/jinxiao-pu/p/6665180.html
-useragent 和 ip 2  https://www.cnblogs.com/xiaomingzaixian/p/7125796.html
-自动更新IP池 http://blog.csdn.net/u011781521/article/details/70194744
-洋葱代理的使用方法 https://www.cnblogs.com/qiyeboy/p/5577036.html
-使用的ip必须开代理，必须加端口
-API提取
-使用xici代理 http://blog.csdn.net/fighting_one_piece/article/details/52961412
+代理ip需添加端口 
+? 代理API提取
+xici代理http://www.xicidaili.com/nn/2640
+自动更新xici代理IP池1 http://blog.csdn.net/u011781521/article/details/70194744
+自动更新xici代理IP池2 http://blog.csdn.net/fighting_one_piece/article/details/52961412
+洋葱代理 https://www.cnblogs.com/qiyeboy/p/5577036.html
+使用crawlera代理 http://blog.csdn.net/xiao4816/article/details/50650075
 
-# 关于js
-方法有二：手动获取；模拟浏览器获取
--
+设置useragent和ip代理 https://www.cnblogs.com/jinxiao-pu/p/6665180.html
+不使用scrapy开代理 http://blog.csdn.net/loguat/article/details/74740229
+
+# 获取网页动态数据
+1 抓包
+抓取json包 https://blog.csdn.net/hanchaobiao/article/details/73150405
+scrapy爬虫与动态页面——爬取拉勾网职位信息（1） https://www.cnblogs.com/voidsky/p/5490786.html
+2 Selenium
+Selenium with Python官方文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
 Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
-Selenium：
-Python爬虫利器五之Selenium的用法 https://cuiqingcai.com/2599.html
-Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
-Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
-Selenium with Python中文翻译文档 http://selenium-python-zh.readthedocs.io/en/latest/index.html
-Selenium与PhantomJS操作 https://www.cnblogs.com/mayi0312/p/7231242.html
-实例： http://blog.csdn.net/kangqianglong/article/details/62045982
-实例：python 爬虫如何获取js里面的内容 http://blog.csdn.net/hanchaobiao/article/details/73150405
-实例：http://blog.csdn.net/And_w/article/details/73611325
-设置PHANTOMJS的USER-AGENT http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
-trs = browser.find_element_by_xpath('//*[@id="proxies_table"]/tbody/tr[1]/td[1]')
-trs.text.split(' ') trs为str
--
-splash：
-利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
-实例：利用scrapy-splash爬取腾讯的证券新闻 https://www.mylonly.com/15052000291680.html
-实例：scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
-实例：scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
-实例：https://edu.hellobi.com/course/156/lessons
-windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
+Selenium是自动化测试工具 https://cuiqingcai.com/2599.html
+Selenium与无界面浏览器 PhantomJS https://www.cnblogs.com/mayi0312/p/7231242.html
+设置PHANTOMJS的USER-AGENT。http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
+使用 Selenium爬取动态网页数据 http://blog.csdn.net/And_w/article/details/73611325
+使用 Selenium+Chrome/PhantomJS抓取淘宝美食 https://edu.hellobi.com/course/156/lessons
 
-Docker安装：
-Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
+Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
+Scrapy+phantomjs爬取动态网页数据http://blog.csdn.net/kangqianglong/article/details/62045982
+3 使用splash
+利用scrapy-splash爬取JS生成的动态页面 https://www.cnblogs.com/zhonghuasong/p/5976003.html
+利用scrapy-splash爬取腾讯的证券新闻 https://www.mylonly.com/15052000291680.html
+scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
+scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
+
+windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
+Docker安装 Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
 Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
 IP 获取不到 github https://github.com/docker/toolbox/issues/317：
 $ docker-machine rm default
 $ docker-machine create --driver virtualbox default
 本地查看渲染情况 http://192.168.99.100:8050/
--
+4
 Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
-=
-# 解析json
-XHR-copy link-address
-解析json页面 https://www.cnblogs.com/voidsky/p/5490786.html
-先使用简单的方法
-先按照自己的思路来，再看参考
-关于js的问题还是没搞清楚就开始做了，js和json不一样
-fiddler
-换页有两种方法 xpath和根据页面的规则
+
 
