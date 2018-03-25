@@ -25,16 +25,6 @@ post_url_id
 发文链接post_url 发布时间publish_date 单位发布规范性文件表的链接release_url
 -
 
-mysql 命名规则 t_表名 info_id
-join代替+ format代替%的用法
-.strip('_|.')
-换页有两种方法 xpath和根据页面的规则
-将mysql表结构和数据给别人 server dataexport
-参考刘总的数据表格式 
-? 数据库中多了数据，为何没有去重 744 - 784
-? 数据表为什么从785开始
-编号默认从最后输入的位置开始
-delete from post_url
 =
 3 规范性文件表 normative_documents
 post_id 
