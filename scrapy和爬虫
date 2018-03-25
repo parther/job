@@ -1,37 +1,3 @@
-经验：
-先总后分的思维方式，先不考虑太多的细枝末节
-决定事情，先征询一下时间
-讨论，而不是聊一下
-一个团队，保持进度上的一致
-代码习惯 加上表头
-凡事画出脑图
-有目标再分析；以终为始的分析方式
-看官方文档
-对比找出问题
-如无必要，不要增加。剃刀原理。必要是没有太大的错误，没必要推到重来
-每周五下午4点，总结此表
-下午5点，解决问题；做事回顾
-为什么要加快效率呢？留出时间处理未知的bug，接受新的任务
-一切从实际的项目入手
-吃透问题，因为你肯定还会遇到这个问题。下午5点是复盘时间
-从返回命令中找失败的原因，因为这个更准确
-注重效率，不用怕犯错，因为害怕也没用
-技术产生进步，采用一切能提高效率的方法
-GitHub 搜索代码
-采用复制 而不是剪切
-
-===
-# 问题：
-导入的表格少数据 5060943 602781 987660 341744 6767600 无法导入mysql
-将csv数据导入已存在的table没法成功
-代码太长换行 跳出 EOL while scanning string literal 错误
-导入到workbench的 user_list 修改字段last_login_time类型为datetime，数据无法读出
-导入完csv文件user_list后提示 unhandled exception ascii codec cant encode character in position 36-37
-导入的csv文件(原本为gbk转为utf-8格式)user_list 字段名user_id 变成了user id 并且无法查询 将文件转为utf无bom格式
-关掉mysqlworkbench 的 SQL additions 板块
-A value is trying to be set on a copy of a slice from a DataFrame.
-存成csv文件多出1列
-=
 # 爬虫
 定义：用自动化的方式，从网站批量获取公开数据的技术
 工作流程：
@@ -48,117 +14,67 @@ A value is trying to be set on a copy of a slice from a DataFrame.
 框架说明 https://cuiqingcai.com/2433.html
 框架说明-工作流程图 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
 
-
-
-
-=
-# 其他
-df_post2.to_csv('df_post2.csv',index=False) 避免生出第一列
-import pandas as pd  
-from sqlalchemy import create_engine
-engine = create_engine('mysql+pymysql://root:12345@127.0.0.1:3306/tianya_scrapy?charset=utf8')  
-df_post.to_sql(name='df_post', con=engine, if_exists='append',index=False,index_label=False) 
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar  1 11:23:53 2018
-
-@author: ZB
-"""
-=
-# MySQL
-Error Code: 1235. This version of MySQL doesn't yet support 'LIMIT & IN/ALL/ANY/SOME subquery'
-delete from user_list where user_id in (select t.user_id from (select * from user_list limit 1,570) as t )
-https://www.cnblogs.com/azhqiang/p/5942093.html
--
-Error Code: 1175. You are using safe update mode and you tried to update a table without a 
-WHERE that uses a KEY column To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.
-SET SQL_SAFE_UPDATES = 0
-https://jingyan.baidu.com/article/e5c39bf58ed69239d76033a4.html
-把Preference中的标签由General切换到SQL Queries标签，然后支去掉safe updates前的选项框
-pymysql.err.interfaceerror # self.conn.close() 断开数据库连接 https://stackoverflow.com/questions/6650940/interfaceerror-0
-mysql导入user_list 需要将所有数据类型改为text才能保证导入不被去空
-导入数据多列变成一列 设置seperate
-MySQL server version for the right syntax to use near 就是语法错误，不管是否返回正确结果
-
-熵权法简介 http://blog.sina.com.cn/s/blog_710e9b550101aqnv.html
-熵权法的计算方法 https://zhuanlan.zhihu.com/p/28067337
-NumPy和Pandas工具包中的函数 http://blog.csdn.net/baoyan2015/article/details/53503073
-=
-
-
-Python爬虫进阶一之爬虫框架概述： 
-
-
-
-
-入门教程： 
-
-Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
 提升scrapy的性能 https://segmentfault.com/a/1190000009321902
-? start_request的用法
-item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
-response.url 取得从上级拿下来的url
-response.url 是 str格式
-item['label'] 为str
-? 定时采集 http://blog.csdn.net/vivian_ll/article/details/65442105
-=
+定时爬虫 http://blog.csdn.net/vivian_ll/article/details/65442105
 
-# scrapy报错解决
-unknown command : crawl :指定到文件夹路径
-list out of range 条目不对
-must be real number, not str: 一般是正则表达的问题
-''' 与下行的缩进保持一致才不会报错
-多页面多条目二级爬取，部分结果无法爬出，返回503错误：
-因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间 https://www.zhihu.com/question/34505058 
-itemmeta doesnot support item assign 没加括号
-feedexporter object has no attribute slot 导出时文件关闭
-返回状态200却没有抓取到内容，是xpath问题或者没有添加yield item
-JSONDecodeError 一般是json链接的格式不对，删除var
-
--
-解决空行的问题 找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
-? 固定爬取的顺序 爬下来字段的顺序是乱的 https://www.jianshu.com/p/fd6f7eba6abe
-获取失败之后，重新将url放入待抓取队列，设置request的重试次数 https://segmentfault.com/q/1010000006899112/a-1020000006901254
-存储路径的两种写法：
-FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
-FEED_URI = './xf_info.csv'
-ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 启用pipe存储
-用for语句存储item才能保证爬取的字符在csv中换行显示
-更新数据库的方法 http://blog.csdn.net/ljm_9615/article/details/76715696
-post 94个链接，只出来63个，出现404 HTTP status code is not handled or allowed ，单个抓取不会
-HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
-=
-# 从案例学习scrapy
 爬虫教程 https://cuiqingcai.com/1052.html
 爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
-使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
-写入数据库；翻页 http://blog.csdn.net/Gavin_CHEN929/article/details/56509735
-翻页 http://blog.csdn.net/dylanzr/article/details/51764694
 优秀代码 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
 
-=
-# scrapy 二级爬取
-使用meta的方法 https://www.jianshu.com/p/fe8a75284f9b 此案例的二级页面结果重复
-=
-# scrapy 翻页
-for 结合 start_urls
-? phase 页面内提交自己解析
+
+
+item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
+response.url 取得从上级拿下来的url，是 str格式
+item['label'] 为str
+
+返回503错误：
+因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间
+设置允许503错误
+404错误 HTTP status code is not handled or allowed。
+HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/details/78009755
+设置request重试 https://segmentfault.com/q/1010000006899112/a-1020000006901254
+itemmeta doesnot support item assign。没加括号item()
+feedexporter object has no attribute slot。导出文件未关闭
+JSONDecodeError。 一般是json链接的格式不对，可能含var需删除
+
+-
+导出到csv表中每插入一行数据空一行。找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
+导出到csv字段的顺序与items中规定的不一样。https://www.jianshu.com/p/fd6f7eba6abe
+
+
+存储到csv文件路径的两种写法：
+FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
+FEED_URI = './xf_info.csv'
+
+启用pipe存储。ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 
+将scrapy爬取的数据存入数据库。http://blog.csdn.net/ljm_9615/article/details/76715696
+
+
+
+
+使用scrapy爬取二级页面，但不推荐：
+使用yield scrapy.Request https://www.jianshu.com/p/fe8a75284f9b
+使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
+Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
+使用meta存储一级页面和二级页面抓取的结果 https://www.jianshu.com/p/fe8a75284f9b
+
+使用callback=self.parse 翻页 http://blog.csdn.net/dylanzr/article/details/51764694
+
 =
 # xpath：
-? 用xpath 去除所选元素的空格 normalize-space http://blog.csdn.net/zhouxuan623/article/details/51241784
-xpath官方文档 ttp://www.w3school.com.cn/xpath
+xpath官方文档 http://www.w3school.com.cn/xpath
 xpath定位 https://www.cnblogs.com/xxyBlogs/p/4244073.html
-Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
--
-使用Chrome获得xpath 鼠标移动到指定文本-审查元素-copy-copy xpath
-将多个要爬取的xpath拿出来比较能够更快看出规律
-xpath的另一种方式 '//div[@class="bbs-content"]/text()' 
-//div[@class="portrait"]/h2/a[1]/text() @class="portrait"一定要双引号 
+获得xpath路径 Chrome内核浏览器-鼠标移动到指定文本-审查元素-copy-copy xpath
+获得xpath规律 多个xpath比较
+获得属性值 '//div[@class="bbs-content"]/a/@href' 
+获得标签下文本 '//div[@class="bbs-content"]/a/text()' 
+获取标签下的所有文本 response.xpath('//*[@class="user-location"]/following-sibling::text()').extract()
+@class="portrait"需为双引号 //div[@class="portrait"]/h2/a[1]/text() 
 Selector和response的用法没有差别，可互相替换
 response.xpath 返回的是list数据
-xpath爬取a标签所有字符 https://www.tuicool.com/articles/iqQFBn response.xpath('//*[@id="bd"]').xpath('string(.)').extract()
-选取含某属性的标签内容 //div[contains(@class, 'demo')] https://segmentfault.com/q/1010000000779093 v
-选取同级元素 response.xpath('//*[@class="user-location"]/following-sibling::text()').extract()
+获取标签下所有字符。response.xpath('//*[@id="bd"]').xpath('string(.)').extract()
+获取含某属性的标签的内容。 //div[contains(@class, 'demo')]
+
 =
 # scrapy 爬虫代理
 不使用框架开代理 http://blog.csdn.net/loguat/article/details/74740229
@@ -177,6 +93,7 @@ API提取
 # 关于js
 方法有二：手动获取；模拟浏览器获取
 -
+Selenium beautifulsoup的用法 http://cuiqingcai.com/1052.html
 Selenium：
 Python爬虫利器五之Selenium的用法 https://cuiqingcai.com/2599.html
 Scrapy+PhantomJS+Selenium动态爬虫 http://blog.csdn.net/qq_30242609/article/details/70859891
