@@ -17,8 +17,6 @@
 # 更新：
 每天7点自动更新搜索页第一页用户的数据
 按照最后登录时间来更新数据库，尽量减少工作量
-? 搜集每次爬虫的间隔时间
-? post_content 需要开启pipe
 
 -
 user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
@@ -36,16 +34,6 @@ reply_post 数据只更新不修改。
 '#' 放在需要说明的代码上一行
 4 爬取间隔 5-10秒 目前暂不考虑
 5 数据库字段的格式及主键 没用到 后面再考虑
-
-? 表post_content 还是没解决94条数据只爬到64条的问题 奇怪的空值，已经在sql里面去掉了却在Python中还能读到 url抓到空值后爬虫停止
-? ? 表post_content 是94条还是93条数据  表post_list 多的两条数据，查看其来源，同步到content和reply 还是空值的问题 nan能占两个字符 not a number
-
-? post_content post_url的数据为781，post_list 为783
-除了na，之前删除过post_id http://bbs.tianya.cn/post-worldlook-1294883-1.shtml
-select * from article limit 150 into outfile '/test/article.sql'
-The MySQL server is running with the --secure-file-priv option
-http://blog.csdn.net/man_to_home/article/details/54947518 双引号
-show variables like '%secure%';
 
 ===
 # 表
