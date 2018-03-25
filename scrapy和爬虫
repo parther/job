@@ -40,16 +40,12 @@ JSONDecodeError。 一般是json链接的格式不对，可能含var需删除
 -
 导出到csv表中每插入一行数据空一行。找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
 导出到csv字段的顺序与items中规定的不一样。https://www.jianshu.com/p/fd6f7eba6abe
-
-
 存储到csv文件路径的两种写法：
 FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
 FEED_URI = './xf_info.csv'
 
 启用pipe存储。ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 
 将scrapy爬取的数据存入数据库。http://blog.csdn.net/ljm_9615/article/details/76715696
-
-
 
 
 使用scrapy爬取二级页面，但不推荐：
