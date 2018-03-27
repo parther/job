@@ -62,4 +62,6 @@ item_id
 pandas join 类似于 merge
 增加行 b_law_1.append(b_law[0:1],ignore_index=True)
 插入列 insert
+str.split('/', expand=True) 改变结果
+表组合 https://zhuanlan.zhihu.com/p/28337202
 
