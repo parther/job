@@ -32,16 +32,18 @@ post_id
 废止日期abolish_date	有效性effectiveness	标题title	正文text 发文链接post_url
 -
 刘总修改版b_law
+'id','post_org','post_number','category','write_date','publish_date', 'implementation_date',
+'abolish_date','effectiveness','title','text','post_url','post_source','law_grade','key_word','title_used'
 -
 有附件的先不处理
 字段中的来源可能是这个 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1275781/index.html
-
 
 4 规范性文件条目表 document_items
 item_id 
 发文字号post_number 标题title 法律法规名称law_name  章节序号chapter_number 条目序号item_number 条目内容item_content
 -
 刘总修改版b_law_details
+`id`,`create_time`,`creator_id`,`creator_name`,`name`,`chapter`,`entries`,`content`,`pushlish_time`,`law_id`
 
 ===
 # 入库
@@ -57,5 +59,7 @@ item_id
 ? 发展规划 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
 
 正则表达式 http://www.runoob.com/python3/python3-reg-expressions.html
-
+pandas join 类似于 merge
+增加行 b_law_1.append(b_law[0:1],ignore_index=True)
+插入列 insert
 
