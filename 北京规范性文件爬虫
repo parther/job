@@ -58,10 +58,4 @@ item_id
 政策措施 http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/160281/index.html
 ? 发展规划 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
 
-正则表达式 http://www.runoob.com/python3/python3-reg-expressions.html
-pandas join 类似于 merge
-增加行 b_law_1.append(b_law[0:1],ignore_index=True)
-插入列 insert
-str.split('/', expand=True) 改变结果
-表组合 https://zhuanlan.zhihu.com/p/28337202
 
