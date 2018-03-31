@@ -69,3 +69,11 @@ item_id
 询问宏海代码
 使用两个notebook 一个测试 一个存储代码
 解析存在 条目内容中含章节的情况
+? b_law_1['text'].apply(chapter).str.split(',', expand=True).stack() 无法形成dataframe
+重复思考
+SyntaxError: invalid or missing encoding declaration for 'c:\\on\\parse_law.py' 尽量使用notepad 还是编码的问题
+import 的文件尽量带上引入的模块
+做事容易慌张，弄清楚问题，不要对号入座
+if __name__ == '__main__' 的理解 http://blog.konghy.cn/2017/04/24/python-entry-program/ 
+jupyter 性能并不稳定
+
