@@ -59,8 +59,10 @@ item_id
 样本
 法律条文 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1425590/index.html
 法律条文带章节 http://zhengce.beijing.gov.cn/zhengce/197/1861/2011/1005231/1295780/index.html
-政策措施 http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/160281/index.html
-? 发展规划 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
+一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/160281/index.html
+分上下部分一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1540140/index.html
+多个一、二、  http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
+没有一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1295060/index.html
 -
 ? str的 字符串匹配 https://www.jianshu.com/p/31daa943cd2b
 ? if的简写形式
