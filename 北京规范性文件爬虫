@@ -94,5 +94,13 @@ Mysql 服务无法启动 服务没有报告任何错误
 https://www.cnblogs.com/wangjunyan/p/5183366.html
 https://blog.csdn.net/skywalker_leo/article/details/47274441
 Access denied for user 'root'@'localhost' (using password: YES)' https://blog.csdn.net/qingyuanluofeng/article/details/48679903
-更改配置文件
+更改配置文件，将配置文件放在根目录下
+b_law['text'].apply(lambda x:1 if '第一条 ' and '第二条 ' in x else 2 if '一、' and '二、'in x else 3)
 
+入库的方式 需要从原始的爬取资料解析
+不细分条目多少了
+时间不好匹配 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1295570/index.html
+
+? 结果为什么没有去重呢
+匹配括号 post_org+'.{0,2}\d+年\d+月\d+日'
+\u3000\u3000 是两个字符
