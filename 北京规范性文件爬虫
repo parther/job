@@ -104,3 +104,6 @@ b_law['text'].apply(lambda x:1 if '第一条 ' and '第二条 ' in x else 2 if '
 ? 结果为什么没有去重呢
 匹配括号 post_org+'.{0,2}\d+年\d+月\d+日'
 \u3000\u3000 是两个字符
+b_law_2['text'].apply(content_2,y=b_law_2) 
+apply函数 https://blog.csdn.net/qq_19528953/article/details/79348929
+
