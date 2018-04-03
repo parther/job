@@ -3,6 +3,7 @@
 工作流程：
 1 获取源代码。网页是html文档，通过HTTP协议，客户机向服务器发送请求，获得html文档
 2 解析源代码。爬虫的目的是获得从html文档，并从文档中挑选自己想要的东西
+爬虫爬取和爬虫解析是独立的，爬虫解析的数据源必须来自于爬虫爬取的原始数据源
 
 # scrapy
 定义：Scrapy是一个爬虫框架（相当于模板），能够减少工作量，省去造轮子的时间
@@ -36,6 +37,8 @@ HTTPERROR_ALLOWED_CODES = [404] http://blog.csdn.net/tingfenyijiu/article/detail
 itemmeta doesnot support item assign。没加括号item()
 feedexporter object has no attribute slot。导出文件未关闭
 JSONDecodeError。 一般是json链接的格式不对，可能含var需删除
+start_urls = ['url'] 链接不能存在空格' '
+检查scrapy运行的结果，先看请求是否响应，也就是response state
 
 -
 导出到csv表中每插入一行数据空一行。找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
@@ -70,6 +73,7 @@ Selector和response的用法没有差别，可互相替换
 response.xpath 返回的是list数据
 获取标签下所有字符。response.xpath('//*[@id="bd"]').xpath('string(.)').extract()
 获取含某属性的标签的内容。 //div[contains(@class, 'demo')]
+依靠文本名字定位 response.xpath('/html/body/ol/li[text()="[发文字号]"]/span/text()').extract())
 
 =
 # scrapy 爬虫代理
