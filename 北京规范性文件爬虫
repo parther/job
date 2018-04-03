@@ -30,22 +30,24 @@ post_url_id
 'id','post_org','post_number','category','write_date','publish_date', 'implementation_date',
 'abolish_date','effectiveness','title','text','post_url','post_source','law_grade','key_word','title_used'
 -
-有附件的先不处理，备注
-字段中的来源可能是这个 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1275781/index.html
+有附件的先不处理，备注。附件中有多个文件，有的是压缩包，重要性不够
+字段中的来源可能是这个，先不处理 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1275781/index.html
+category 暂不处理 条例、规定、通告、办法、决定五种
+404 错误
 
 4 规范性文件条目表 document_items
 刘总修改版b_law_details
 'id','create_time','creator_id','creator_name', '法律规章名称'name','chapter','entries','content','pushlish_time','law_id'
 -
-? `pushlish_time` 拼错了 发布时间 还是 实施时间 修改了字段名
+`pushlish_time` 拼错了
 `pushlish_time` varchar(20) DEFAULT NULL COMMENT '发布时间', publish 应为实施日期
 
 ===
-# 入库
-新的表格式入库
-条例、规定、通告、办法、决定五种，按照存在的来
+# 入库解析
 如果有第二部分，只爬第二部分
-格式完全按照规定的格式来，可以尽量粗些
+数据表更新的问题 设置创建字段的时间
+b_law 的解析表暂取原始表
+设置无法解析
 -
 样本
 法律条文 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1425590/index.html
