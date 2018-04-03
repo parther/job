@@ -9,6 +9,7 @@
 0327 周二 文档解析；解析入库
 0328 周三 全能正则匹配；解析入库
 0330 周五 提交数据
+询问宏海代码
 ===
 爬取入口 http://zhengce.beijing.gov.cn/zhengce/197/1861/989831/index.html
 
@@ -28,10 +29,6 @@ post_url_id
 最好是加上发文的单位
 =
 3 规范性文件表 normative_documents
-post_id 
-发文机构post_agency 发文字号post_number	类别category	成文日期written_date	发布日期publish_date	实施日期implementation_date	
-废止日期abolish_date	有效性effectiveness	标题title	正文text 发文链接post_url
--
 刘总修改版b_law
 'id','post_org','post_number','category','write_date','publish_date', 'implementation_date',
 'abolish_date','effectiveness','title','text','post_url','post_source','law_grade','key_word','title_used'
@@ -40,13 +37,10 @@ post_id
 字段中的来源可能是这个 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1275781/index.html
 
 4 规范性文件条目表 document_items
-item_id 
-发文字号post_number 标题title 法律法规名称law_name  章节序号chapter_number 条目序号item_number 条目内容item_content
--
 刘总修改版b_law_details
 'id','create_time','creator_id','creator_name', '法律规章名称'name','chapter','entries','content','pushlish_time','law_id'
 -
-? `pushlish_time` 发布时间 还是 实施时间
+? `pushlish_time` 拼错了 发布时间 还是 实施时间 修改了字段名
 `pushlish_time` varchar(20) DEFAULT NULL COMMENT '发布时间', publish 应为实施日期
 
 ===
@@ -64,46 +58,4 @@ item_id
 多个一、二、  http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
 没有一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1295060/index.html
 -
-? str的 字符串匹配 https://www.jianshu.com/p/31daa943cd2b
-? if的简写形式
-现在战略上定规则
-? 函数中利用函数
-询问宏海代码
-使用两个notebook 一个测试 一个存储代码
-解析存在 条目内容中含章节的情况
-? b_law_1['text'].apply(chapter).str.split(',', expand=True).stack() 无法形成dataframe
-重复思考
-SyntaxError: invalid or missing encoding declaration for 'c:\\on\\parse_law.py' 尽量使用notepad 还是编码的问题
-import 的文件尽量带上引入的模块
-做事容易慌张，弄清楚问题，不要对号入座
-if __name__ == '__main__' 的理解 http://blog.konghy.cn/2017/04/24/python-entry-program/ 
-jupyter 性能并不稳定
-依靠文本名字定位 response.xpath('/html/body/ol/li[text()="[发文字号]"]/span/text()').extract())
-? 异常处理
-['http://zhengce.beijing.gov.cn//zhengce/197/1861/1931/1005151/234501/index.html' ] 不能有空格
-先看是否404
-Error 1366: Incorrect string value: '\xF0\x9F\x91\xBD\xF0\x9F...' for column 'content' 
-MySQL中my.ini的位置 promgranData被隐藏了
-修改my.ini https://www.cnblogs.com/shihaiming/p/5855616.html
-ALTER TABLE b_law CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
-
-windows下重启mysql的方法
-http://www.jb51.net/article/58890.htm 重新点击图标
-https://blog.csdn.net/u012385190/article/details/51638059
-Mysql 服务无法启动 服务没有报告任何错误
-https://www.cnblogs.com/wangjunyan/p/5183366.html
-https://blog.csdn.net/skywalker_leo/article/details/47274441
-Access denied for user 'root'@'localhost' (using password: YES)' https://blog.csdn.net/qingyuanluofeng/article/details/48679903
-更改配置文件，将配置文件放在根目录下
-b_law['text'].apply(lambda x:1 if '第一条 ' and '第二条 ' in x else 2 if '一、' and '二、'in x else 3)
-
-入库的方式 需要从原始的爬取资料解析
-不细分条目多少了
-时间不好匹配 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1295570/index.html
-
-? 结果为什么没有去重呢
-匹配括号 post_org+'.{0,2}\d+年\d+月\d+日'
-\u3000\u3000 是两个字符
-b_law_2['text'].apply(content_2,y=b_law_2) 
-apply函数 https://blog.csdn.net/qq_19528953/article/details/79348929
 
