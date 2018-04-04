@@ -9,25 +9,27 @@
 定义：Scrapy是一个爬虫框架（相当于模板），能够减少工作量，省去造轮子的时间
 工作流程：发送请求-获得回应并解析-将解析内容交由管道存储
 -
-参考：
+# 参考：
 官方文档 https://doc.scrapy.org/en/1.5/topics/commands.html
 官方文档-中文版 http://scrapy-chs.readthedocs.io/zh_CN/1.0/intro/overview.html
 框架说明 https://cuiqingcai.com/2433.html
 框架说明-工作流程图 https://www.cnblogs.com/jinxiao-pu/p/6762636.html
-
+-
 提升scrapy的性能 https://segmentfault.com/a/1190000009321902
 定时爬虫 http://blog.csdn.net/vivian_ll/article/details/65442105
-
+-
 爬虫教程 https://cuiqingcai.com/1052.html
 爬虫教程 http://blog.csdn.net/column/details/python3-spider.html
 优秀代码 https://chenjiabing666.github.io/categories/Scrapy%E5%AD%A6%E4%B9%A0/
 
-
-
+=
+# 基础
 item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
 response.url 取得从上级拿下来的url，是 str格式
 item['label'] 为str
 
+=
+# 错误处理
 返回503错误：
 因为服务器过载导致503，请降低爬虫的并发访问数量，并且延长各个请求之间的间隔时间
 设置允许503错误
@@ -39,24 +41,28 @@ feedexporter object has no attribute slot。导出文件未关闭
 JSONDecodeError。 一般是json链接的格式不对，可能含var需删除
 start_urls = ['url'] 链接不能存在空格' '
 检查scrapy运行的结果，先看请求是否响应，也就是response state
+scrapy 查看错误日志
+https://blog.csdn.net/hopygreat/article/details/78771500
 
--
+=
+# 存储
 导出到csv表中每插入一行数据空一行。找到anaconda路径，修改源码 http://www.mamicode.com/info-detail-2000839.html
 导出到csv字段的顺序与items中规定的不一样。https://www.jianshu.com/p/fd6f7eba6abe
 存储到csv文件路径的两种写法：
 FEED_URI = u'file:///C:/Users/Administrator/Desktop/douban.csv'
 FEED_URI = './xf_info.csv'
-
+-
 启用pipe存储。ITEM_PIPELINES = {'beta.pipelines.BetaPipeline': 300,} 
 将scrapy爬取的数据存入数据库。http://blog.csdn.net/ljm_9615/article/details/76715696
 
-
+=
+# 多级页面处理
 使用scrapy爬取二级页面，但不推荐：
 使用yield scrapy.Request https://www.jianshu.com/p/fe8a75284f9b
 使用LinkExtractor爬取二级页面 http://blog.csdn.net/u010814042/article/details/74127309
 Scrapy中的Rules理解 http://blog.csdn.net/wqh_jingsong/article/details/56865433
 使用meta存储一级页面和二级页面抓取的结果 https://www.jianshu.com/p/fe8a75284f9b
-
+-
 使用callback=self.parse 翻页 http://blog.csdn.net/dylanzr/article/details/51764694
 
 =
@@ -84,10 +90,11 @@ xici代理http://www.xicidaili.com/nn/2640
 自动更新xici代理IP池2 http://blog.csdn.net/fighting_one_piece/article/details/52961412
 洋葱代理 https://www.cnblogs.com/qiyeboy/p/5577036.html
 使用crawlera代理 http://blog.csdn.net/xiao4816/article/details/50650075
-
+-
 设置useragent和ip代理 https://www.cnblogs.com/jinxiao-pu/p/6665180.html
 不使用scrapy开代理 http://blog.csdn.net/loguat/article/details/74740229
 
+=
 # 获取网页动态数据
 1 抓包
 抓取json包 https://blog.csdn.net/hanchaobiao/article/details/73150405
@@ -100,7 +107,7 @@ Selenium与无界面浏览器 PhantomJS https://www.cnblogs.com/mayi0312/p/72312
 设置PHANTOMJS的USER-AGENT。http://smilejay.com/2013/12/set-user-agent-for-phantomjs/
 使用 Selenium爬取动态网页数据 http://blog.csdn.net/And_w/article/details/73611325
 使用 Selenium+Chrome/PhantomJS抓取淘宝美食 https://edu.hellobi.com/course/156/lessons
-
+-
 Scrapy+phantomjs爬取动态网页数据 http://blog.csdn.net/u010085423/article/details/54944502
 Scrapy+phantomjs爬取动态网页数据http://blog.csdn.net/kangqianglong/article/details/62045982
 3 使用splash
@@ -108,7 +115,7 @@ Scrapy+phantomjs爬取动态网页数据http://blog.csdn.net/kangqianglong/artic
 利用scrapy-splash爬取腾讯的证券新闻 https://www.mylonly.com/15052000291680.html
 scrapy-splash抓取动态数据例子一 https://www.cnblogs.com/shaosks/p/6950358.html
 scrapy-splash抓取动态数据例子二 https://www.cnblogs.com/shaosks/p/6961951.html
-
+-
 windows下安装docker http://blog.csdn.net/tina_ttl/article/details/51372604
 Docker安装 Docker Toolbox https://docs.docker.com/toolbox/toolbox_install_windows/
 Windows10 使用docker toolbox安装docker http://www.cnblogs.com/shaosks/p/6932319.html
