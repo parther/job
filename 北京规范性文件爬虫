@@ -50,7 +50,7 @@ b_law 的解析表暂取原始表
 设置无法解析
 -
 样本
-法律条文 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1425590/index.html
+法律条文 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1425590/index.html 292
 法律条文带章节 http://zhengce.beijing.gov.cn/zhengce/197/1861/2011/1005231/1295780/index.html
 一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/160281/index.html
 分上下部分一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1540140/index.html
@@ -66,3 +66,9 @@ alter table b_law add column create_time datetime NOT NULL DEFAULT NOW()
 pymysql.err.DataError: (1406, "Data too long for column 'title' at row 1")
 http://zhengce.beijing.gov.cn/zhengce/197/1861/1951/1005171/1276291/index.html
 
+尚未爬取
+pymysql.err.DataError: (1406, "Data too long for column 'title' at row 1")
+http://zhengce.beijing.gov.cn/zhengce/197/1861/1951/1005171/1276291/index.html
+http://zhengce.beijing.gov.cn/zhengce/197/1861/2071/1005291/101041/index.html
+
+http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/75653/index.html 没有第三条
