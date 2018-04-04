@@ -4,9 +4,8 @@
 计划完成时间：0330 周五 / 0404 周三
 成果：爬虫代码；数据表
 -
-计划：
-0403 周二 代码封装，已完成b_law_details
-0404 周三 代码说明；提交数据和代码；询问宏海代码
+待办：
+
 ===
 爬取入口 http://zhengce.beijing.gov.cn/zhengce/197/1861/989831/index.html
 
@@ -33,7 +32,10 @@ post_url_id
 有附件的先不处理，备注。附件中有多个文件，有的是压缩包，重要性不够
 字段中的来源可能是这个，先不处理 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1275781/index.html
 category 暂不处理 条例、规定、通告、办法、决定五种
-? 404 错误，但是单独爬却又没啥问题 使用粘贴并转到
+404 错误，但是单独爬却又没啥问题 使用粘贴并转到
+下面链接尚未爬取：
+http://zhengce.beijing.gov.cn/zhengce/197/1861/1951/1005171/1276291/index.html
+http://zhengce.beijing.gov.cn/zhengce/197/1861/2071/1005291/101041/index.html
 
 4 规范性文件条目表 document_items
 刘总修改版b_law_details
@@ -57,18 +59,6 @@ b_law 的解析表暂取原始表
 多个一、二、  http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/141491/index.html
 没有一、二、 http://zhengce.beijing.gov.cn/zhengce/197/1861/1921/1005141/1295060/index.html
 -
-alter table b_law add column create_time datetime NOT NULL DEFAULT NOW()
-入库的节点
-0-1000
-1000-2000 截止时间 2018-04-04 11:32:47
-2000-3000
-3000-
-pymysql.err.DataError: (1406, "Data too long for column 'title' at row 1")
-http://zhengce.beijing.gov.cn/zhengce/197/1861/1951/1005171/1276291/index.html
-
-尚未爬取
-pymysql.err.DataError: (1406, "Data too long for column 'title' at row 1")
-http://zhengce.beijing.gov.cn/zhengce/197/1861/1951/1005171/1276291/index.html
-http://zhengce.beijing.gov.cn/zhengce/197/1861/2071/1005291/101041/index.html
-
 http://zhengce.beijing.gov.cn/zhengce/197/1861/1931/1005151/75653/index.html 没有第三条
+
+
