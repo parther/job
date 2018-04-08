@@ -19,13 +19,6 @@
 每天7点自动更新搜索页第一页用户的数据
 按照最后登录时间来更新数据库，尽量减少工作量
 
--
-user_list 更新最后登录时间，但只保留最后登录时间 最后登录不一定是新用户
-user_info 数据只更新不修改。数据变动的可能性不大，且昵称应该不能再次修改
-post_list 数据只更新不修改。
-post 数据只更新不修改。
-reply_post 数据只更新不修改。
-
 =
 # 优化
 策略：
@@ -36,11 +29,18 @@ reply_post 数据只更新不修改。
 4 爬取间隔 5-10秒 目前暂不考虑
 5 数据库字段的格式及主键 没用到 后面再考虑
 
+=
+# 字段入库处理
+? 天涯和微博 汇入同一个数据库，id自增会有重复的
+mysql 索引介绍 https://blog.csdn.net/ithomer/article/details/6589651
+? busi_petitioner resource` `weburl` 是什么意思
+? busi_petitioner birthday 需要换成那种形式 
+? busi_petitioner Create_time registration_date 如何理解
+
 ===
 # 表
 爬虫尽量拿到原始数据，至于怎么用再做拼接
  
-
 # 1 上访用户列表 user_list 4个字段 576条数据
 用户id user_id 昵称nickname 个人主页homepage 最后登录时间last_login_time
 -
