@@ -32,14 +32,9 @@
 =
 # 字段入库处理
 ? 天涯和微博 汇入同一个数据库，id自增会有重复的
-mysql 索引介绍 https://blog.csdn.net/ithomer/article/details/6589651
 ? busi_petitioner resource` `weburl` 是什么意思
 ? busi_petitioner birthday 需要换成那种形式 
 ? busi_petitioner Create_time registration_date 如何理解
-去掉最后一个字符 string1[:-1]
-? 用find方法寻找字符串最后1位的位置
-测试func，先带入参数
-UnboundLocalError: local variable 'province' referenced before assignment 一般是else未做说明
 ? busi_petitioner location换成city和province
 ? work_company 怎么会是 industry呢
 
