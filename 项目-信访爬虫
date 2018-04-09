@@ -38,7 +38,7 @@
 ? busi_petitioner location换成city和province
 ? work_company 怎么会是 industry呢
 -
-busi_weibo_ext 是否通过creator_id关联表busi_petitioner，但是表busi_petitioner中creator_id留空了
+? busi_weibo_ext 是否通过creator_id关联表busi_petitioner，但是表busi_petitioner中creator_id留空了
 
 ===
 # 表
