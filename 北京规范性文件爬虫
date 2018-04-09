@@ -10,6 +10,10 @@
 爬取入口 http://zhengce.beijing.gov.cn/zhengce/197/1861/989831/index.html
 
 ===
+# 更新规则
+? 终止cmd代码运行 ctrl + c
+
+===
 # 爬虫
 北京规范性文件 beijing_normative_documents
 =
