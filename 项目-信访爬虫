@@ -37,8 +37,12 @@
 ? busi_petitioner Create_time registration_date 如何理解
 ? busi_petitioner location换成city和province
 ? work_company 怎么会是 industry呢
+将 busi_petitioner resource 取值为tianya，以示判别
 -
 ? busi_weibo_ext 是否通过creator_id关联表busi_petitioner，但是表busi_petitioner中creator_id留空了
+爬虫最好都需要加上标志性的时间或者是createtime
+1110 specified twice 某个column被使用了两次 mysql大写会转为小写
+? 类的实际应用
 
 ===
 # 表
@@ -69,6 +73,8 @@ user_id 昵称nickname 被封杀banned 等级level 等级标签level_label关注
 发帖id post_id 帖子链接post_url 帖子标题post_title 帖子内容post_text 发布时间post_time 
 点击数click_number 回复数click_reply_number 点赞数like_number 发帖终端post_terminal
 ? 打赏人数number_of_reward ? 总赏金total_reward
+
+
 -
 打赏人数number_of_reward 总赏金total_reward 暂时获取不到js，不抓取 http://bbs.tianya.cn/post-news-364310-1.shtml
 图片暂时不爬取，图片是少数
