@@ -27,6 +27,8 @@
 item文件中的条目可以全列出来，不会影响spider文件中的操作，少了却是不行
 response.url 取得从上级拿下来的url，是 str格式
 item['label'] 为str
+爬虫最好都需要加上标志性的时间或者是createtime
+数据的更新操作都是放在最后的
 
 =
 # 错误处理
