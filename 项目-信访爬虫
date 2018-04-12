@@ -37,23 +37,10 @@
 ? busi_petitioner Create_time registration_date 如何理解
 ? busi_petitioner location换成city和province
 ? work_company 怎么会是 industry呢
-将 busi_petitioner resource 取值为tianya，以示判别
-建议 混合插入
 -
-? busi_weibo_ext 是否通过creator_id关联表busi_petitioner，但是表busi_petitioner中creator_id留空了
-爬虫最好都需要加上标志性的时间或者是createtime
-1110 specified twice 某个column被使用了两次 mysql大写会转为小写
-类的实际应用 如果一个功能所需要的函数较多，建议使用类 两个以上的函数，之间有数据共享，就应该使用类来封装
-天涯爬虫和微博爬虫的id是不一样的，但id却又是自增的，而且存在关联
-简单问题复杂化
-Error Code: 2013. Lost connection to MySQL server during query的问题解决 
-【Edit】->【Preference】->【SQL Editor】将下图DBMS connection read time out (in seconds)适当调大：
-# cur = conn.cursor(cursor=pymysql.cursors.DictCursor)
+
 ? 游标的概念
 http://www.runoob.com/python/python-mysql.html
-更新都是放在最后的
-fetch 的结果插入数据库
-很简单的东西为什么会弄这么久呢
 
 ===
 # 表
