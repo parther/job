@@ -47,7 +47,6 @@ https://my.oschina.net/u/1459992/blog/209325
 需设置主键
 INSERT INTO busi_weibo_ext(id,petitioner_id,follow_num) VALUE(354658,14,10) 
 ON DUPLICATE KEY UPDATE petitioner_id=14,follow_num=18
-
 ? 批量更新和插入
 
 cursor返回结果为字典 
