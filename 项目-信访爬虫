@@ -52,6 +52,12 @@ ON DUPLICATE KEY UPDATE petitioner_id=14,follow_num=18
 cursor返回结果为字典 
 http://www.jb51.net/article/92516.htm
 
+busi_weibo_letter的user_name 尚未提交
+busi_weibo_letter的details字符太短导致无法插入
+1062 - Duplicate entry '0' for key 'id
+busi_reply_post `id` int(11) NOT NULL COMMENT '编号',  id没有自增长
+数据量大了，插入数据存在时间差
+
 
 ===
 # 表
