@@ -57,6 +57,12 @@ busi_weibo_letter的details字符太短导致无法插入
 1062 - Duplicate entry '0' for key 'id
 busi_reply_post `id` int(11) NOT NULL COMMENT '编号',  id没有自增长
 数据量大了，插入数据存在时间差
+where 语句后面换行不能用 \ 吗 关键是不能出现空格
+SyntaxError: EOL while scanning string literal
+TypeError: execute() takes from 2 to 3 positional arguments but 4 were given
+先看数 重复操作时 
+语法错误就是语法错误
+
 
 
 ===
