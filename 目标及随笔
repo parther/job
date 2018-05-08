@@ -4,14 +4,22 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
-搭建vpn：
-解决win7 L2TP连接尝试失败，因为安全层在初始化与远程计算机的协商时遇到了一个处理错误
-在Parameters新建DWORD
-https://www.cnblogs.com/langtianyaa/p/6409290.html
-搭建vpn
-https://www.jianshu.com/p/b0d460efca4e
-windows上利用putty通过SSH连接亚马逊AWS服务器
-https://blog.csdn.net/biboshouyu/article/details/76068127
+领导团队：
+月总，周报，早会
+目标调动，内部竞争
+为团队争取资源
+内部分享
+开会前准备工作先做好
+-
+月度总结如何写：
+任务开始时间，完成时间，当前进度
+下一步计划
+出现的问题，原因，解决方法，教训或感想
+坐下来，讲事情
+-
+周报注意事项：
+本周写下周的工作计划
+感想是一定要写的
 -
 领导汇报：
 了解领导的情绪，说明问题带上理由，解决问题的途径
@@ -19,6 +27,7 @@ https://blog.csdn.net/biboshouyu/article/details/76068127
 -
 邮件发送：
 正文带内容，给谁看要指定人
+讨论完问题后写邮件确认
 -
 写报告：
 是什么\为什么 - 框架 - 参考 - 写和填入数据
@@ -31,8 +40,8 @@ word修改：
 -
 团队协作：
 谁主导，谁负责
-了解各自进度并交流讨论
-讨论问题，而不是聊一下问题
+出了问题要直接向小组组长汇报
+
 -
 优柔寡断，患得患失，陷入痛苦：
 承认不完美，有自己的理由便好，切勿重复思考
@@ -66,5 +75,12 @@ GitHub 搜索代码
 -
 mathtype 破解版:
 http://www.jb51.net/softs/600866.html 
-
-
+-
+搭建vpn：
+解决win7 L2TP连接尝试失败，因为安全层在初始化与远程计算机的协商时遇到了一个处理错误
+在Parameters新建DWORD
+https://www.cnblogs.com/langtianyaa/p/6409290.html
+搭建vpn
+https://www.jianshu.com/p/b0d460efca4e
+windows上利用putty通过SSH连接亚马逊AWS服务器
+https://blog.csdn.net/biboshouyu/article/details/76068127
