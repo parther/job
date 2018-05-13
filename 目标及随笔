@@ -99,3 +99,103 @@ https://www.cnblogs.com/langtianyaa/p/6409290.html
 https://www.jianshu.com/p/b0d460efca4e
 windows上利用putty通过SSH连接亚马逊AWS服务器
 https://blog.csdn.net/biboshouyu/article/details/76068127
+-
+吴恩达 斯坦福大学公开课 ：机器学习课程 http://open.163.com/special/opencourse/machinelearning.html
+网易微专业 深度学习 http://study.163.com/my#/smarts
+
+十分钟机器学习系列 待续 大数据文摘公众号：
+http://dwz.cn/6owBR9
+http://dwz.cn/6owCG6
+http://dwz.cn/6owCL6
+http://dwz.cn/6owCVI
+http://dwz.cn/6tbkOz
+http://dwz.cn/6tbjl2
+
+大数据 平台 http://dwz.cn/73KjiO
+超实用总结：AI实践者需要用到的10个深度学习方法 http://dwz.cn/72idSG
+深度学习计算机视觉 http://study.163.com/course/courseMain.htm?courseId=1003223001
+8种最常见机器学习算法 http://dwz.cn/6vceaH
+如何训练一个简单的音频识别网络 http://dwz.cn/6zvmqV
+数据挖掘和统计科学自学十大必备读物  http://dwz.cn/6zvoVr
+常见的10种自然语言处理技术（附代码）http://dwz.cn/6PnbV9
+无监督学习填补缺失数据 http://dwz.cn/6PncEW
+新手深度学习平台  http://dwz.cn/6Pndbl
+在你的iPhone上建立第一个机器学习模型  http://dwz.cn/6E2BoW
+程序员技能图谱 http://dwz.cn/6r9mpS
+各领域公开数据集下载 https://zhuanlan.zhihu.com/p/25138563
+
+隐狄利克雷模型 http://dwz.cn/6T8cQH
+文本主题识别模型，主题建模中最流行的概率学方法之一
+利用隐狄利克雷模型识别ted演讲的主题 http://dwz.cn/6T8m3a
+
+特征工程到底是什么？ https://www.zhihu.com/question/29316149
+一张图看懂AI、机器学习和深度学习的区别 http://blog.csdn.net/dukai392/article/details/70271574
+数据挖掘岗位的面试问题与实用答题思路 http://dwz.cn/6WBNHP
+数据挖掘工作需要哪些思维原理 http://dwz.cn/6WCqxf：
+数据为核心 机器懂人
+数据挖掘的三要素解析 http://dwz.cn/6WBVaJ ：
+Garbage In, Garbage Out
+数据挖掘在研究生阶段大概要学些什么 http://dwz.cn/6WC5Ln
+
+Python 常用数据结构——DataFrame介绍 http://dwz.cn/6WDGff
+【Python】多重索引切片示例 http://dwz.cn/6WN4Fq
+灵活处理时间数据—lubridate包 http://dwz.cn/6WMXvq
+用dplyr包做数据预处理 http://dwz.cn/6WNdQ9
+两个惊艳的python库：tqdm和retry http://dwz.cn/6WNdQ9
+
+【OCR技术浅探】光学字符识别 背景与假设 http://dwz.cn/6WD60a
+OCR技术浅探：特征提取(2) http://dwz.cn/6WDi3g
+【OCR技术浅探】3. 文字定位 http://dwz.cn/6WDtRE
+【OCR技术浅探】4. 文本切割 http://dwz.cn/6WDxiJ
+【OCR技术浅探】5. 光学识别 http://dwz.cn/6WDyZQ
+【OCR技术浅探】6. 语言模型 http://dwz.cn/6WDBb1
+【OCR技术浅探】7. 综合评估 http://dwz.cn/6WDE46
+文本情感分类（一）：传统模型 http://dwz.cn/6WN830
+文本情感分类（二）：深度学习模型 http://dwz.cn/6WNa0F
+文本情感分类（三）：分词 OR 不分词 http://dwz.cn/6WNbwO
+【中文分词系列】 1. 基于AC自动机的快速分词 http://dwz.cn/6WNiKS
+【中文分词系列】 2. 基于切分的新词发现 http://dwz.cn/6WNkhp
+【中文分词系列】 3. 字标注法与HMM模型 http://dwz.cn/6WNlGT
+【中文分词系列】 4. 基于双向LSTM的seq2seq字标注 http://dwz.cn/6WNneD
+【中文分词系列】 5. 基于语言模型的无监督分词 http://dwz.cn/6WNov6
+【中文分词系列】 6. 基于全卷积网络的中文分词 http://dwz.cn/6WNqrE
+
+神经网络实用教程及配套视频 http://dwz.cn/6WBRLs
+从Boosting学习到神经网络：看山是山 http://dwz.cn/6WCYsq ：
+把模型结果当做特征，类似于人工神经网络
+轻松看懂机器学习十大常用算法 http://dwz.cn/6WNsH2
+机器学习的八个步骤 http://dwz.cn/6WNxvJ
+深度学习的“深度”有什么意义？ http://dwz.cn/6WNzXo
+如何“扒”站？手把手教你爬百度百科～ http://dwz.cn/6WNDUG
+从头开始：用Python实现随机森林算法 http://dwz.cn/6WNHWG
+用TensorFlow实现神经网络 http://dwz.cn/6WNJIt
+
+=
+数据挖掘入门基础知识疑惑 https://www.zhihu.com/question/35055219/answer/61201204
+如何系统地学习数据挖掘 https://www.zhihu.com/question/20751219/answer/24345252
+零基础入门数据挖掘 http://dwz.cn/6Mbah9 ：
+正确理解业务问题，才能正确把业务问题转化成挖掘问题，所以跟着项目学挖掘是最有效的捷径
+
+挖掘书籍：
+1 代码的实现 《集体智慧编程》 《机器学习实战》
+2 机器学习 机器学习，统计学习方法，数据挖掘导论
+3 深度学习 吴恩达深度学习
+
+数据挖掘中Java的作用 http://www.jianshu.com/p/8845a83c22f9 ：
+性能优化
+apache家族项目java，Hadoop和Spark的底层实现使用Java
+Java写分布式的实现，如mr，graph，spark（scala），python写udf，数据处理，单机版，gpu版，脚本
+
+为什么很多数据挖掘过程中用C++来写算法 https://www.zhihu.com/question/20362988 ：
+改写算法，提高算法的效率
+底层Numpy Scipy 里面有很多代码是 c/cpp 写的啊。python作为胶水，把很多c/cpp代码构成的算法粘在一起
+
+unix https://www.zhihu.com/question/20117703 ：
+用户知道自己想要什么，也明白自己在做什么，并且会为自己的行为负责
+Unix和Linux操作系统有什么区别 https://www.zhihu.com/question/24217234/answer/45669979 ：
+Linux是Unix的开源实现
+
+hadoop和大数据的关系？和spark的关系？互补？并行？ https://www.zhihu.com/question/23036370/answer/24675452 ：
+分布式计算系统
+hadoop 和spark如何系统的学习？https://www.zhihu.com/question/39078198 ：
+Scala
