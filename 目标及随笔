@@ -4,6 +4,11 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
+s = [['134780078','106991820']]
+# 只选取搜索页第一页的用户所发的帖子进行更新
+sql_select = "select post_url from post_list where user_id in %s and post_url is not null"
+cur.execute(sql_select,(s))
+-
 确定处理事情的基本流程，能够提升效率
 -
 基本缺点：
