@@ -130,4 +130,12 @@ $ docker-machine create --driver virtualbox default
 4
 Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
 
+=
+常规爬虫代码：
+import requests  
+from lxml import etree
+
+res = requests.get('http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF&pn=1')  
+res.encoding = 'utf-8'
+user_id = etree.HTML(res.text).xpath('//*[@id="main"]/div[2]/ul/li/p[1]/a/@href')
 
