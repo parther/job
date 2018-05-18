@@ -4,6 +4,8 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
+代码的易维护性
+-
 s = [['134780078','106991820']]
 # 只选取搜索页第一页的用户所发的帖子进行更新
 sql_select = "select post_url from post_list where user_id in %s and post_url is not null"
