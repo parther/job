@@ -1,11 +1,15 @@
 2018-6-1 周五
 =
 增加登录表单
+案例改为 新浪微博。新浪微博需要登录才能搜索
 =
 怎样用Python设计一个爬虫模拟登陆知乎
 https://www.zhihu.com/question/29925879
 
 <<python爬虫开发与项目实战>>书籍配套源码和说明
 https://github.com/qiyeboy/spiderbook
+
+利用selenium模拟登录网站
+https://www.jianshu.com/p/cc70e35b47fc
 
 
