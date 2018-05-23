@@ -20,6 +20,9 @@ request的session方法用来存储cookies，避免跳转和翻页时重新登�
 使用Cookie登陆
 将cookie保存在本地，避免每次登录
 -
+利用cookie登录知乎
+https://www.cnblogs.com/leon507/p/7652148.html
+
 怎样用Python设计一个爬虫模拟登陆知乎
 https://www.zhihu.com/question/29925879
 
