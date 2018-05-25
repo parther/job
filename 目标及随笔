@@ -4,15 +4,10 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
-https://www.cnblogs.com/lhj588/p/4245719.html
--
-代码的易维护性
--
-s = [['134780078','106991820']]
-# 只选取搜索页第一页的用户所发的帖子进行更新
-sql_select = "select post_url from post_list where user_id in %s and post_url is not null"
-cur.execute(sql_select,(s))
--
+整理文档
+思路归思路，文档归文档
+主次，归类
+
 确定处理事情的基本流程，能够提升效率
 -
 基本缺点：
@@ -98,6 +93,7 @@ word修改：
 优柔寡断，患得患失，陷入痛苦。承认不完美，有自己的理由便好，切勿重复思考
 -
 代码习惯:
+代码的易维护性
 加上表头
 尽量使用代码的方式操纵图形界面的软件
 借给别人东西的时候，考虑到存在的问题
