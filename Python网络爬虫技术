@@ -12,6 +12,11 @@ request的session方法用来存储cookies，避免跳转和翻页时重新登�
 重定向：简单理解为跳转，客户端发送请求-服务器端相应并给出一个新地址-客户端向新地址发送请求
 HTTP Referer是header的一部分，当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器我是从哪个页面链接过来的
 -
+
+Python模拟登陆万能法-微博|知乎
+https://www.cnblogs.com/chenxiaohan/p/7654667.html
+https://zhuanlan.zhihu.com/p/28587931
+
 python requests用法总结
 https://www.cnblogs.com/lilinwei340/p/6417689.html
 
