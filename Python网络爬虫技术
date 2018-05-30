@@ -1,7 +1,8 @@
-2018-6-1 周五
+2018-6-8 周五
 
 脑图 http://naotu.baidu.com/file/7dd05f8b443d3d4a793d84fc66aae35b
 =
+? requests库，代理是自动切换的吗
 增加登录表单
 案例改为 新浪微博。新浪微博需要登录才能搜索
 常规登录 加密登录
@@ -13,6 +14,9 @@ request的session方法用来存储cookies，避免跳转和翻页时重新登�
 重定向：简单理解为跳转，客户端发送请求-服务器端相应并给出一个新地址-客户端向新地址发送请求
 HTTP Referer是header的一部分，当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器我是从哪个页面链接过来的
 -
+
+python爬虫之requests的基本使用 代理设置
+https://www.cnblogs.com/lei0213/p/6957508.html
 
 Python模拟登陆万能法-微博|知乎
 https://www.cnblogs.com/chenxiaohan/p/7654667.html
