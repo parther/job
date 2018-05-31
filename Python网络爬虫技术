@@ -12,6 +12,9 @@
 数睿思 http://www.tipdm.org/bdrace/index.html  pc2019 pc2019
 标题改为：爬取深层网页；模拟登录
 =
+pillow
+https://pillow.readthedocs.io/en/5.1.x/reference/Image.html
+
 session是服务器端用来区分不同用户请求的方法，cookies将用户状态保存在浏览器端，session将用户状态保存在服务器端
 request的session方法用来存储cookies，避免跳转和翻页时重新登录
 重定向：简单理解为跳转，客户端发送请求-服务器端相应并给出一个新地址-客户端向新地址发送请求
