@@ -130,6 +130,7 @@ http://www.jb51.net/softs/600866.html
 错误789：L2TP连接尝试失败，因为安全层在初始化与远程计算机的协商时遇到了一个处理错误
 在Parameters新建DWORD，在“名称”框中，（键入“ProhibitIpSec”），在“数值数据”框中，键入“1”，（选择10进制）然后单击“确定”
 再找到AllowL2TPWeakCrypto，如果没有则新建“DWORD值”，修改值为1
+vpn要连接3次以上
 https://www.cnblogs.com/langtianyaa/p/6409290.html
 搭建vpn的方法：
 https://www.jianshu.com/p/b0d460efca4e
