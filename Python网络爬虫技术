@@ -19,6 +19,12 @@ POST方法具体
 =
 SQLAlchemy
 
+网络爬虫（三）：使用cookiejar管理cookie
+https://blog.csdn.net/xixi880928/article/details/78339157
+
+cookiejar官方文档
+https://docs.python.org/3/library/http.cookiejar.html
+
 requests官方文档
 http://www.python-requests.org/en/master/
 
