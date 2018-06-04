@@ -9,6 +9,7 @@
 # 增加内容
 免费获得代理的具体方法
 POST方法具体
+增加urllib方法
 
 增加登录表单
 案例改为 新浪微博。新浪微博需要登录才能搜索
@@ -16,6 +17,8 @@ POST方法具体
 数睿思 http://www.tipdm.org/bdrace/index.html  pc2019 pc2019
 标题改为：爬取深层网页；模拟登录
 =
+SQLAlchemy
+
 requests官方文档
 http://www.python-requests.org/en/master/
 
