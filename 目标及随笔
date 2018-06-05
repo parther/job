@@ -4,6 +4,9 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
+str.split(str="", num=string.count(str))
+num 分割次数  
+-
 成为一个好的交谈者
 产品经理需要好的技术加交流能力
 先易后难，先简后繁，不断总结做事的流程
