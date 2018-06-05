@@ -4,6 +4,10 @@ request的session方法用来存储cookies，避免跳转和翻页时重新登�
 HTTP Referer是header的一部分，当浏览器向web服务器发送请求的时候，一般会带上Referer，告诉服务器我是从哪个页面链接过来的
 
 =
+懵逼的HTTP、Socket与TCP
+https://www.jianshu.com/p/a5410f895d6b
+http://itindex.net/detail/47119-socket-http
+
 网络爬虫（三）：使用cookiejar管理cookie
 https://blog.csdn.net/xixi880928/article/details/78339157
 
