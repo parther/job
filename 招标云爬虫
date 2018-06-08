@@ -26,5 +26,6 @@ t表的规定数据在数据库
 =
 ? 409 已经成熟解析，需要将R脚本转为Python
 ? 蔡黎邮件中的，爬取历史数据的代码是什么意思
-
+crontab常用命令
+https://www.cnblogs.com/MartinChentf/p/6060252.html
 
