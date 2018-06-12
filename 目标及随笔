@@ -4,6 +4,8 @@
 # 好文收藏 http://t.cn/REbUSIt
 
 =
+害怕拒绝别人，也害怕被人拒绝
+-
 str.split(str="", num=string.count(str))
 num 分割次数  
 -
