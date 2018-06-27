@@ -1,18 +1,15 @@
 信访爬虫项目-分析 http://t.cn/RnZRJxd
-# 
-目的：
-从天涯论坛爬取上访用户的相关内容
-完成时间：
-0102 - 0206 周二
-成果：
-代码；数据库表；数据库表说明
-计划:
-0319 周一 着手解决按时间提取的问题
-0320 周二 user_list，连接数据库；其他表格，设置时间提取规则，连接数据库，更新规则；交给何老师
-
-===
-技术问题和总结 https://github.com/parther/others/blob/master/spider
-搜索入口 http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF
+在mysql中检测爬虫结果是否插入的代码
+# delete from user_list where user_id = 136548591
+# delete from user_info where user_id = 136548591
+# delete from post_list where post_id = 10088
+# delete from post_content where post_id = 10088
+# delete from post_reply where reply_id = 25520
+select * from user_list order by dataCreateTime desc
+select * from user_info order by dataCreateTime desc
+select * from post_list order by dataCreateTime desc
+select * from post_content order by dataCreateTime desc
+select * from post_reply order by dataCreateTime desc
 
 =
 # 更新：
