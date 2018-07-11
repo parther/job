@@ -1,10 +1,10 @@
 招标信息处理网站 http://120.76.134.113:88/zb/home/extractInfo
 中标信息处理网站 http://120.76.134.113:88/zb/home/extractZbInfo
 
-===
 项目管理 http://t.cn/RnQ9Wr2
 总项目负责人是 杨征
 湖北经济学院负责人是 张耀峰
+
 -
 115数据库招标云数据库 112.74.76.115 yuancheng 123456
 115服务器 112.74.76.115 的连接密码（root/tipdm.com123）
@@ -13,11 +13,9 @@
 操作流程：爬虫入115服务器-113服务器通过java调r库表
 t库表的数据放在了134服务器，112.74.130.134 用户名：administrator,密码为：Tipdm123
 134数据库 112.74.130.134 用户名：root,密码为：root!@#$
+
 -
-t表的规定数据在数据库
-=
-? 409 已经成熟解析，需要将R脚本转为Python
-? 蔡黎邮件中的，爬取历史数据的代码是什么意思
-crontab常用命令
+crontab 操作
 https://www.cnblogs.com/MartinChentf/p/6060252.html
+
 
