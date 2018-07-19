@@ -6,6 +6,13 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 = 
+bs语法
+import requests
+from bs4 import BeautifulSoup
+html = requests.get('http://www.pm25.com/xian.html')
+soup = BeautifulSoup(html.text,'html.parser')
+https://cuiqingcai.com/1319.html
+
 学习区和练习区
 
 shell 连接数据库的语法：
@@ -28,7 +35,6 @@ try except：
 回复他人直接说好的，而不是行吧
 最大的粗心大意是看错字
 
--
 遇到问题，明确目的而非抱怨，找到方法，而方法并非直线型的方法，方法也有其优缺点
 遇到问题，看自己曾经是否遇到过
 减少面对任务时的压力感，大任务分解成小任务，减少难度
@@ -41,7 +47,7 @@ proud of what i choose
 工作教不了你什么东西，书却是可以的
 顺,不妄喜；逆,不惶馁；安,不奢逸；危,不惊惧；胸有惊雷而面如平湖者,可拜上将军
 
--
+=
 任务管理：
 根据目标，分析哪些条件是难以满足的，然后根据实际情况调整自己的目标
 
