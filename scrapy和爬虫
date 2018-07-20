@@ -1,5 +1,6 @@
 《Python爬虫开发与项目实战》.pdf
 
+
 # 爬虫
 定义：用自动化的方式，从网站/app批量获取公开数据的技术
 工作流程：
@@ -133,11 +134,17 @@ $ docker-machine create --driver virtualbox default
 Python爬虫:更加优雅的执行JavaScript(PyV8) https://www.jianshu.com/p/c534d6eb881a?utm_source=oschina-app
 
 =
-常规爬虫代码：
+常规爬虫代码，使用requests ：
 import requests  
 from lxml import etree
-
 res = requests.get('http://search.tianya.cn/user?q=%E4%B8%8A%E8%AE%BF&pn=1')  
 res.encoding = 'utf-8'
 user_id = etree.HTML(res.text).xpath('//*[@id="main"]/div[2]/ul/li/p[1]/a/@href')
+
+bs语法：
+import requests
+from bs4 import BeautifulSoup
+html = requests.get('http://www.pm25.com/xian.html')
+soup = BeautifulSoup(html.text,'html.parser')
+https://cuiqingcai.com/1319.html
 
