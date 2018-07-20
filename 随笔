@@ -6,20 +6,8 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 = 
-爬虫是否加pyv8
-
-bs语法
-import requests
-from bs4 import BeautifulSoup
-html = requests.get('http://www.pm25.com/xian.html')
-soup = BeautifulSoup(html.text,'html.parser')
-https://cuiqingcai.com/1319.html
 
 学习区和练习区
-
-shell 连接数据库的语法：
-mysql -h127.0.0.1 -uroot -proot
-使用命令操作mysql，每条语法后面必须携带分号;
 
 养生：
 别忍
