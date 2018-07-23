@@ -6,6 +6,15 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+原始内容在 response.content 里，bytes
+s1 = '中国人'.encode('utf-8')
+s2 = b'\xe4\xb8\xad\xe5\x9b\xbd\xe4\xba\xba'.decode('utf-8')
+s3 = s1.decode('utf-8')
+print(s3)
+try:
+    s = 1/0
+except Exception as e:
+    print(e)
 不伤害别人只能伤害自己，况且也伤害不了别人
 特定环境下人很难做出理性的判断
 遇到纠结，价值观冲突的问题，倾向优先价值观
