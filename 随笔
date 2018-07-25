@@ -6,6 +6,12 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+i = 1
+while i:
+    i = i+1
+    if i>4:
+        break
+    print(i)
 画判断流程图，是否在线上，执行动作在方框
 幽默就是常规行为的意外结果
 基本功不扎实，条件控制和循环语句
