@@ -1,5 +1,6 @@
 《Python爬虫开发与项目实战》.pdf
 
+原始内容在 response.content 里，bytes
 
 # 爬虫
 定义：用自动化的方式，从网站/app批量获取公开数据的技术
