@@ -6,47 +6,14 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
-Python操作MySQL：pymysql和SQLAlchemy
-将对象转换成SQL，然后使用数据API执行SQL并获取执行结果。
-https://www.cnblogs.com/xuyaping/p/7106443.html
-ValueError: If using all scalar values, you must pass an index
-d = {'id':[6],'product':['apple'],'price':[350]}
-df = pd.DataFrame(d)
-http://36kr.com/p/5144930.html
-对于重要却难以下手的事情，专门花一整天去做
+=
+基本功不扎实，条件控制和循环语句
 选择看TED而不是淘宝买东西
-路径下的文件
-path = "data/"
-os.listdir(path)
-Windows桌面右键新建未出现word/excel/ppt解决办法
-https://blog.csdn.net/gl486546/article/details/75615242
-免费WPS Office Pro 2016 企业正版
-https://baijiahao.baidu.com/s?id=1570526367411578
-ERROR writing temporary file
-icacls C:\Users\Administrator\Desktop /setintegritylevel H
-i = 1
-while i:
-    i = i+1
-    if i>4:
-        break
-    print(i)
 画判断流程图，是否在线上，执行动作在方框
 幽默就是常规行为的意外结果
-基本功不扎实，条件控制和循环语句
-原始内容在 response.content 里，bytes
-s1 = '中国人'.encode('utf-8')
-s2 = b'\xe4\xb8\xad\xe5\x9b\xbd\xe4\xba\xba'.decode('utf-8')
-s3 = s1.decode('utf-8')
-print(s3)
-try:
-    s = 1/0
-except Exception as e:
-    print(e)
 不伤害别人只能伤害自己，况且也伤害不了别人
 特定环境下人很难做出理性的判断
 遇到纠结，价值观冲突的问题，倾向优先价值观
-
-=
 没有东西是完全准备好了给你的
 踏实地啃下去，别急躁
 下午3点是状态低落点
@@ -174,6 +141,26 @@ http://www.jb51.net/softs/600866.html
 Microsoft Office 2016 激活工具 http://www.runker.net/office-2016-jihuo.html
 按F9可以更新题注
 
+Windows桌面右键新建未出现word/excel/ppt解决办法
+https://blog.csdn.net/gl486546/article/details/75615242
+
+免费WPS Office Pro 2016 企业正版
+https://baijiahao.baidu.com/s?id=1570526367411578
+
+ERROR writing temporary file
+icacls C:\Users\Administrator\Desktop /setintegritylevel H
+
+使用aws搭建vpn的方法：
+https://www.jianshu.com/p/b0d460efca4e
+windows上利用putty通过SSH连接亚马逊AWS服务器
+https://blog.csdn.net/biboshouyu/article/details/76068127
+使用hadowsocks客户端翻墙：
+http://www.bioinfo-scrounger.com/archives/490
+解决win7搭vpn出现错误789的方法：
+https://www.cnblogs.com/langtianyaa/p/6409290.html
+在Parameters新建DWORD，在“名称”框中，（键入“ProhibitIpSec”），在“数值数据”框中，键入“1”，（选择10进制）然后单击“确定”
+再找到AllowL2TPWeakCrypto，如果没有则新建“DWORD值”，修改值为1。vpn要连接3次以上。
+
 写ppt的基本流程：
 列框架 - 用word写出内容 - ppt设计
 
@@ -245,17 +232,6 @@ Google/百度，搜狗微信/搜狗知乎，知网\百度学术等，36kr等报�
 GitHub 搜索代码
 如无必要，不要推翻，先了解原来的原因，在已有的基础上修改
 
-使用aws搭建vpn的方法：
-https://www.jianshu.com/p/b0d460efca4e
-windows上利用putty通过SSH连接亚马逊AWS服务器
-https://blog.csdn.net/biboshouyu/article/details/76068127
-使用hadowsocks客户端翻墙：
-http://www.bioinfo-scrounger.com/archives/490
-解决win7搭vpn出现错误789的方法：
-https://www.cnblogs.com/langtianyaa/p/6409290.html
-在Parameters新建DWORD，在“名称”框中，（键入“ProhibitIpSec”），在“数值数据”框中，键入“1”，（选择10进制）然后单击“确定”
-再找到AllowL2TPWeakCrypto，如果没有则新建“DWORD值”，修改值为1。vpn要连接3次以上。
-
 机器学习参考资料：
 8种最常见机器学习算法 http://dwz.cn/6vceaH
 轻松看懂机器学习十大常用算法 http://dwz.cn/6WNsH2
@@ -282,6 +258,8 @@ Garbage In, Garbage Out
 
 时间管理：
 http://naotu.baidu.com/file/8a1bb38636c01384331b56327c733322
+http://36kr.com/p/5144930.html
+对于重要却难以下手的事情，专门花一整天去做
 
 所有需要意志力的方法，都是耍流氓，关键是动力
 http://36kr.com/p/5071846.html
