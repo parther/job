@@ -7,6 +7,7 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
 Python操作MySQL：pymysql和SQLAlchemy
+将对象转换成SQL，然后使用数据API执行SQL并获取执行结果。
 https://www.cnblogs.com/xuyaping/p/7106443.html
 ValueError: If using all scalar values, you must pass an index
 d = {'id':[6],'product':['apple'],'price':[350]}
