@@ -6,6 +6,10 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+继承
+https://www.cnblogs.com/bigberg/p/7182741.html
+类属性和实例属性
+类可以理解为数据类型
 通过对象来调用的才是方法
 df3 = df2.groupby(['1', '2'])['num']
 df3.head()
