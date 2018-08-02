@@ -6,6 +6,8 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+df.loc[df['two'].notnull(),:],行上的筛选
+df[df['two'].notnull()]
 ? stack unstack
 s.value_counts() s.count len
 s.count 返回非空值的个数
