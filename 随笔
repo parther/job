@@ -6,72 +6,19 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
-哑变量，用来表示分类变量、非数据因素可能产生的影响
-https://mp.weixin.qq.com/s/dTTC5WsZd3_bTWdIv0OfcQ
-积极是面对挫折时的韧性
-http://36kr.com/p/5121022.html?from=related
-函数、变量、条件、循环是编程的基础
-使用库
-10个日常小习惯
-http://36kr.com/p/5139215.html
-arange([start,] stop[, step,], dtype=None)
-随性
-作用，应用场景，实现过程
-分析方法论
-http://36kr.com/p/5045197.html
-关于选择
-http://36kr.com/p/5145426.html
-第三选择
-工作复盘
-grai 目标回顾 - 成果对比 - 分析成功和失败的原因 - 总结一般性的规律
-http://36kr.com/p/5145625.html
 ? 时间操作
-DF. pd 使用
-保存的书同步到网盘
-s3 = (s1 == s2)
-len(s3) == s3.sum()
-a = df['two'].notnull()
-b = df['three'].notnull()
-a & b
-遇到问题不要急，看是否有第三选择
-遇到问题勇敢面对而不是逃避，才能让你变得更强，同时充满激情
-df.loc[df['two'].notnull(),:],行上的筛选
-df[df['two'].notnull()]
 ? stack unstack
-s.value_counts() s.count len
-s.count 返回非空值的个数
-晚上上淘宝
 ? loging
 https://www.jianshu.com/p/29cb6a535e2d
 ? session和普通缓存
 ? xpath
-三种主要匹配模式
-pattern = re.compile('23')
-string = '12345623'
-pattern.match(string,5).group(0)
-pattern.search(string,5).group(0)
-pattern.findall(string)
-http://www.runoob.com/python3/python3-reg-expressions.html
-if True or False 的表达式
+随性
+晚上上淘宝
+保存的书同步到网盘
+遇到问题不要急，看是否有第三选择
+遇到问题勇敢面对而不是逃避，才能让你变得更强，同时充满激情
 面对问题，从容面对
-numpy的broadcast机制
-数组的按位加按位减
-https://blog.csdn.net/lanchunhui/article/details/50158975
-df.T 直观看横竖转换
-鸟笼效应
 关注谈话的目的
-继承
-https://www.cnblogs.com/bigberg/p/7182741.html
-类属性和实例属性
-类可以理解为数据类型
-通过对象来调用的才是方法
-df3 = df2.groupby(['1', '2'])['num']
-df3.head()
-优先采用正斜杠
-https://www.cnblogs.com/pxh-phper/p/6231294.html
-pickle模块的基本使用
-https://www.cnblogs.com/lincappu/p/8296078.html
-https://www.cnblogs.com/pannyvan/p/4439308.html
 任何指望通过读一本书而改变习惯或命运的人，通常都会受到客观规律的客观对待
 简历上哪些内容才是 HR 眼中的干货？
 http://daily.zhihu.com/story/9690231
@@ -79,14 +26,6 @@ http://daily.zhihu.com/story/9690231
 http://36kr.com/p/5143847.html
 职场新人如何与领导沟通工作？
 http://daily.zhihu.com/story/9690202
-条件控制和循环
-continue 是不执行本次条件
-https://www.cnblogs.com/Plynn/p/6344341.html
-join拼接序列
-http://www.runoob.com/python3/python3-string-join.html
-Numeric value out of range: 1264 Out of range value for column
-https://blog.csdn.net/coreyc/article/details/80281456
-https://blog.csdn.net/hanshangzhi/article/details/76177994
 
 =
 基本功不扎实
@@ -123,6 +62,13 @@ proud of what i choose
 以终为始
 金字塔思维
 大格局
+
+分析方法论：
+http://36kr.com/p/5045197.html
+
+工作复盘：
+grai 目标回顾 - 成果对比 - 分析成功和失败的原因 - 总结一般性的规律
+http://36kr.com/p/5145625.html
 
 5W2H：
 是什么：作用、应用场景
@@ -320,6 +266,8 @@ https://www.cnblogs.com/li-daphne/p/7245923.html
 从返回命令中找失败的原因，因为这个更准确
 看官方文档
 GitHub 搜索代码
+函数、变量、条件、循环是编程的基础
+使用库
 
 机器学习参考资料：
 8种最常见机器学习算法 http://dwz.cn/6vceaH
@@ -349,6 +297,8 @@ Garbage In, Garbage Out
 http://naotu.baidu.com/file/8a1bb38636c01384331b56327c733322
 http://36kr.com/p/5144930.html
 对于重要却难以下手的事情，专门花一整天去做
+10个日常小习惯
+http://36kr.com/p/5139215.html
 
 所有需要意志力的方法，都是耍流氓，关键是动力
 http://36kr.com/p/5071846.html
@@ -462,7 +412,7 @@ https://github.com/parther/others/blob/master/%E8%AF%89%E8%AE%BC
 3 练习。讲出来；做练习题
 
 如何快速了解一个知识点：
-准备：为何要了解这个知识点，其作用，其应用场景
+准备：为何要了解这个知识点，作用，应用场景，实现过程
 检验：自己用一句话能够描述知识点，与其他知识点联系（区别和联系，优点和缺点），找到应用应用的例子
 学习新的东西，先把找到的参透，没有啥东西是完全准备好给你的
 
@@ -494,10 +444,18 @@ http://36kr.com/p/5135936.html
 积极心理学：
 http://open.163.com/movie/2012/1/D/J/M8SKHU3MA_M8SKI2QDJ.html
 
-做出决定 我选择A方案：
-为什么需要做出决定：
-1 资源总是缺乏的，所以要做出决定
-2 在有限选项中权衡利弊，做出最优选择
-方法：
-选择矩阵，对每个因素向进行打分，选择相对高分
+关于选择：
+量化因素，配合权重，核实因素及权重，选择相对高分
 http://36kr.com/p/5141146.html
+是否值得花时间做选择，站在长远的角度考虑
+如果是别人，他会怎么做
+http://36kr.com/p/5145426.html
+第三选择
+做最坏的准备
+
+
+决策能力：
+解决问题的策略；足够积极；自我监控能力
+积极是面对挫折时的韧性
+自我监控能力帮助认清自我和现实
+http://36kr.com/p/5121022.html
