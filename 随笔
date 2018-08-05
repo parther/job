@@ -6,6 +6,8 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+1265 - Data truncated for column错误
+是因为报错的字段的字节个数或者类型不正确
 睡觉前不喝碳酸饮料，可以11点半睡
 张豹 张季高 张得闲 zan peter
 stack unstack 一般用于层次化索引，stack将列转为行，unstack正好相反，相当于索引级别的透视表
