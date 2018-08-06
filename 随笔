@@ -17,7 +17,7 @@ stack unstack 一般用于层次化索引，stack将列转为行，unstack正好
 ? loging
 https://www.jianshu.com/p/29cb6a535e2d
 ? 时间操作
-? session和普通缓存
+? session和普通缓存，urllib的区别
 ? xpath
 自由到互赖
 遇到问题不要急，看是否有第三选择
