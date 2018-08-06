@@ -8,6 +8,11 @@ http://pandas.pydata.org/pandas-docs/stable/dsintro.html
 apply 和 agg 有什么区别呢，agg 调用的时候要指定字段，apply 默认传入的是整个dataframe
 https://blog.csdn.net/qq_16234613/article/details/78245325
 
+scikit-learn
+http://scikit-learn.org/stable/documentation.html
+https://zhuanlan.zhihu.com/p/38160930
+https://www.leiphone.com/news/201701/ZJMTak4Y8ch3Nwd0.html
+
 移动窗口
 http://pandas.pydata.org/pandas-docs/version/0.18.1/generated/pandas.DataFrame.rolling.html
 https://blog.csdn.net/maymay_/article/details/80241627
