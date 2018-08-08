@@ -9,7 +9,7 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 是什么 输入什么 输出什么
 np.percentile df.quantile 都是分位数
 ? 非线性转换
-? 各种数据转换的适用情景，问林
+? 分位数转换的适用情景，问林
 学习途径
 一手知识、反思
 学习的层次：浅层和深沉
@@ -19,7 +19,9 @@ http://36kr.com/p/5146809.html
 https://blog.csdn.net/qq_22238533/article/details/70050748
 df.loc[df['id']==2,:] 筛选条件所在的轴
 s1.var().round(2) 将结果的科学计数转换为小数
-作用，应用场景，实现 前提，为什么，优缺点，区别和联系
+作用和方法（输入-输出），前提条件，为什么
+优缺点
+区别和联系
 数学中，减号可以理解为平移，乘号可以理解为缩放
 -
 1265 - Data truncated for column错误
