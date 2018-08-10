@@ -5,7 +5,10 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 我的
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
-===
+==
+? index 算不算属性，DataFrame.get_values()算不算属性
+http://pandas.pydata.org/pandas-docs/stable/api.html=
+
 结构
 不要在批注文档上修改，因为看不到变化
 API文档
