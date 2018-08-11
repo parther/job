@@ -6,9 +6,9 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+了解一个知识点，先看例子
 有始有终，自己开的空调自己关
-? loging
-https://www.jianshu.com/p/29cb6a535e2d
+
 ? session和普通缓存，urllib的区别
 ? xpath
 =
@@ -53,12 +53,12 @@ http://36kr.com/p/5145426.html
 http://36kr.com/p/5121022.html
 
 学习一个知识点的前提：
-一手知识
+一手知识，如官方文档
 驱动力。学习的必要性
 让学习过程更高效。获得反馈，如做练习题；大量补充水
 
 全面了解一个知识点：
-作用和应用领域（输入-输出）
+作用和应用领域（输入-输出），最好是先举个例子
 实现方法和使用前提条件
 为什么。它的优缺点，它与其他知识点的区别和联系
 
