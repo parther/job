@@ -6,45 +6,19 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+? jupyter的基本功能，参考Python数据分析与应用
+? 只获取一系列日期的月
+s.values.astype('datetime64[M]')
+? session和普通缓存，urllib的区别
+? xpath
+
 计划要适应变化
 目标只负责给方向，实现看造化，重要的是永不言败、保持积极主动的精神
-pyecharts 输入值与对应标签保持一致
 工作区就是要完成任务，一切手段完成任务
 想法可以用图形的形式表达出来
 演讲当作送礼物
-Timedelta('0 days 00:01:00')
-M表示月，m表示分钟
-pd.Timestamp(ts_input='2016/8/1 11:11:46', freq='m') + 1
-freq指的是偏移的年月日等
 保持交流，从独立到互赖
 脑子乱的时候，用最笨的方法去做一件事情
-? jupyter的基本功能，Python数据分析与应用
-时间函数：
-Datetimes and Timedeltas https://docs.scipy.org/doc/numpy/reference/arrays.datetime.html
-将str类型转换为时间类型：     
-pd.to_datetime(s, format='%Y%m%d')
-将间隔天数转换为int类型：
-s.dt.days
-获取月份，不改变数据类型：
-s.values.astype('datetime64[M]')
-创建时间数据
-np.datetime64('2005-02-25')
-numpy的时间类型操作，及period
-import time
-# 时间戳
-time.time()
-# 时间元组
-time.localtime()
-# 时间元组转换为字符串
-time.asctime( time.localtime())
-# 格式化时间元组，将时间元组转换为字符串
-time.strftime("%Y-%m-%d", time.localtime())
-# 将字符串转换为元组
-time.srptime("2018-08-14", "%Y-%m-%d")
-import datetime
-time是Python中最基本的时间模块，提供三种时间形式，即时间戳，时间元组、格式化时间
-datetime是高级的时间模块，提供时间差timedelta模块
-https://docs.python.org/3/library/datetime.html
 尽信书不如无书
 优势条件和受限条件
 如何过每一天，就是如何过这一生
@@ -53,9 +27,6 @@ https://docs.python.org/3/library/datetime.html
 做事不是直线型，一口气吃不成胖子
 了解一个知识点，先看例子
 有始有终，自己开的空调自己关
-
-? session和普通缓存，urllib的区别
-? xpath
 =
 自由到互赖
 数学中，减号可以理解为平移，乘号可以理解为缩放
