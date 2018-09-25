@@ -10,6 +10,8 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 ? class_weight : {dict, ‘balanced’}, optional
 ? 决策树模型是否需要对数值型数据标准化
 ? 递归
+? 接收callable或自定义函数
+任何存在都有其前提条件
 学习方向是NLP和神经网络
 写的第一个字要慢，然后顺着自己的心意写
 成为更好的自己、过好每一天
@@ -24,7 +26,7 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
 想要成为一个什么样的人：
-冷静、不纠结、敢冒险
+不纠结、不啰嗦、无条件自信
 品格：不占便宜
 才学：历史
 能力包括通用能力和专业领域能力
