@@ -13,6 +13,7 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 ? 接收callable或自定义函数
 ? 接收array-like
 ? learning_rate_init : double, optional, default 0.001
+价值在于对比
 每一次做同样的事，想着如何做到更好
 成事在于积累
 尊重自然规律，该做的时候做，该休息的时候休息，该玩的时候玩
