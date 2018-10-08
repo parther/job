@@ -6,10 +6,14 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
-? 普通最小二乘回归和线性回归是否重复
 ? 奇异值分解
 ? 交叉验证
-? 极大似然估计法
+? 普通最小二乘回归和线性回归是否重复
+极大似然估计法:
+https://mp.weixin.qq.com/s/0tlHAZGNZQcMo5LFvnnNpg
+极大似然估计就是一种参数估计方法
+利用已知的样本结果，反推最有可能（最大概率）导致这样结果的参数值
+模型已定，参数未知
 任务分解和分阶段目标
 通过简单的方式，如视频了解知识点
 学习目标的可验证性
