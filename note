@@ -6,9 +6,11 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+? classifier.decision_path(cancer_trainStd)[0:2])
 ? 奇异值分解
 https://www.jianshu.com/p/e1b8a315fd36
 ? 决策树
+自己不了解的东西，尽量转述，别画蛇添足
 最重要的不是你曾经想到过什么，而是你最后做到了什么
 不是为了证明自己，而是从一个事情中获得成长
 各个物种是通过不断试错不断调整来适应外界环境的
