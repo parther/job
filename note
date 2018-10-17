@@ -6,11 +6,12 @@ http://naotu.baidu.com/file/142a519ce9df2921aa0f3948780c34f6
 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
-? 标准差标准化的区别
 ? lasso path方法
 ? sparse_coef_ 
 ? 岭回归是否需要标准化
 ? Ridge(alpha=1.0, copy_X=True
+标准差标准化的区别
+https://blog.csdn.net/u011089523/article/details/80198312
 写东西，对比说明，步骤说明，无他
 转行的身体准备
 完成一个可以复制的小任务，先停下来，查找优化项，再应用于其他小任务
