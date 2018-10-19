@@ -8,10 +8,13 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 ===
 ? 从array中筛选数据
 ? Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
-? Lasso.sparse_coef_
-? Lasso_model.path(X_test,y_test)
-? 岭回归是否需要标准化
-? Ridge(alpha=1.0, copy_X=True
+
+? print('权重矩阵为：\n',MLP_model.coefs_)
+? print('偏差向量为：\n',MLP_model.intercepts_)
+? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
+? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
+
+先入为主
 接纳自己，先找外界原因，再找自身原因
 重复量大且容易出错的任务，采用分类处理的方法，减少切换成本
 主动性思维，改变外界，不是改变自己
