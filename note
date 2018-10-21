@@ -15,6 +15,8 @@ http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
 从整体到局部，小范围实验然后推广到全部，避免返工
 任务分类处理，减少切换成本
+-
+做5年计划
 
 先入为主
 接纳自己，先找外界原因，再找自身原因
