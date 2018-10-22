@@ -10,6 +10,10 @@
 ? print('偏差向量为：\n',MLP_model.intercepts_)
 ? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
+不在某件事上耗费精力
+学会迅速决策
+白无故做你期望的，他们只会做你所激励的、你所强调的、他想要的
+用逻辑管理事务，而用情绪管理人心
 身体检查:
 嘴巴嘟起，右肩下垂，脚踏实地
 
