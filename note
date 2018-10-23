@@ -7,6 +7,7 @@
 ? print('偏差向量为：\n',MLP_model.intercepts_)
 ? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
+? 确定辞职日期
 书签用于速查和积累
 永远想着提高工作效率，遇到问题永远想着解决方法
 做应该做的，它可能是情绪上不舒服的
