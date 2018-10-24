@@ -8,6 +8,8 @@
 ? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
 ? 确定辞职日期
+立刻杀掉错误的想法，知行合一
+不要因为简单，而不想着提高效率
 发现兴趣
 使用工具提高效率
 书签用于速查和积累
