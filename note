@@ -3,10 +3,14 @@
 我的 http://naotu.baidu.com/file/6eb83ef68cb6a5c0a2bbe9b7ad6f0e01
 
 ===
+? sklearn.utils.arrayfuncs.cholesky_delete
+? estimator
+-
 ? print('权重矩阵为：\n',MLP_model.coefs_)
 ? print('偏差向量为：\n',MLP_model.intercepts_)
 ? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
+永不对爱自己的人发火
 ? 确定辞职日期
 写作是一个论证的过程
 立刻杀掉错误的想法，知行合一
