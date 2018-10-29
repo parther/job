@@ -13,6 +13,8 @@
 ? print('测试集弹性网络路径为：\n',Lasso_model.path(X_test,y_test))
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
 ? 对历史复盘
+痛苦源于得不到-多巴胺缺乏-获得多巴胺
+运动，太阳，感恩
 机械重复的工作容易出错
 可证伪性 https://www.zhihu.com/question/20620094/answer/15664914
 中午或下午5点看微信，整点看QQ
