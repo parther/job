@@ -14,7 +14,6 @@
 ? print('scipy.sparse matrix为：\n',Lasso.sparse_coef_)
 ? 对36kr收藏的回顾阶段
 ? 对历史复盘
-? 学人之长
 
 总结。先note，再书签
 不发生真正改变的学习都是无效的学习。
